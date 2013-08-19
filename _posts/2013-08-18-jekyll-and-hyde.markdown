@@ -10,7 +10,7 @@ It's that time again; time to update the blog. I was using Google's Blogspot to 
 If you don't know Jekyll you are missing out on a great open source static site generator that has some great features for us technical bloggers.
 
 ##The Jekyll goods:
-* The generate sites are blazing fast.
+* Generated sites are blazing fast.
 * Create content with my trusty code editor
 * Markdown support
 * Pygments code colorizer
