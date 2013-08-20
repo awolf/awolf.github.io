@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
   a         { color: #00a; }
   a:hover   { color: #000; }
-  a:visited { color: #a0a; }
+  a:visited { color: #00a; }
 
 /*****************************************************************************/
 /*
@@ -51,6 +51,40 @@ ul.posts span {
   font-size: 80%;
 }
 
+.business-card{
+  position: fixed;
+  width:200px;
+  top: 30px;
+  
+  margin-left: -250px;
+
+  font-size: 14px;
+  text-align: right;
+  float: left;
+
+  line-height: 1.5em;
+}
+
+.business-card img{
+  width:85px;
+  margin-bottom: 3px;
+}
+
+.business-card .name {
+  font-weight: bold;
+  font-size: 125%;
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.business-card i{
+  font-style: normal;
+  font-weight: 500;
+  display: block;
+  font-size: 100%;
+  color: #666;
+}
+
 /*****************************************************************************/
 /*
 /* Site
@@ -62,8 +96,12 @@ ul.posts span {
   padding: 0 1em;
   max-width: 700px;
   min-width: 480px;
-  margin: 3em auto 2em;
+  margin: 1em auto 2em;
   line-height: 1.5em;
+}
+
+.site .header {
+  margin-bottom: 2em;
 }
 
 .site .header a {
@@ -77,7 +115,7 @@ ul.posts span {
 }
 
 .site .header h1.title a {
-  color: #a00;
+  color: #000;
 }
 
 .site .header h1.title a:hover {
@@ -86,7 +124,7 @@ ul.posts span {
 
 .site .header a.extra {
   color: #aaa;
-  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .site .header a.extra:hover {
@@ -124,6 +162,20 @@ ul.posts span {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
+}
+
+.post blockquote {
+  font-weight: 400;
+  font-style: italic;
+  
+  border-left: 6px solid #0DADD3;
+  
+  margin-top: -1px;
+  margin-left: -26px;
+  margin-bottom: 15px;
+  
+  padding-bottom: 3px;
+  padding-left: 20px;
 }
 
 .post ul, .post ol {
