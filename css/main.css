@@ -46,7 +46,7 @@ ul.posts li {
 ul.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+  font-size: 60%;
 }
 
 .business-card{
@@ -227,4 +227,8 @@ ul.posts span {
         .resume-position a, .resume-position a:hover, .resume-position a:visited {
           color: #666; }
 
-
+div.highlight{
+  font-size: 60%;
+  font-family: Monaco, "Courier New", monospace;
+  line-height: 1.2em;
+}
