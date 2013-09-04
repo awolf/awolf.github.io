@@ -201,6 +201,12 @@ ul.posts span {
   background-color: #333;
 }
 
+.gist{
+  font-size: 12px;
+  line-height: 14px;
+  font-family: 'Courier New';
+}
+
 /*****************************************************************************/
 /*
 /* Resume

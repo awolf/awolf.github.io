@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jekyll and hyde"
+title:  "Jekyll and Hyde"
 date:   2013-08-18 13:52:38
 categories: blog
 ---

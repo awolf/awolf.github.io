@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SharePoint before and after"
+title:  "SharePoint Before and After"
 date:   2013-08-20 13:52:38
 categories: sharepoint
 ---
