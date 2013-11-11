@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What to teach a beginner"
-date:   2013-11-05 13:52:38
+date:   2013-11-11 13:52:38
 categories: teaching
 ---
 
