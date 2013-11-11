@@ -4,7 +4,7 @@ awolf.github.io
 
 ## Things to do
 
-* update stylesheet start with the mobile first then scale up to desktop.
+* update stylesheet. Start with mobile first then scale up to desktop.
 * Add more header styles for header layers.
 
 
