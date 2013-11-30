@@ -5,9 +5,6 @@ date:   2013-11-30 13:52:38
 categories: productivity
 ---
 
-
-#To Done Lists
-
 If you're going to be productive, tracking your progress is important. For me it needs to be dead simple, motivational and obvious. I use a simple paper and pen system called ToDone lists. I know what you're thinking, paper and pen, piff! 
 
 ToDone lists consist of one list for important things that need to get done today and another to track everything else. Simple, and it has an added benefit of not freaking you out when you look at a list with a kajillion items on it. I have been using this system for a few years and I love crossing things off the "to" side and don't feel bad adding something to the "done" side. Hey, it's done, who can argue with that.
