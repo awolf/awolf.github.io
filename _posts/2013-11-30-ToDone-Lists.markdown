@@ -27,6 +27,7 @@ __Here is a typical start of the day ToDone lists.__
 | Add Report PowerShell to Scheduler  | |
 | Fix bug: 234 on Project A           | |
 
+
 ### End of the Day
 
 As you can see on my 'done' list, stuff just keeps coming out of the woodwork, but my 'to-do' list is complete. It's nice at the end of the day to look back and see all the things that you have accomplished. 
