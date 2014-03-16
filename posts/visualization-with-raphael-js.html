@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog of Adam J Wolf">
+    <meta name="Adam J Wolf" content="Blog of Adam J Wolf">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Adam J Wolf</title>
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav"><a href="/" class="blog-nav-item active">Home</a><a href="/resume.html" class="blog-nav-item">Resume</a><a href="/about.html" class="blog-nav-item">About</a></nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="blog-header">
+        <h1>Adam J Wolf</h1>
+        <p>Technical craftsman in the valley of the sun.</p>
+      </div>
+      <div class="main-content">
+        <div class="content-area"><img src="/img/posts/raphaeljs.png" style="width:100%">
+          <h2>Visualizations with Raphael.js</h2>
+          <p>I've been having a lot of fun lately building custom visualization with Raphael.js. My latest project is a dashboard for a globally distributed call center with near real-time data feeds. Making new and interesting visualizations with this library is a breeze and my client thinks they are sexy!</p>
+          <h2>Raphael.js</h2>
+          <blockquote>Raphaël uses the SVG W3C Recommendation and VML as a base for creating graphics. This means every graphical object you create is also a DOM object, so you can attach JavaScript event handlers or modify them later. Raphaël’s goal is to provide an adapter that will make drawing vector art compatible  cross-browser and easy. Raphaël currently supports Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+.</blockquote>
+          <h2>The Timeline</h2>
+          <p>Working with a globally dispersed call center data is challenging. The most challenging aspect is dealing with the UX and UI of time zone sensitive data. We all know the pain of trying to coordinate a meeting with people dispersed across the US but have you tried to do that with offshore workers also. Let's just say, it's not fun.</p>
+          <p>One of the ways you can display this information is with the "x hours ago" method. Here in this new timeline control. You can see how I use it to display some naughty reports on a particular call center employee.</p><img src="/img/posts/raphael-timeline.png" style="width:100%">
+          <p>With Raphael and Angular this timeline is easy to build and is visually appealing. If you use the same reference timezone the "x hr ago" on the scale will work in every timezone in the world. I always use UTC time for a reference time.</p>
+          <h2>The Schedule</h2>
+          <p>In a call center schedule adherence is a big deal. We could have displayed the actual and planned schedule in a table and let the manager decide. Or we could go the extra mile and give them a nicer visualization like this.</p><img src="/img/posts/raphael-schedule.png" style="width:100%">
+          <p>With Raphael.js the flags are easy to draw by hand or you can export the paths from Adobe Illustrator or other vector graphics applications and use them with Raphael. Once you have the paths rotating them on the horizon to represent the "Actual" schedule or "Plan", is easy.</p>
+          <h2>Gauges - got to love them!</h2>
+          <p>What's not to love? Well, the math for drawing arcs is a little painful.</p><img src="/img/posts/raphael-gauge.png" style="width:100%">
+          <p>The best part of making your own gauges is the ability to customize every aspect of the look and feel. My client wants color sections, multiple thumbs and animations.</p>
+          <h2>Metro Bricks</h2>
+          <p>Ok, you don't need Raphael.js for this UI. Div's and CSS will get the job done and is easy to do. If you need the rounded corners and your client base is IE8, then Raphael is going to be an option.</p><img src="/img/posts/raphael-metro.png" style="width:100%">
+          <p>Raphael.js is a very powerful JavaScript library and its use of VML is well supported by a wide variety of browsers. My project requires that it works on IE8 and to be usable on mobile devices like the Surface and Blackberry phones. That's a tall order but with Raphael if it works in IE8, then it works on mobile.</p>
+          <p>Not every project is going to need custom visualization but when they do, give Raphael.js a try.</p>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-module sidebar-module-inset"><img src="/img/adam-circle.png" style="width:150px">
+            <h4>About Adam</h4>
+            <p>Currently writing .Net code for a local university but loving Node.js and AngularJS. I love writing code, kayaking, hiking and woodworking.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Using in Anger</h4>
+            <ol class="list-unstyled">
+              <li>Windows Azure</li>
+              <li>AngularJS</li>
+              <li>C&#35;, JavaScript, PowerShell</li>
+              <li>Visual Studio 2013</li>
+              <li>Microsoft.Net 4.5</li>
+              <li>Asp.Net MVC, Web API</li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Learning</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://nodejs.org/">Node.js</a></li>
+              <li><a href="http://lesscss.org/">Less CSS</a></li>
+              <li><a href="https://www.docker.io/">Docker</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/awolf">GitHub</a></li>
+              <li><a href="https://twitter.com/adamjwolf">Twitter</a></li>
+              <li><a href="https://www.facebook.com/adam.j.wolf">Facebook</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-footer"></div>
+  </body>
+</html>

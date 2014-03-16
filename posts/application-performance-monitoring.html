@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog of Adam J Wolf">
+    <meta name="Adam J Wolf" content="Blog of Adam J Wolf">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Adam J Wolf</title>
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav"><a href="/" class="blog-nav-item active">Home</a><a href="/resume.html" class="blog-nav-item">Resume</a><a href="/about.html" class="blog-nav-item">About</a></nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="blog-header">
+        <h1>Adam J Wolf</h1>
+        <p>Technical craftsman in the valley of the sun.</p>
+      </div>
+      <div class="main-content">
+        <div class="content-area"><img src="/img/posts/scom-apm.png" style="width:100%">
+          <h2>SCOM Application Performance Monitoring</h2>
+          <p>The Microsoft System Center Operations Manager Server 2012 (SCOM) has the ability to monitor and instrument .Net web and Windows Service applications. This feature was originally developed by Avicode. Avicode was purchased by Microsoft in 2010 and their technology was integrated into SCOM 2012. With the addition of Internet Information Server and SQL Server management pack SCOM has become a very capable end to end application monitoring platform.</p>
+          <p>The monitoring system in SCOM has some very impressive features that will make developers, their managers and Operations very happy. They include:</p>
+          <ol>
+            <li>Exception Reporting and Logging</li>
+            <li>Instrumentation</li>
+            <li>Performance Monitoring</li>
+            <li>Alerting</li>
+            <li>Availability and Reliability Monitoring</li>
+          </ol>
+          <p>All of these features require no code changes or effort by developers.</p>
+          <h2>Exception Reporting and Logging</h2>
+          <p>Developers will no longer have to use external logging tools like Elmah, NLog, and Log4Net or receive error email sent to their Exchange Distribution List. The Operations Manager (OM) client that is installed on the server monitors all configured .Net processes. The client will record all unhandled and handled exceptions automatically without developer intervention. Try, catch and log will no longer be necessary.</p>
+          <p>The level of detail recorded in the APM exception event far outweighs the detail gathered by our current logging frameworks. The system will capture the full stack trace, method variables, class properties and members that are in scope during the event. Please see figure 1.</p><img src="/img/posts/stacktrace.png" style="width:100%">
+          <p class="figure">Figure 1.0 Stack trace and local variables.</p>
+          <h2>Instrumentation</h2>
+          <p>Application instrumentation or profiling is normally done in development with tools like RedGate‘s ANTS Profiler or Visual Studio. These profilers will instrument your code and provide very fine grained detail in the development environment. The OM client on the other hand uses the .Net frameworks instrumentation features while it’s running on the server and provides a lower level of detail.</p>
+          <p>The client records timing data for all method calls and SQL Queries. In addition, it will show LINQ queries transformed into SQL. In a multi-tier application, this instrumentation data will be stitched together to show a comprehensive profile. In SCOM APM SP1 you can even instrument the client with JavaScript and get profiling data from the browser. Please see figure 2.</p><img src="/img/posts/instrumentation.png" style="width:100%">
+          <p class="figure">Figure 2 Instrumentation Data.</p>
+          <h2>Performance Monitoring</h2>
+          <p>Performance monitoring alongside profiling will allow Operations to trouble shoot issues affecting production application before involving a developer. Developers have little to no control or access to the production environment which makes troubleshooting difficult. SCOM APM will reduce the occurrence of developers being called to look at a failing application due to slow or intermittent application dependencies. If the database is slow, then the dependent application is going to be slower.</p><img src="/img/posts/apc.png" style="width:100%">
+          <p class="figure">Figure 3 Application Advisor Console.</p>
+          <h2>Alerting</h2>
+          <p>Without SCOM the current email to distribution list alerting is appropriate. With SCOM those practices can be removed and developer inbox rules can be reduced to sane levels. SCOM APM has customizable exception filtering and occurrence level settings. This configuration will enable developers and managers to fine tune alerting for each application and exception type. The new and rare exception emails can be investigated and fixed.</p><img src="/img/posts/exception-event.png" style="width:100%">
+          <p class="figure">Figure 4 Exception Event</p>
+          <h2>Availability and Reliability Monitoring</h2>
+          <p>Our company and customers depend on our applications to be available and reliable. Any system as a whole is only as available and reliable as its weakest dependency. Dependencies include databases, web services, Campus-View, CRM, XRM, BizTalk, Active Directory, Azure and the network.</p>
+          <p>Monitoring system dependencies and alerting will help alleviate Operations dependency on developers for troubleshooting. With SCOM, Operations will be able to see the reason an application is throwing errors because of a down or unreliable dependency.</p><img src="/img/posts/monitoring-dashboard.png" style="width:100%">
+          <p class="figure">Figure 5 Monitoring Dashboard</p>
+          <p>Having worked in an organization with SCOM and APM running for every production system was an interesting experience. It changed the software development lifecycle, how software was written and deployed.</p>
+          <p>Changes after SCOM:</p>
+          <ol>
+            <li>Try catch was almost never used</li>
+            <li>Optimizations happened post production</li>
+            <li>Production alerts were priority 1</li>
+            <li>Increase communication from dependent system owners</li>
+            <li>Repeated application exceptions became bugs in TFS</li>
+            <li>Pareto principle / 80-20 rule used for prioritizing bugs</li>
+            <li>A general rise in software quality</li>
+          </ol>
+          <p>System Center Operation Manager and Application Performance Monitoring solve real world challenges for developers and Operations. The current release of SCOM with the integrated Avicode software instrumentation abilities make it a powerful tool for software development and management.</p>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-module sidebar-module-inset"><img src="/img/adam-circle.png" style="width:150px">
+            <h4>About Adam</h4>
+            <p>Currently writing .Net code for a local university but loving Node.js and AngularJS. I love writing code, kayaking, hiking and woodworking.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Using in Anger</h4>
+            <ol class="list-unstyled">
+              <li>Windows Azure</li>
+              <li>AngularJS</li>
+              <li>C&#35;, JavaScript, PowerShell</li>
+              <li>Visual Studio 2013</li>
+              <li>Microsoft.Net 4.5</li>
+              <li>Asp.Net MVC, Web API</li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Learning</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://nodejs.org/">Node.js</a></li>
+              <li><a href="http://lesscss.org/">Less CSS</a></li>
+              <li><a href="https://www.docker.io/">Docker</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/awolf">GitHub</a></li>
+              <li><a href="https://twitter.com/adamjwolf">Twitter</a></li>
+              <li><a href="https://www.facebook.com/adam.j.wolf">Facebook</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-footer"></div>
+  </body>
+</html>
