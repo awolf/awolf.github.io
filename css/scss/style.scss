@@ -1,0 +1,9 @@
+@import "normalize";
+@import "bourbon/_bourbon";
+@import "base/_base";
+@import "neat/_neat";
+
+section {
+  @include outer-container(700px);
+  article { @include span-columns(12); }
+}
