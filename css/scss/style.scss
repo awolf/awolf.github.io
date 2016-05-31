@@ -22,7 +22,7 @@ body {
   article {
     @include row;
     @include span-columns(12);
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 
     header {
       height: 430px;
@@ -43,4 +43,20 @@ body {
       }
     }
   }
+}
+
+#author {
+  padding-bottom: 140px;
+  img {
+    width: 125px;
+    float:left;
+    margin-right: 30px;
+  }
+  #author-name {
+    color: #666;
+  }
+  i {
+    font-size: medium;
+  }
+
 }
