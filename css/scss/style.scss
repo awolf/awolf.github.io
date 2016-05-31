@@ -3,7 +3,44 @@
 @import "base/_base";
 @import "neat/_neat";
 
-section {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+
+blockquote {
+  color: #666;
+  margin: 10px 30px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+  font: {
+    style: italic;
+  };
+}
+
+body {
+  padding: 0 10px 10px 10px;
   @include outer-container(700px);
-  article { @include span-columns(12); }
+
+  article {
+    @include row;
+    @include span-columns(12);
+    margin-bottom: 120px;
+
+    header {
+      height: 430px;
+      background-color: purple;
+      margin-bottom: 40px;
+      position: relative;
+
+      h1 {
+        color:white;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        margin-bottom: 10px;
+        font: {
+          size: 72px;
+          weight: 300;
+        };
+      }
+    }
+  }
 }
