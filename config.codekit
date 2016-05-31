@@ -29,6 +29,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/back-to-basics-blog\/basic-tools.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105210,
+		"inputAbbreviatedPath": "\/back-to-basics-blog\/basic-tools.png",
+		"outputAbbreviatedPath": "\/back-to-basics-blog\/basic-tools.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/back-to-basics-blog\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
