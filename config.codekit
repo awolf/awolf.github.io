@@ -40,36 +40,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/back-to-basics-blog\/content.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/content.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/back-to-basics-blog\/content.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 1,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/content.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/back-to-basics-blog\/content.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
 	"\/back-to-basics-blog\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
