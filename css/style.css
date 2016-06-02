@@ -432,10 +432,10 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.25em;
+  font-size: 1.5625em;
   line-height: 1.3;
   margin: 0 0 0.85em;
-  font-weight: normal; }
+  font-weight: lighter; }
 
 p {
   margin: 0 0 0.85em; }
@@ -469,6 +469,18 @@ blockquote {
   font-style: italic;
   font-size: 1.2em;
   font-family: "Raleway", sans-serif; }
+
+nav {
+  text-align: center;
+  padding: 20px 0; }
+  nav li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px; }
+    nav li a {
+      color: #999;
+      text-transform: uppercase;
+      font-size: .9em; }
 
 body {
   padding: 0 10px 10px 10px;
@@ -522,7 +534,7 @@ body {
     color: #999; }
 
 #author {
-  padding-bottom: 140px; }
+  padding-bottom: 40px; }
   #author img {
     width: 125px;
     float: left;
@@ -561,8 +573,6 @@ ol.cards {
       position: relative;
       border-top: 1px solid #ccc;
       padding: 15px; }
-      ol.cards li.card div.card-details h2 {
-        font-weight: 700; }
       ol.cards li.card div.card-details p {
         font-size: 15px;
         color: #999; }

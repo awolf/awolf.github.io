@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_partials\/_nav.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_partials\/_nav.kit",
+		"outputAbbreviatedPath": "\/_partials\/_nav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/back-to-basics-blog\/_artical.kit": {
 		"fileType": 2048,
 		"ignore": 1,
