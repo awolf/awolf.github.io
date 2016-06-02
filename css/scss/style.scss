@@ -54,6 +54,23 @@ body {
   }
 }
 
+#blog-header {
+  text-align: center;
+  padding: 40px 0 20px 0;
+
+  h1 {
+    margin: 0;
+    font: {
+      size: 75px;
+      weight: normal;
+    }
+  }
+  em {
+    font-size: medium;
+    color: $medium-gray;
+  }
+}
+
 #author {
   padding-bottom: 140px;
   img {
@@ -67,5 +84,48 @@ body {
   i {
     font-size: medium;
   }
+}
 
+ol.cards {
+  @include row;
+  @include span-columns(12);
+  margin-right: 0px;
+  padding-bottom: 60px;
+
+  li {
+    width: 100%;
+    float:none;
+    padding: 30px 0;
+
+    @media screen and (min-width: $large-screen) {
+      width: 325px;
+      float:left;
+      margin: 0 15px 30px 0;
+    }
+
+    div.card {
+      position: relative;
+      box-shadow: 1px 1px 5px $medium-gray;
+      div.card-img {
+
+      }
+      div.card-details {
+        border-top: 1px solid #ccc;
+        padding: 15px;
+        h2 {
+          font-weight:700;
+        }
+        p {
+          font: {
+            size: 15px;
+          }
+          color: $medium-gray;
+        }
+        em {
+          font-size: .8em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
