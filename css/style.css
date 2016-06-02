@@ -527,8 +527,9 @@ body {
     width: 125px;
     float: left;
     margin-right: 30px; }
-  #author #author-name {
-    color: #999; }
+  #author h4 {
+    color: #999;
+    margin-bottom: 0px; }
   #author i {
     font-size: medium; }
 
