@@ -597,4 +597,13 @@ ol.cards {
           family: "Raleway", sans-serif;
           size: 22px; }
 
+#resume {
+  padding-bottom: 40px; }
+  #resume h3 {
+    font-size: 1.3em;
+    margin: 20px 0 0 0; }
+  #resume h6 {
+    font-size: 1em;
+    color: #999; }
+
 /*# sourceMappingURL=style.css.map */
