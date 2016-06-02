@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/back-to-basics-blog\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/back-to-basics-blog\/_card.kit",
+		"outputAbbreviatedPath": "\/back-to-basics-blog\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/back-to-basics-blog\/basic-tools.png": {
 		"fileType": 32768,
 		"ignore": 0,

@@ -91,12 +91,14 @@ ol.cards {
   @include row;
   @include span-columns(12);
   margin-right: 0px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 
-  li {
+  li.card {
     width: 100%;
     float:none;
-    padding: 30px 0;
+    margin: 30px 0;
+    box-shadow: 1px 1px 5px $medium-gray;
+
 
     @media screen and (min-width: $large-screen) {
       width: 325px;
@@ -104,27 +106,45 @@ ol.cards {
       margin: 0 15px 30px 0;
     }
 
-    div.card {
-      position: relative;
-      box-shadow: 1px 1px 5px $medium-gray;
-      div.card-img {
-
+    div.card-details {
+      position:relative;
+      border-top: 1px solid #ccc;
+      padding: 15px;
+      h2 {
+        font-weight:700;
       }
-      div.card-details {
-        border-top: 1px solid #ccc;
-        padding: 15px;
-        h2 {
-          font-weight:700;
+      p {
+        font: {
+          size: 15px;
         }
-        p {
-          font: {
-            size: 15px;
-          }
-          color: $medium-gray;
-        }
-        em {
-          font-size: .8em;
-          text-transform: uppercase;
+        color: $medium-gray;
+      }
+      em {
+        font-size: .8em;
+        text-transform: uppercase;
+      }
+
+      .card-badge {
+        width: 60px;
+        height: 60px;
+        position:relative;
+        float: right;
+        top:-40px;
+
+        background-color: green;
+        color: white;
+
+        border: 5px solid white;
+        border-radius: 50px;
+        box-shadow: 1px 1px 5px $medium-gray;
+
+        text-align: center;
+        line-height: 1.5em;
+        padding-top: 8px;
+
+        font {
+          family: $heading-font-family;
+          size: 22px;
         }
       }
     }

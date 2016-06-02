@@ -540,35 +540,51 @@ ol.cards {
   margin-right: 2.3576515979%;
   width: 100%;
   margin-right: 0px;
-  padding-bottom: 60px; }
+  padding: 60px 0; }
   ol.cards::after {
     clear: both;
     content: "";
     display: block; }
   ol.cards:last-child {
     margin-right: 0; }
-  ol.cards li {
+  ol.cards li.card {
     width: 100%;
     float: none;
-    padding: 30px 0; }
+    margin: 30px 0;
+    box-shadow: 1px 1px 5px #999; }
     @media screen and (min-width: 715px) {
-      ol.cards li {
+      ol.cards li.card {
         width: 325px;
         float: left;
         margin: 0 15px 30px 0; } }
-    ol.cards li div.card {
+    ol.cards li.card div.card-details {
       position: relative;
-      box-shadow: 1px 1px 5px #999; }
-      ol.cards li div.card div.card-details {
-        border-top: 1px solid #ccc;
-        padding: 15px; }
-        ol.cards li div.card div.card-details h2 {
-          font-weight: 700; }
-        ol.cards li div.card div.card-details p {
-          font-size: 15px;
-          color: #999; }
-        ol.cards li div.card div.card-details em {
-          font-size: .8em;
-          text-transform: uppercase; }
+      border-top: 1px solid #ccc;
+      padding: 15px; }
+      ol.cards li.card div.card-details h2 {
+        font-weight: 700; }
+      ol.cards li.card div.card-details p {
+        font-size: 15px;
+        color: #999; }
+      ol.cards li.card div.card-details em {
+        font-size: .8em;
+        text-transform: uppercase; }
+      ol.cards li.card div.card-details .card-badge {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        float: right;
+        top: -40px;
+        background-color: green;
+        color: white;
+        border: 5px solid white;
+        border-radius: 50px;
+        box-shadow: 1px 1px 5px #999;
+        text-align: center;
+        line-height: 1.5em;
+        padding-top: 8px; }
+        ol.cards li.card div.card-details .card-badge font {
+          family: "Raleway", sans-serif;
+          size: 22px; }
 
 /*# sourceMappingURL=style.css.map */
