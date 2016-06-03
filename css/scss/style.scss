@@ -19,11 +19,11 @@ blockquote {
 
 nav {
   text-align: center;
-  padding: 20px 0;
+  padding-bottom: 60px;
   li {
     display: inline;
     list-style-type: none;
-    padding-right: 20px;
+    padding: 0 20px;
     a {
       color: $medium-gray;
       text-transform:uppercase;
@@ -71,8 +71,7 @@ body {
 
 #blog-header {
   text-align: center;
-  padding: 40px 0 20px 0;
-
+  padding: 40px 0 0 0;
   h1 {
     margin: 0;
     font: {
@@ -87,7 +86,9 @@ body {
 }
 
 #author {
-  padding-bottom: 40px;
+  @include row;
+  @include span-columns(12);
+  padding: 40px 0;
   img {
     width: 125px;
     float:left;
@@ -116,7 +117,7 @@ section.person {
   }
   em {
     font-size: medium;
-    
+
     display: block;
     color: $medium-gray;
   }
@@ -126,7 +127,6 @@ ol.cards {
   @include row;
   @include span-columns(12);
   margin-right: 0px;
-  padding: 60px 0;
 
   li.card {
     width: 100%;
@@ -184,7 +184,8 @@ ol.cards {
 }
 
 #resume {
-  padding-bottom: 40px;
+  @include row;
+  @include span-columns(12);
   h3 {
     font-size: 1.3em;
     margin: 20px 0 0 0;
@@ -192,5 +193,8 @@ ol.cards {
   h6 {
     font-size: 1em;
     color: $medium-gray;
+  }
+  blockquote {
+    margin-top: 0px;
   }
 }

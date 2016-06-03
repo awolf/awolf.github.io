@@ -471,11 +471,11 @@ blockquote {
 
 nav {
   text-align: center;
-  padding: 20px 0; }
+  padding-bottom: 60px; }
   nav li {
     display: inline;
     list-style-type: none;
-    padding-right: 20px; }
+    padding: 0 20px; }
     nav li a {
       color: #999;
       text-transform: uppercase;
@@ -523,7 +523,7 @@ body {
 
 #blog-header {
   text-align: center;
-  padding: 40px 0 20px 0; }
+  padding: 40px 0 0 0; }
   #blog-header h1 {
     margin: 0;
     font-size: 75px;
@@ -533,7 +533,18 @@ body {
     color: #999; }
 
 #author {
-  padding-bottom: 40px; }
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  padding: 40px 0; }
+  #author::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #author:last-child {
+    margin-right: 0; }
   #author img {
     width: 125px;
     float: left;
@@ -565,8 +576,7 @@ ol.cards {
   display: block;
   margin-right: 2.3576515979%;
   width: 100%;
-  margin-right: 0px;
-  padding: 60px 0; }
+  margin-right: 0px; }
   ol.cards::after {
     clear: both;
     content: "";
@@ -612,10 +622,22 @@ ol.cards {
           size: 22px; }
 
 #resume {
-  padding-bottom: 40px; }
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%; }
+  #resume::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #resume:last-child {
+    margin-right: 0; }
   #resume h3 {
     font-size: 1.3em;
     margin: 20px 0 0 0; }
   #resume h6 {
     font-size: 1em;
     color: #999; }
+  #resume blockquote {
+    margin-top: 0px; }
