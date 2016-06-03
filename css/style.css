@@ -519,8 +519,8 @@ article {
   article img {
     margin: 20px; }
     article img.aligncenter {
-      width: 100%;
-      clear: both; }
+      margin: auto;
+      display: block; }
     article img.alignleft {
       float: left; }
     article img.alignright {

@@ -61,10 +61,9 @@ article {
   }
   img {
     margin: 20px;
-
     &.aligncenter {
-      width:100%;
-      clear: both;
+      margin: auto;
+      display: block;
     }
     &.alignleft {
       float:left;
