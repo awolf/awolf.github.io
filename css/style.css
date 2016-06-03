@@ -490,36 +490,36 @@ body {
     clear: both;
     content: "";
     display: block; }
-  body article {
-    display: block;
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
+
+article {
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%; }
+  article::after {
+    clear: both;
+    content: "";
+    display: block; }
+  article:last-child {
+    margin-right: 0; }
+  article header {
+    height: 430px;
+    background-color: purple;
+    margin-bottom: 40px;
+    position: relative; }
+    article header h1 {
+      color: white;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      margin-bottom: 10px;
+      font-size: 72px;
+      font-weight: 300; }
+  article img {
     width: 100%;
-    margin-bottom: 60px; }
-    body article::after {
-      clear: both;
-      content: "";
-      display: block; }
-    body article:last-child {
-      margin-right: 0; }
-    body article header {
-      height: 430px;
-      background-color: purple;
-      margin-bottom: 40px;
-      position: relative; }
-      body article header h1 {
-        color: white;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        margin-bottom: 10px;
-        font-size: 72px;
-        font-weight: 300; }
-    body article img {
-      width: 100%;
-      padding-top: 20px;
-      padding-bottom: 20px; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 #blog-header {
   text-align: center;
