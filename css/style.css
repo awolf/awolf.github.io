@@ -443,7 +443,6 @@ p {
 a {
   color: #1565c0;
   text-decoration: none;
-  -webkit-transition: color 150ms ease;
   transition: color 150ms ease; }
   a:active, a:focus, a:hover {
     color: #104c90; }
@@ -545,6 +544,21 @@ body {
   #author i {
     font-size: medium; }
 
+section.person {
+  padding-bottom: 40px;
+  clear: both; }
+  section.person img {
+    width: 125px;
+    float: left;
+    margin-right: 30px; }
+  section.person h4 {
+    color: #999;
+    margin-bottom: 0px; }
+  section.person em {
+    font-size: medium;
+    display: block;
+    color: #999; }
+
 ol.cards {
   display: block;
   float: left;
@@ -605,5 +619,3 @@ ol.cards {
   #resume h6 {
     font-size: 1em;
     color: #999; }
-
-/*# sourceMappingURL=style.css.map */

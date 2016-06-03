@@ -102,6 +102,26 @@ body {
   }
 }
 
+section.person {
+  padding-bottom: 40px;
+  clear:both;
+  img {
+    width: 125px;
+    float:left;
+    margin-right: 30px;
+  }
+  h4 {
+    color: $medium-gray;
+    margin-bottom: 0px;
+  }
+  em {
+    font-size: medium;
+    
+    display: block;
+    color: $medium-gray;
+  }
+}
+
 ol.cards {
   @include row;
   @include span-columns(12);
