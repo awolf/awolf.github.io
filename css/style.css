@@ -517,9 +517,14 @@ article {
       font-size: 72px;
       font-weight: 300; }
   article img {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    margin: 20px; }
+    article img.aligncenter {
+      width: 100%;
+      clear: both; }
+    article img.alignleft {
+      float: left; }
+    article img.alignright {
+      float: right; }
 
 #blog-header {
   text-align: center;

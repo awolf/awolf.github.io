@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Blog of Adam J Wolf">
+<meta name="Adam J Wolf" content="Blog of Adam J Wolf">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/manifest.json">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel='stylesheet' href='\css\style.css' type='text/css' media='all' />
+    <title>Adam J Wolf - Back to Basics Blog Rewrite</title>
+  </head>
+  <body>
+    <article >
+	<header>
+	<h1>Taking Attendance with Beacons and Microsoft Azure</h1>
+  </header>
+
+<p>
+  This post is going to be a little different than my normal Xamarin.Forms posts. I want you all to know that I am more than a pretty interface. I have architectural and distributed systems chops as well.
+</p>
+<p>
+  I currently work for a local university that needs a solution for taking attendance for the first 3 weeks of every semester. You see, the university I work for is not an attendance taking university, but we need to satisfy a government requirement to take a student&#8217;s attendance to get financial aid. So I was asked to solve this little problem using mobile.
+</p>
+
+<h4>Here was the challenge</h4>
+<blockquote><p>Students will walk into class and have their attendance taken automatically without the teachers involvement. Magically Delicious!</p></blockquote>
+
+<h2><img class="alignright"  src="\posts\attendance-with-beacons-and-microsoft-azure\BeaconRadar.png" alt="BeaconRadar" width="312" height="323" />Beacons</h2>
+
+<p>
+  To solve the problem, I combined some very cool technology and one of them, of course, is Xamarin and Xamarin.Forms, but it&#8217;s not the star of this blog post. The star is iBeacons, specifically <a href="http://estimote.com/"  target="_blank">Estimote</a> Beacons.
+</p>
+
+<p>
+  If you don&#8217;t know what an iBeacon is, don&#8217;t worry. Think of them as tiny radio stations that transmit their signal over Bluetooth. The Bluetooth signal can range from a few feet to over 200 feet for each station.
+</p>
+<p>
+  The beacons broadcast a small amount of data every few seconds to receivers that are tuned to its specific address. Each classroom at the university will get its own beacon and it will broadcast the building and the room number of the classroom.
+</p>
+<p>
+  When a phone comes in contact with the beacons signal, it will then wake the Xamarin app up and give it 10 seconds to do its work. This works even if your app is not running. Neat!
+</p>
+
+<h2>Beacon Phone Home</h2>
+<p>
+  Ok, now that the phone has come into range of our classroom radio station, what do we do now? For this application, the app transmits the beacon data and the student&#8217;s identity to the cloud. We call this message a beacon ping. To the cloud!
+</p>
+
+<p><img class="aligncenter" src="\posts\attendance-with-beacons-and-microsoft-azure\AzureBeaconCloudPS.png" alt="AzureBeaconCloudPS" width="700" height="414" /></p>
+
+<p>
+  The university&#8217;s student mobile application is backed by an Node.js Azure Mobile Service. I know, I use C# on the phone and JavaScript on the server, the irony!
+</p>
+
+<p>
+  <img class="alignright" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-cloud.png" alt="cir-cloud" width="100" height="100" />As you can imagine, we will have a lot of pings coming into the Azure front ends. Today most of that data will be used for attendance but we have no idea where the school will place beacons in the future. Maybe they&#8217;ll put them in front of the food venues to figure out which is the most popular. Or put them on the light posts outside to see what walkways are the busiest. We just don&#8217;t know what the genie will do once it&#8217;s let out of the bottle.
+</p>
+
+<h2>Beacon PubSub</h2>
+<p>
+  With all the unknowns for our system, flexibility was something we had to build into the system from the beginning. I decided to use the Azure Message Bus in a PubSub configuration to handle today&#8217;s and tomorrow&#8217;s requirements. This configuration is very powerful and it&#8217;s so simple to setup it borders on criminal.
+</p>
+
+<p>
+  <img class="aligncenter" src="\posts\attendance-with-beacons-and-microsoft-azure\BeaconStreamTopology.png" alt="BeaconStreamTopology"/>
+</p>
+<p>
+  Our day 1 configuration for the Beacon PubSub was for the Azure Mobile Service to take in pings from the handset and push them onto the &#8220;BeaconPing&#8221; topic inside of the Azure Message Bus. Two subscriptions are added to the topic, one for taking attendance and one for auditing.
+</p>
+
+<h3>Taking Attendance</h3>
+
+<p>
+  <img class="alignleft" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-todo-list.png" alt="cir-todo-list" width="100" height="100" />Taking attendance is pretty simple. For every ping, we look up a student&#8217;s schedule based on the StudentId inside the ping and see if the beacon&#8217;s location matches the classroom on their schedule. If we have a match, then we mark them as attended. If not, we throw the ping away and move on. Students can easily come into contact with beacons from other classrooms so we just handle that case by ignoring the ping. The attendance module is idempotent so duplicates are not a problem.
+</p>
+
+<h3>Auditing</h3>
+
+<p>
+  The audit subscription will subscribe to every ping and put the pings into Hadoop for future analysis. I have no doubt our computer science students will have some fun with that data in the years to come.
+</p>
+
+<h3>The Future</h3>
+<p>
+  <img class="alignright" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-pacman.png" alt="cir-pacman" width="100" height="100" />One of the benefits to using PubSub like this is flexibility. With each ping, identifying the student and a location on campus, the opportunities are endless. One scenario we like to talk about is placing a beacon on our school mascot and running reports to see what part of the student body came in contact with our furry friend. I don&#8217;t know why we would want to do that, but we could. Beacons don&#8217;t have to be stationary either.
+</p>
+
+<h2>The Endless Possibilities</h2>
+
+<p>
+  <img class="alignleft" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-rotate-clockwise.png" alt="cir-rotate-clockwise" width="100" height="100" />The one reason why I like this system and setup is flexibility and the fact that we don&#8217;t have to change the code on the mobile app when we add a new type of beacon or beacon processor. We just put more beacons on campus and another processor in the cloud and we&#8217;re done. See, like I said in the beginning of this post, I&#8217;m not just a pretty interface!
+</p>
+<p>
+  One thing to note here is that some students might not have a phone or wish to be tracked in this manner. Our students using the app have a choice to enable or disable this feature and we still have to have a manual way to taking attendance at the school. Because some student may have a Windows or Blackberry phone! 😉
+</p>
+</article>
+    <section id="author">
+  <img src="\img/adam-badge-small.png" alt="Adam J Wolf" />
+  <h4>
+    Adam J Wolf
+  </h4>
+  <i>
+    I'm a code craftsman living in the valley of the sun (Phoenix). I write code all the time, woodwork at night, and paddle my kayak on the weekends.
+  </i>
+</section>
+    <nav>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/pages/resume.html">Resume</a></li>
+    <li><a href="/pages/work.html">Work</a></li>
+    <li><a href="/pages/about.html">About</a></li>
+  </ol>
+</nav>
+  </body>
+</html>

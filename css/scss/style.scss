@@ -60,10 +60,17 @@ article {
     }
   }
   img {
-    width: 100%;
-    padding: {
-      top: 20px;
-      bottom: 20px
+    margin: 20px;
+
+    &.aligncenter {
+      width:100%;
+      clear: both;
+    }
+    &.alignleft {
+      float:left;
+    }
+    &.alignright {
+      float:right;
     }
   }
 }

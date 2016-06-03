@@ -1802,6 +1802,119 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/_card.kit",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/AzureBeaconCloudPS.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34816,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/AzureBeaconCloudPS.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/AzureBeaconCloudPS.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconRadar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23323,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconRadar.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconRadar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconStreamTopology.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24141,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconStreamTopology.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/BeaconStreamTopology.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-cloud.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1656,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-cloud.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-cloud.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-pacman.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2164,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-pacman.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-pacman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-rotate-clockwise.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1786,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-rotate-clockwise.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-rotate-clockwise.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-todo-list.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1528,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-todo-list.png",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/cir-todo-list.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/attendance-with-beacons-and-microsoft-azure\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/index.kit",
+		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/README.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
