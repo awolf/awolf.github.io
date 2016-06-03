@@ -608,7 +608,7 @@ ol.cards {
         height: 60px;
         position: relative;
         float: right;
-        top: -40px;
+        top: -45px;
         background-color: green;
         color: white;
         border: 5px solid white;
@@ -616,7 +616,7 @@ ol.cards {
         box-shadow: 1px 1px 5px #999;
         text-align: center;
         line-height: 1.5em;
-        padding-top: 8px; }
+        padding-top: 10px; }
         ol.cards li.card div.card-details .card-badge font {
           family: "Raleway", sans-serif;
           size: 22px; }
