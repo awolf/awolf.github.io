@@ -50,7 +50,7 @@
 	<h4>Here was the challenge</h4>
 	<blockquote><p>Students will walk into class and have their attendance taken automatically without the teachers involvement. Magically Delicious!</p></blockquote>
 
-	<h2><img class="alignright"  src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconRadar.png" alt="BeaconRadar" width="312" height="323" />Beacons</h2>
+	<h2><img class="alignright"  src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconRadar.png" alt="Beacon Radar" width="312" height="323" />Beacons</h2>
 
 	<p>
 	  To solve the problem, I combined some very cool technology and one of them, of course, is Xamarin and Xamarin.Forms, but it&#8217;s not the star of this blog post. The star is iBeacons, specifically <a href="http://estimote.com/"  target="_blank">Estimote</a> Beacons.
@@ -71,7 +71,7 @@
 	  Ok, now that the phone has come into range of our classroom radio station, what do we do now? For this application, the app transmits the beacon data and the student&#8217;s identity to the cloud. We call this message a beacon ping. To the cloud!
 	</p>
 
-	<p><img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/AzureBeaconCloudPS.png" alt="AzureBeaconCloudPS" /></p>
+	<p><img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/AzureBeaconCloudPS.png" alt="Azure Beacon Cloud PS" /></p>
 
 	<p>
 	  The university&#8217;s student mobile application is backed by an Node.js Azure Mobile Service. I know, I use C# on the phone and JavaScript on the server, the irony!
@@ -87,7 +87,7 @@
 	</p>
 
 	<p>
-	  <img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconStreamTopology.png" alt="BeaconStreamTopology"/>
+	  <img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconStreamTopology.png" alt="Beacon Stream Topology"/>
 	</p>
 	<p>
 	  Our day 1 configuration for the Beacon PubSub was for the Azure Mobile Service to take in pings from the handset and push them onto the &#8220;BeaconPing&#8221; topic inside of the Azure Message Bus. Two subscriptions are added to the topic, one for taking attendance and one for auditing.
