@@ -13,7 +13,7 @@
 	<h4>Here was the challenge</h4>
 	<blockquote><p>Students will walk into class and have their attendance taken automatically without the teachers involvement. Magically Delicious!</p></blockquote>
 
-	<h2><img class="alignright"  src="\posts\attendance-with-beacons-and-microsoft-azure\BeaconRadar.png" alt="BeaconRadar" width="312" height="323" />Beacons</h2>
+	<h2><img class="alignright"  src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconRadar.png" alt="BeaconRadar" width="312" height="323" />Beacons</h2>
 
 	<p>
 	  To solve the problem, I combined some very cool technology and one of them, of course, is Xamarin and Xamarin.Forms, but it&#8217;s not the star of this blog post. The star is iBeacons, specifically <a href="http://estimote.com/"  target="_blank">Estimote</a> Beacons.
@@ -34,14 +34,14 @@
 	  Ok, now that the phone has come into range of our classroom radio station, what do we do now? For this application, the app transmits the beacon data and the student&#8217;s identity to the cloud. We call this message a beacon ping. To the cloud!
 	</p>
 
-	<p><img class="aligncenter" src="\posts\attendance-with-beacons-and-microsoft-azure\AzureBeaconCloudPS.png" alt="AzureBeaconCloudPS" /></p>
+	<p><img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/AzureBeaconCloudPS.png" alt="AzureBeaconCloudPS" /></p>
 
 	<p>
 	  The university&#8217;s student mobile application is backed by an Node.js Azure Mobile Service. I know, I use C# on the phone and JavaScript on the server, the irony!
 	</p>
 
 	<p>
-	  <img class="alignright" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-cloud.png" alt="cir-cloud" width="100" height="100" />As you can imagine, we will have a lot of pings coming into the Azure front ends. Today most of that data will be used for attendance but we have no idea where the school will place beacons in the future. Maybe they&#8217;ll put them in front of the food venues to figure out which is the most popular. Or put them on the light posts outside to see what walkways are the busiest. We just don&#8217;t know what the genie will do once it&#8217;s let out of the bottle.
+	  <img class="alignright" src="/posts/attendance-with-beacons-and-microsoft-azure/cir-cloud.png" alt="cir-cloud" width="100" height="100" />As you can imagine, we will have a lot of pings coming into the Azure front ends. Today most of that data will be used for attendance but we have no idea where the school will place beacons in the future. Maybe they&#8217;ll put them in front of the food venues to figure out which is the most popular. Or put them on the light posts outside to see what walkways are the busiest. We just don&#8217;t know what the genie will do once it&#8217;s let out of the bottle.
 	</p>
 
 	<h2>Beacon PubSub</h2>
@@ -50,7 +50,7 @@
 	</p>
 
 	<p>
-	  <img class="aligncenter" src="\posts\attendance-with-beacons-and-microsoft-azure\BeaconStreamTopology.png" alt="BeaconStreamTopology"/>
+	  <img class="aligncenter" src="/posts/attendance-with-beacons-and-microsoft-azure/BeaconStreamTopology.png" alt="BeaconStreamTopology"/>
 	</p>
 	<p>
 	  Our day 1 configuration for the Beacon PubSub was for the Azure Mobile Service to take in pings from the handset and push them onto the &#8220;BeaconPing&#8221; topic inside of the Azure Message Bus. Two subscriptions are added to the topic, one for taking attendance and one for auditing.
@@ -59,7 +59,7 @@
 	<h3>Taking Attendance</h3>
 
 	<p>
-	  <img class="alignleft" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-todo-list.png" alt="cir-todo-list" width="100" height="100" />Taking attendance is pretty simple. For every ping, we look up a student&#8217;s schedule based on the StudentId inside the ping and see if the beacon&#8217;s location matches the classroom on their schedule. If we have a match, then we mark them as attended. If not, we throw the ping away and move on. Students can easily come into contact with beacons from other classrooms so we just handle that case by ignoring the ping. The attendance module is idempotent so duplicates are not a problem.
+	  <img class="alignleft" src="/posts/attendance-with-beacons-and-microsoft-azure/cir-todo-list.png" alt="cir-todo-list" width="100" height="100" />Taking attendance is pretty simple. For every ping, we look up a student&#8217;s schedule based on the StudentId inside the ping and see if the beacon&#8217;s location matches the classroom on their schedule. If we have a match, then we mark them as attended. If not, we throw the ping away and move on. Students can easily come into contact with beacons from other classrooms so we just handle that case by ignoring the ping. The attendance module is idempotent so duplicates are not a problem.
 	</p>
 
 	<h3>Auditing</h3>
@@ -70,13 +70,13 @@
 
 	<h3>The Future</h3>
 	<p>
-	  <img class="alignright" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-pacman.png" alt="cir-pacman" width="100" height="100" />One of the benefits to using PubSub like this is flexibility. With each ping, identifying the student and a location on campus, the opportunities are endless. One scenario we like to talk about is placing a beacon on our school mascot and running reports to see what part of the student body came in contact with our furry friend. I don&#8217;t know why we would want to do that, but we could. Beacons don&#8217;t have to be stationary either.
+	  <img class="alignright" src="/posts/attendance-with-beacons-and-microsoft-azure/cir-pacman.png" alt="cir-pacman" width="100" height="100" />One of the benefits to using PubSub like this is flexibility. With each ping, identifying the student and a location on campus, the opportunities are endless. One scenario we like to talk about is placing a beacon on our school mascot and running reports to see what part of the student body came in contact with our furry friend. I don&#8217;t know why we would want to do that, but we could. Beacons don&#8217;t have to be stationary either.
 	</p>
 
 	<h2>The Endless Possibilities</h2>
 
 	<p>
-	  <img class="alignleft" src="\posts\attendance-with-beacons-and-microsoft-azure\cir-rotate-clockwise.png" alt="cir-rotate-clockwise" width="100" height="100" />The one reason why I like this system and setup is flexibility and the fact that we don&#8217;t have to change the code on the mobile app when we add a new type of beacon or beacon processor. We just put more beacons on campus and another processor in the cloud and we&#8217;re done. See, like I said in the beginning of this post, I&#8217;m not just a pretty interface!
+	  <img class="alignleft" src="/posts/attendance-with-beacons-and-microsoft-azure/cir-rotate-clockwise.png" alt="cir-rotate-clockwise" width="100" height="100" />The one reason why I like this system and setup is flexibility and the fact that we don&#8217;t have to change the code on the mobile app when we add a new type of beacon or beacon processor. We just put more beacons on campus and another processor in the cloud and we&#8217;re done. See, like I said in the beginning of this post, I&#8217;m not just a pretty interface!
 	</p>
 	<p>
 	  One thing to note here is that some students might not have a phone or wish to be tracked in this manner. Our students using the app have a choice to enable or disable this feature and we still have to have a manual way to taking attendance at the school. Because some student may have a Windows or Blackberry phone! 😉
