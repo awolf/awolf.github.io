@@ -38,53 +38,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/back-to-basics-blog\/_artical.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/_artical.kit",
-		"outputAbbreviatedPath": "\/back-to-basics-blog\/_artical.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/back-to-basics-blog\/_card.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/_card.kit",
-		"outputAbbreviatedPath": "\/back-to-basics-blog\/_card.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/back-to-basics-blog\/basic-tools.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 105210,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/basic-tools.png",
-		"outputAbbreviatedPath": "\/back-to-basics-blog\/basic-tools.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/back-to-basics-blog\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/back-to-basics-blog\/index.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/back-to-basics-blog\/index.kit",
-		"outputAbbreviatedPath": "\/back-to-basics-blog\/index.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/scss\/_normalize.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1912,6 +1865,53 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/index.kit",
 		"outputAbbreviatedPath": "\/posts\/attendance-with-beacons-and-microsoft-azure\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/back-to-basics-blog\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/back-to-basics-blog\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/back-to-basics-blog\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/back-to-basics-blog\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/back-to-basics-blog\/_card.kit",
+		"outputAbbreviatedPath": "\/posts\/back-to-basics-blog\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/back-to-basics-blog\/basic-tools.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105210,
+		"inputAbbreviatedPath": "\/posts\/back-to-basics-blog\/basic-tools.png",
+		"outputAbbreviatedPath": "\/posts\/back-to-basics-blog\/basic-tools.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/back-to-basics-blog\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/back-to-basics-blog\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/back-to-basics-blog\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/back-to-basics-blog\/index.kit",
+		"outputAbbreviatedPath": "\/posts\/back-to-basics-blog\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
