@@ -61,16 +61,19 @@ article {
   }
   img {
     margin: 20px;
-    &.aligncenter {
-      margin: auto;
-      display: block;
-    }
-    &.alignleft {
-      float:left;
-    }
-    &.alignright {
-      float:right;
-    }
+  }
+}
+
+img {
+  &.aligncenter {
+    margin: auto;
+    display: block;
+  }
+  &.alignleft {
+    float:left;
+  }
+  &.alignright {
+    float:right;
   }
 }
 

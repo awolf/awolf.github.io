@@ -518,13 +518,14 @@ article {
       font-weight: 300; }
   article img {
     margin: 20px; }
-    article img.aligncenter {
-      margin: auto;
-      display: block; }
-    article img.alignleft {
-      float: left; }
-    article img.alignright {
-      float: right; }
+
+img.aligncenter {
+  margin: auto;
+  display: block; }
+img.alignleft {
+  float: left; }
+img.alignright {
+  float: right; }
 
 #blog-header {
   text-align: center;
