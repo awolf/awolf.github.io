@@ -1719,23 +1719,100 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/resume.html": {
+	"\/pages\/resume\/bluecognition-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4266,
+		"inputAbbreviatedPath": "\/pages\/resume\/bluecognition-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/bluecognition-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/culinary-craftsman-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3467,
+		"inputAbbreviatedPath": "\/pages\/resume\/culinary-craftsman-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/culinary-craftsman-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/extreme-logic-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3321,
+		"inputAbbreviatedPath": "\/pages\/resume\/extreme-logic-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/extreme-logic-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/gcu-student-app.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4225,
+		"inputAbbreviatedPath": "\/pages\/resume\/gcu-student-app.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/gcu-student-app.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/resume.html",
+		"inputAbbreviatedPath": "\/pages\/resume\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/resume.kit": {
+	"\/pages\/resume\/index.kit": {
 		"fileType": 2048,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/resume.kit",
-		"outputAbbreviatedPath": "\/pages\/resume.html",
+		"inputAbbreviatedPath": "\/pages\/resume\/index.kit",
+		"outputAbbreviatedPath": "\/pages\/resume\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/resume\/pulte-homes-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4714,
+		"inputAbbreviatedPath": "\/pages\/resume\/pulte-homes-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/pulte-homes-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/uhaul-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3608,
+		"inputAbbreviatedPath": "\/pages\/resume\/uhaul-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/uhaul-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/resume\/wells-fargo-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4064,
+		"inputAbbreviatedPath": "\/pages\/resume\/wells-fargo-logo.png",
+		"outputAbbreviatedPath": "\/pages\/resume\/wells-fargo-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/pages\/work\/adam-j-wolf-site-logo.png": {
 		"fileType": 32768,
