@@ -591,8 +591,7 @@ section.person {
     width: 125px;
     float: left;
     margin-right: 30px; }
-  section.person h4 {
-    color: #999;
+  section.person h2 {
     margin-bottom: 0px; }
   section.person em {
     font-size: medium;
@@ -663,7 +662,6 @@ ol.cards {
   #resume:last-child {
     margin-right: 0; }
   #resume h3 {
-    font-size: 1.3em;
     margin: 20px 0 0 0; }
   #resume h6 {
     font-size: 1em;

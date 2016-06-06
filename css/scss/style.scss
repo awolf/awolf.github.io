@@ -147,8 +147,7 @@ section.person {
     float:left;
     margin-right: 30px;
   }
-  h4 {
-    color: $medium-gray;
+  h2 {
     margin-bottom: 0px;
   }
   em {
@@ -223,7 +222,6 @@ ol.cards {
   @include row;
   @include span-columns(12);
   h3 {
-    font-size: 1.3em;
     margin: 20px 0 0 0;
   }
   h6 {
