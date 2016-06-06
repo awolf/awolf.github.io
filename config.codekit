@@ -1408,17 +1408,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/bama-badge-small.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 31603,
-		"inputAbbreviatedPath": "\/img\/bama-badge-small.png",
-		"outputAbbreviatedPath": "\/img\/bama-badge-small.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/favicon-16x16.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1459,17 +1448,6 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/favicon-96x96.png",
 		"outputAbbreviatedPath": "\/img\/favicon-96x96.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/kathy-badge-small.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30439,
-		"inputAbbreviatedPath": "\/img\/kathy-badge-small.png",
-		"outputAbbreviatedPath": "\/img\/kathy-badge-small.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1672,17 +1650,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/wash-badge-small.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30130,
-		"inputAbbreviatedPath": "\/img\/wash-badge-small.png",
-		"outputAbbreviatedPath": "\/img\/wash-badge-small.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -1701,21 +1668,21 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/about.html": {
+	"\/pages\/about\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/about.html",
+		"inputAbbreviatedPath": "\/pages\/about\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/about.kit": {
+	"\/pages\/about\/index.kit": {
 		"fileType": 2048,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/about.kit",
-		"outputAbbreviatedPath": "\/pages\/about.html",
+		"inputAbbreviatedPath": "\/pages\/about\/index.kit",
+		"outputAbbreviatedPath": "\/pages\/about\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
