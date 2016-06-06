@@ -5,6 +5,34 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 
+h1 {
+  font-size: 2em;
+  line-height: 1.25;
+  color: #2c80c9;
+}
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615;
+  color: #46a843;
+}
+
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13636364;
+  color: #d37e00;
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111;
+  color: #185082;
+}
+
+h5 {
+  color: #222222;
+}
+
 blockquote {
   color: $medium-gray;
   margin: 45px 0px 45px 15px;
