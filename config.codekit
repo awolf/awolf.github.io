@@ -1948,7 +1948,7 @@
 		},
 	"\/pages\/work\/work.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/work\/work.html",
 		"outputAbbreviatedPath": "No Output Path",
