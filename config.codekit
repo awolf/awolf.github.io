@@ -1668,6 +1668,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/pages\/about\/adam-badge-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11624,
+		"inputAbbreviatedPath": "\/pages\/about\/adam-badge-small.png",
+		"outputAbbreviatedPath": "\/pages\/about\/adam-badge-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/about\/bama-badge-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10528,
+		"inputAbbreviatedPath": "\/pages\/about\/bama-badge-small.png",
+		"outputAbbreviatedPath": "\/pages\/about\/bama-badge-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/pages\/about\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -1685,6 +1707,28 @@
 		"outputAbbreviatedPath": "\/pages\/about\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/about\/kathy-badge-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10913,
+		"inputAbbreviatedPath": "\/pages\/about\/kathy-badge-small.png",
+		"outputAbbreviatedPath": "\/pages\/about\/kathy-badge-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/pages\/about\/wash-badge-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11056,
+		"inputAbbreviatedPath": "\/pages\/about\/wash-badge-small.png",
+		"outputAbbreviatedPath": "\/pages\/about\/wash-badge-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/pages\/resume\/bluecognition-logo.png": {
 		"fileType": 32768,
@@ -1847,6 +1891,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/pages\/work\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/work\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/work\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/work\/index.kit",
+		"outputAbbreviatedPath": "\/pages\/work\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/pages\/work\/print-to-press.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1912,24 +1974,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/pages\/work\/work.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/work\/work.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/pages\/work\/work.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/work\/work.kit",
-		"outputAbbreviatedPath": "\/pages\/work\/work.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/posts\/attendance-with-beacons-and-microsoft-azure\/_artical.kit": {
 		"fileType": 2048,
