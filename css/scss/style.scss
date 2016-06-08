@@ -162,31 +162,30 @@ section.person {
 ol.cards {
   @include row;
   @include span-columns(12);
-  margin-right: 0px;
+  display: flex;
+  flex-wrap: wrap;
 
   li.card {
-    width: 100%;
-    float:none;
     margin: 30px 0;
     box-shadow: 1px 1px 5px $medium-gray;
 
-
     @media screen and (min-width: $large-screen) {
-      width: 325px;
-      float:left;
+      flex-basis: 325px;
       margin: 0 15px 30px 0;
+      img{
+        height: 200px;
+      }
     }
 
     div.card-details {
-      position:relative;
       border-top: 1px solid #ccc;
       padding: 15px 0 15px 15px;
       p {
         padding-right: 15px;
+        color: $medium-gray;
         font: {
           size: 15px;
         }
-        color: $medium-gray;
       }
       em {
         font-size: .8em;
@@ -200,8 +199,6 @@ ol.cards {
         float: right;
         right:10px;
         top:-45px;
-
-        background-color: green;
         color: white;
 
         border: 5px solid white;
