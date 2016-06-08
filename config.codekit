@@ -1993,6 +1993,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/posts\/3-weeks-from-start-to-store\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/3-weeks-from-start-to-store\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/3-weeks-from-start-to-store\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/posts\/_post-template\/_artical.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -2179,6 +2188,75 @@
 		"outputAbbreviatedPath": "\/posts\/back-to-basics-blog\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/from-start-to-store\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/from-start-to-store\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/_card.kit",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/from-start-to-store\/card.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15646,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/card.jpg",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/card.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/from-start-to-store\/icon.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9465,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/icon.jpg",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/icon.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/from-start-to-store\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/from-start-to-store\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/index.kit",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/from-start-to-store\/screen-shots.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 132773,
+		"inputAbbreviatedPath": "\/posts\/from-start-to-store\/screen-shots.jpg",
+		"outputAbbreviatedPath": "\/posts\/from-start-to-store\/screen-shots.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/posts\/lego-mobile-device-lab-stand\/_artical.kit": {
 		"fileType": 2048,
