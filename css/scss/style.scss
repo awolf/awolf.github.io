@@ -94,6 +94,7 @@ article {
 
 img {
   &.aligncenter {
+    padding: 20px 0;
     margin: auto;
     display: block;
   }
@@ -179,8 +180,9 @@ ol.cards {
     div.card-details {
       position:relative;
       border-top: 1px solid #ccc;
-      padding: 15px;
+      padding: 15px 0 15px 15px;
       p {
+        padding-right: 15px;
         font: {
           size: 15px;
         }
@@ -196,6 +198,7 @@ ol.cards {
         height: 60px;
         position:relative;
         float: right;
+        right:10px;
         top:-45px;
 
         background-color: green;

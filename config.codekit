@@ -2153,6 +2153,86 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/posts\/lego-mobile-device-lab-stand\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/_card.kit",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/card.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16802,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/card.jpg",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/card.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/card.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66793,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/card.png",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/card.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/device-stand.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 113439,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/device-stand.jpg",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/device-stand.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/index.kit",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/lego-mobile-device-lab-stand\/parts.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91818,
+		"inputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/parts.jpg",
+		"outputAbbreviatedPath": "\/posts\/lego-mobile-device-lab-stand\/parts.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/README.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
