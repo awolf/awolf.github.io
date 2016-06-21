@@ -7,7 +7,7 @@
   </p>
   <h2>Amazon S3</h2>
   <p>
-    The biggest different between this site and the new site is the hosting. This blog is hosted right on <a href="http://github.com">GitHub</a> which makes deployment a breeze. To deploy this site all I have to do is commit some code and push it to GitHub.
+    The biggest difference between this site and the new site is the hosting. This blog is hosted right on <a href="http://github.com">GitHub</a> which makes deployment a breeze. To deploy this site all I have to do is commit some code and push it to GitHub.
   </p>
 
   <pre>
@@ -30,12 +30,12 @@
   --exclude "_partials/*"
   </pre>
   <p>
-    The exclude options get rid of the noise from the <a href="https://www.git-scm.com/">Git SCM</a> and Codekit. Theres no need to add these files to the Amazon S3 bucket. I of course add the files for the new site to source control. Don't want to lose all my hard work.
+    The exclude options get rid of the noise from the <a href="https://www.git-scm.com/">Git SCM</a> and Codekit. There's no need to add these files to the Amazon S3 bucket. I of course add the files for the new site to source control. Don't want to lose all my hard work.
   </p>
 
   <h2>Route 53</h2>
   <p>
-    The only difficult thing about the new site setup was configuring <a href="https://aws.amazon.com/route53/">Route 53</a> and the DNS entries on <a href="http://www.hover.com">Hover</a>. With the help of some  documentation and trial and error I was able to configure Route 53 to be the Names Servers for the domain.
+    The only difficult thing about the new site setup was configuring <a href="https://aws.amazon.com/route53/">Route 53</a> and the DNS entries on <a href="http://www.hover.com">Hover</a>. With the help of some documentation and trial and error, I was able to configure Route 53 to be the Names Servers for the domain.
   </p>
   <p>
     Once Amazon Route 53 was the accepted name servers, setting up the forwarding and ANAMES were easy.
@@ -43,5 +43,5 @@
 
   <h2>Easy As Pie</h2>
 
-  Now that I have been through the experience of hosting on Amazon S3 Buckets I must say it's pretty slick. For static sites, I think it's the best option I've found so far. Wonder what my next static site will be.
+  Now that I have been through the experience of hosting on Amazon S3 Buckets, I must say it's pretty slick. For static sites, I think it's the best option I've found so far. Wonder what my next static site will be.
 </article>
