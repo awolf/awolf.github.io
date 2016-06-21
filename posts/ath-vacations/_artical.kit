@@ -1,6 +1,47 @@
 <article>
-  <header style="background-color: #C0C0C0;">
+  <header style="background-color: #DFDFDF;">
     <h1>Aluminum Toy Hauler Vacations</h1>
   </header>
+  <p>
+    Well, I did it again. I put up another <a href="http://www.aluminumtoyhauler.vacations">static site</a> built with <a href="http://www.codekit.com">CodeKit</a> and hosted on <a href="https://aws.amazon.com/s3/">Amazon Web Services S3</a> (Simple Storage Service). The new site takes it's design queues and layout straight from this site, so it will look familiar.
+  </p>
+  <h2>Amazon S3</h2>
+  <p>
+    The biggest different between this site and the new site is the hosting. This blog is hosted right on <a href="http://github.com">GitHub</a> which makes deployment a breeze. To deploy this site all I have to do is commit some code and push it to GitHub.
+  </p>
 
+  <pre>
+  git add .
+  git commit -m "commit message"
+  git push origin master
+  </pre>
+  <p>
+    For the new site the commands is a little different.
+  </p>
+
+  <pre style="white-space: pre-wrap;">
+  aws s3 sync . s3://aluminumtoyhauler.vacations
+  --exclude ".git/*"
+  --exclude "*.kit"
+  --exclude "css/scss/*"
+  --exclude ".DS_Store"
+  --exclude ".gitignore"
+  --exclude "*.codekit"
+  --exclude "_partials/*"
+  </pre>
+  <p>
+    The exclude options get rid of the noise from the <a href="https://www.git-scm.com/">Git SCM</a> and Codekit. Theres no need to add these files to the Amazon S3 bucket. I of course add the files for the new site to source control. Don't want to lose all my hard work.
+  </p>
+
+  <h2>Route 53</h2>
+  <p>
+    The only difficult thing about the new site setup was configuring <a href="https://aws.amazon.com/route53/">Route 53</a> and the DNS entries on <a href="http://www.hover.com">Hover</a>. With the help of some  documentation and trial and error I was able to configure Route 53 to be the Names Servers for the domain.
+  </p>
+  <p>
+    Once Amazon Route 53 was the accepted name servers, setting up the forwarding and ANAMES were easy.
+  </p>
+
+  <h2>Easy As Pie</h2>
+
+  Now that I have been through the experience of hosting on Amazon S3 Buckets I must say it's pretty slick. For static sites, I think it's the best option I've found so far. Wonder what my next static site will be.
 </article>
