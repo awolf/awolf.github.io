@@ -2047,6 +2047,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/posts\/ath-vacations\/card.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15331,
+		"inputAbbreviatedPath": "\/posts\/ath-vacations\/card.jpg",
+		"outputAbbreviatedPath": "\/posts\/ath-vacations\/card.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/posts\/ath-vacations\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
