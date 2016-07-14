@@ -2142,6 +2142,42 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/posts\/azure-message-bus-fan-in\/_artical.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/_artical.kit",
+		"outputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/_artical.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/azure-message-bus-fan-in\/_card.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/_card.kit",
+		"outputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/_card.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/azure-message-bus-fan-in\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/posts\/azure-message-bus-fan-in\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/index.kit",
+		"outputAbbreviatedPath": "\/posts\/azure-message-bus-fan-in\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/posts\/back-to-basics-blog\/_artical.kit": {
 		"fileType": 2048,
 		"ignore": 1,
