@@ -32,7 +32,7 @@
 <meta name="theme-color" content="#ffffff">
 
 <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
-    <title>Adam J Wolf - Back to Basics Blog Rewrite</title>
+    <title>Adam J Wolf - Aluminum Toy Hauler Vacations</title>
   </head>
   <body>
     <header id="blog-header">
@@ -47,40 +47,51 @@
   </ol>
 </nav>
     <article>
-  <header style="background-color: #2162AF;">
-    <h1> Back to Basics <br>Blog Rewrite</h1>
+  <header style="background-color: #DFDFDF;">
+    <h1>Aluminum Toy Hauler Vacations</h1>
   </header>
+  <p>
+    Well, I did it again. I put up another <a href="http://www.aluminumtoyhauler.vacations">static site</a> built with <a href="http://www.codekit.com">CodeKit</a> and hosted on <a href="https://aws.amazon.com/s3/">Amazon Web Services S3</a> (Simple Storage Service). The new site takes it's design queues and layout straight from this site, so it will look familiar.
+  </p>
+  <h2>Amazon S3</h2>
+  <p>
+    The biggest difference between this site and the new site is the hosting. This blog is hosted right on <a href="http://github.com">GitHub</a> which makes deployment a breeze. To deploy this site all I have to do is commit some code and push it to GitHub.
+  </p>
 
-  <p>Every now and then I like to get back to my roots, back to the fundamentals, back to where I started. For this blog that means no WordPress, no plugins, no themes and no WP hosting. This blog is going old school as a static site.</p>
+  <pre>
+  git add .
+  git commit -m "commit message"
+  git push origin master
+  </pre>
+  <p>
+    For the new site the commands is a little different.
+  </p>
 
-  <h2>A Static Site</h2>
+  <pre style="white-space: pre-wrap;">
+  aws s3 sync . s3://aluminumtoyhauler.vacations
+  --exclude ".git/*"
+  --exclude "*.kit"
+  --exclude "css/scss/*"
+  --exclude ".DS_Store"
+  --exclude ".gitignore"
+  --exclude "*.codekit"
+  --exclude "_partials/*"
+  </pre>
+  <p>
+    The exclude options get rid of the noise from the <a href="https://www.git-scm.com/">Git SCM</a> and Codekit. There's no need to add these files to the Amazon S3 bucket. I of course add the files for the new site to source control. Don't want to lose all my hard work.
+  </p>
 
-  <p>Yep, static sites are all the rage these days and for good reason. They are super fast and can be hosted anywhere. This blog is hosted on my Github account but could be hosted on any cloud provider or service.</p>
+  <h2>Route 53</h2>
+  <p>
+    The only difficult thing about the new site setup was configuring <a href="https://aws.amazon.com/route53/">Route 53</a> and the DNS entries on <a href="http://www.hover.com">Hover</a>. With the help of some documentation and trial and error, I was able to configure Route 53 to be the Names Servers for the domain.
+  </p>
+  <p>
+    Once Amazon Route 53 was the accepted name servers, setting up the forwarding and ANAMES were easy.
+  </p>
 
-  <p>Don&#8217;t get me wrong, I love WordPress. There is nothing wrong with a dynamic site with lots of features. I have personally done that and been there. Now it&#8217;s time for some HTML, CSS, and a wee bit of JavaScript.</p>
+  <h2>Easy As Pie</h2>
 
-  <h2 id="thetools">The Tools</h2>
-
-  <p>No, I&#8217;m not an animal, so I&#8217;ll be using a few tools to help me put words on the screen and make them look good to boot.
-  <img src="/posts/back-to-basics-blog/basic-tools.png" class="aligncenter" alt="Tool logos" />
-  Besides hosting on GitHub, I&#8217;ll also be using <a href="https://incident57.com/codekit/">CodeKit</a> to assemble the completed pages, process SASS styles, and minify outputs.</p>
-
-  <p>If you haven&#8217;t seen CodeKit before, you have to take a look at the site. The developer has a wicked sense of humor, and the recommendation section is hilarious.</p>
-
-  <h2 id="thelooksfeels">The Look &amp; Feel</h2>
-
-  <p>I know you noticed that 6 of the 9 tools that I&#8217;m using on this blog have to do with styling and the look and feel of the site. You are very perceptive. If you didn&#8217;t notice, maybe you noticed how easy it is to read? Yes, I thought so.</p>
-
-  <blockquote>
-  A blogs style, layout and typography should be optimized for reading. Everything else is secondary.
-  </blockquote>
-
-  <p>With <a href="http://sass-lang.com/">SASS</a> and a couple of libraries from the good people at <a href="https://thoughtbot.com/">ThoughtBot</a>, this blog style, layout and theme appear deceptively simple and maybe even a little elegant. I&#8217;ll be blogging about SASS, Bourbon, Neat and Bitters in the coming months. Stay tuned.</p>
-
-  <h2 id="thebeginning">The Beginning</h2>
-
-  <p>This might be the 3rd or 5th blog rewrite on www.AdamJWolf.com, and it might not be the last, but it&#8217;s going to be fun to see how it turns out. If you have any questions, please find me <a href="https://www.twitter.com/adamjwolf">@adamjwolf</a> on Twitter. </p>
-
+  Now that I have been through the experience of hosting on Amazon S3 Buckets, I must say it's pretty slick. For static sites, I think it's the best option I've found so far. Wonder what my next static site will be.
 </article>
     <section id="author">
   <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <atom:link href="http://adamjwolf.com/rss.xml" rel="self" type="application/rss+xml" />
+  <title>Adam J Wolf</title>
+  <link>http://www.adamjwolf.com</link>
+  <description>The blog of Adam J Wolf</description>
+
+  <item>
+    <title>Aluminum Toy Hauler Vacations</title>
+    <guid>http://www.adamjwolf.com/posts/ath-vacations/</guid>
+    <link>http://www.adamjwolf.com/posts/ath-vacations/</link>
+    <description>New static site deployed on AWS in a S3 bucket.</description>
+  </item>
+
+  <item>
+    <title>Taking Attendance with Beacons and Microsoft Azure</title>
+    <guid>http://www.adamjwolf.com/posts/attendance-with-beacons-and-microsoft-azure/</guid>
+    <link>http://www.adamjwolf.com/posts/attendance-with-beacons-and-microsoft-azure/</link>
+    <description>At work I use Estimote beacons to help take attendance at the collegue.</description>
+  </item>
+
+  <item>
+    <title>Lego Mobile Device Lab Stand</title>
+    <guid>http://www.adamjwolf.com/posts/lego-mobile-device-lab-stand/</guid>
+    <link>http://www.adamjwolf.com/posts/lego-mobile-device-lab-stand/</link>
+    <description>With all thee mobile devices I needed something to clean up my desk.</description>
+  </item>
+
+  <item>
+    <title>From Start to Store in 3 Weeks</title>
+    <link>http://www.adamjwolf.com/posts/from-start-to-store/</link>
+    <guid>http://www.adamjwolf.com/posts/from-start-to-store/</guid>
+    <description>My foray into iOS app development.</description>
+  </item>
+
+  <item>
+    <title>Back to Basics Blog Rewrite</title>
+    <link>http://www.adamjwolf.com/posts/back-to-basics-blog/</link>
+    <description>Getting back to the fundementals of the web building static sites</description>
+    <guid>http://www.adamjwolf.com/posts/back-to-basics-blog/</guid>
+  </item>
+</channel>
+
+</rss>
