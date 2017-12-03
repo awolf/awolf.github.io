@@ -248,3 +248,23 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+img.aligncenter {
+  padding: 20px 0;
+  margin: auto;
+  display: block; 
+}
+
+img.alignleft {
+  float: left; 
+}
+
+img.alignright {
+  float: right; 
+}
+
+img.person {
+  width: 130px;
+  float: left;
+  margin: 0 10px 0 0;
+}
