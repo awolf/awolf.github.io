@@ -3,28 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://adamjwolf.com/posts/attendance-with-beacons/</loc>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://adamjwolf.com/work/</loc>
-    <lastmod>2017-12-03T11:35:57-07:00</lastmod>
+    <lastmod>2010-01-01T11:35:57-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://adamjwolf.com/resume/</loc>
-    <lastmod>2017-12-03T11:35:51-07:00</lastmod>
+    <lastmod>2010-01-01T11:35:51-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://adamjwolf.com/about/</loc>
-    <lastmod>2017-12-03T11:35:18-07:00</lastmod>
+    <lastmod>2010-01-01T11:35:18-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://adamjwolf.com/</loc>
-    <lastmod>2017-12-03T11:35:57-07:00</lastmod>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adamjwolf.com/categories/architecture/</loc>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://adamjwolf.com/categories/</loc>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adamjwolf.com/categories/development/</loc>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adamjwolf.com/posts/</loc>
+    <lastmod>2015-06-20T13:44:30-07:00</lastmod>
     <priority>0</priority>
   </url>
   

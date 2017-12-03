@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Adam J Wolf</title>
+    <link>http://adamjwolf.com/categories/architecture/</link>
+    <description>Recent content in Architecture on Adam J Wolf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2015 13:44:30 -0700</lastBuildDate>
+    
+	<atom:link href="http://adamjwolf.com/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Attendance With Beacons</title>
+      <link>http://adamjwolf.com/posts/attendance-with-beacons/</link>
+      <pubDate>Sat, 20 Jun 2015 13:44:30 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/posts/attendance-with-beacons/</guid>
+      <description>This post is going to be a little different than my normal Xamarin.Forms posts. I want you all to know that I am more than a pretty interface. I have architectural and distributed systems chops as well.
+I currently work for a local university that needs a solution for taking attendance for the first 3 weeks of every semester. You see, the university I work for is not an attendance taking university, but we need to satisfy a government requirement to take a student&amp;#8217;s attendance to get financial aid.</description>
+    </item>
+    
+  </channel>
+</rss>

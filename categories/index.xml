@@ -6,9 +6,28 @@
     <description>Recent content in Categories on Adam J Wolf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2015 13:44:30 -0700</lastBuildDate>
     
 	<atom:link href="http://adamjwolf.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Architecture</title>
+      <link>http://adamjwolf.com/categories/architecture/</link>
+      <pubDate>Sat, 20 Jun 2015 13:44:30 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/categories/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>http://adamjwolf.com/categories/development/</link>
+      <pubDate>Sat, 20 Jun 2015 13:44:30 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/categories/development/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
