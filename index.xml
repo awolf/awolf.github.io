@@ -6,9 +6,39 @@
     <description>Recent content on Adam J Wolf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 03 Dec 2017 11:35:57 -0700</lastBuildDate>
     
 	<atom:link href="http://adamjwolf.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Work</title>
+      <link>http://adamjwolf.com/work/</link>
+      <pubDate>Sun, 03 Dec 2017 11:35:57 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>http://adamjwolf.com/resume/</link>
+      <pubDate>Sun, 03 Dec 2017 11:35:51 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://adamjwolf.com/about/</link>
+      <pubDate>Sun, 03 Dec 2017 11:35:18 -0700</pubDate>
+      
+      <guid>http://adamjwolf.com/about/</guid>
+      <description>Adam J Wolf Hello! Thanks for coming to my little place on the internet. Please stick around and enjoy my views and opinions on technology, programming and design.
+Most of my work is behind corporate firewalls but you can find some of it in public here, here and here. A summary of them is here as well.
+I&amp;rsquo;m glad you stoped by. If you have any questions or want to comment, please find me on Twitter and fire away.</description>
+    </item>
     
   </channel>
 </rss>
