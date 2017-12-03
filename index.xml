@@ -17,7 +17,9 @@
       <pubDate>Sun, 03 Dec 2017 11:35:57 -0700</pubDate>
       
       <guid>http://adamjwolf.com/work/</guid>
-      <description></description>
+      <description>Most of my career as a developer has been spent making web apps behind corporate firewalls. But, in the past couple of years, I&amp;#8217;ve had the pleasure of doing more public facing work.
+This page holds a small collection of my private and corporate public facing work. For source code, please check out my GitHub repositories.
+Programming I&amp;#8217;ve been programming ever since my mom bought me a Commodore 64 back in 1985 for Christmas when I was 12.</description>
     </item>
     
     <item>
@@ -26,7 +28,8 @@
       <pubDate>Sun, 03 Dec 2017 11:35:51 -0700</pubDate>
       
       <guid>http://adamjwolf.com/resume/</guid>
-      <description></description>
+      <description>Full life-cycle, full-stack software developer focused on distributed enterprise applications with a proven track record as an effective, efficient problem-solver.
+ Employment History Grand Canyon University - Lead Developer 2014 - 2017 Phoenix, AZ Architect and Lead Developer for the GCU Inquiry Portal project. Inquiry portal enables potential student to find information about GCU and helps them apply for college. The portal is developed and deployed as a Azure cloud solution utilizing Web Apps, WebJobs, Azure Active Directory, O365, Message Bus and Storage Services.</description>
     </item>
     
     <item>
@@ -35,9 +38,9 @@
       <pubDate>Sun, 03 Dec 2017 11:35:18 -0700</pubDate>
       
       <guid>http://adamjwolf.com/about/</guid>
-      <description>Adam J Wolf Hello! Thanks for coming to my little place on the internet. Please stick around and enjoy my views and opinions on technology, programming and design.
+      <description>Adam J Wolf Hello! Thanks for coming to my little place on the internet. I&amp;rsquo;m glad you stoped by. If you have any questions or want to comment, please find me on Twitter and fire away.
 Most of my work is behind corporate firewalls but you can find some of it in public here, here and here. A summary of them is here as well.
-I&amp;rsquo;m glad you stoped by. If you have any questions or want to comment, please find me on Twitter and fire away.</description>
+Views and opinions expressed on this site are mine and not that of my employer.</description>
     </item>
     
   </channel>

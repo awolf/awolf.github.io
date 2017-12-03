@@ -268,3 +268,8 @@ img.person {
   float: left;
   margin: 0 10px 0 0;
 }
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
