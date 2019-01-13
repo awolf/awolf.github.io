@@ -547,6 +547,9 @@ article {
     article header time {
       color: #999;
       font-size: medium; }
+  article ul {
+    list-style-type: disc;
+    padding-left: 40px; }
 
 img.aligncenter {
   padding: 20px 0;
@@ -554,10 +557,12 @@ img.aligncenter {
   display: block; }
 
 img.alignleft {
-  float: left; }
+  float: left;
+  margin-right: 20px; }
 
 img.alignright {
-  float: right; }
+  float: right;
+  margin-left: 20px; }
 
 img.img-card-right {
   float: right;
@@ -627,3 +632,7 @@ article section.gallery {
 
 #costs-page table tr.total {
   background-color: #ddd; }
+
+/* Clean up the Gist css a little */
+td.blob-num {
+  border-bottom: none; }
