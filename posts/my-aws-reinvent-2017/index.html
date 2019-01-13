@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Adam J Wolf">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Adam J Wolf Blog"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AdamJWolf.com" href="/rss.xml" />
+    
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-194.png" sizes="194x194" />
+    
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <title>Aluminum Toy Hauler Vacations- ...</title>
+  </head>
+  <body>
+    <header id="blog-header">
+      <h1>Adam J Wolf Blog</h1>
+    </header>
+    
+    <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/resume/">Resume</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/chestnut/">Chestnut</a></li>
+          </ol>
+        </nav>
+        
+
+    <article>
+      <header >
+        <h1>My Re:Invent 2017</h1>
+        <time datetime="2016-12-7">December 7 2017</time>
+      </header>
+      
+      <img class="alignnone size-full wp-image-61" src="/posts/my-aws-reinvent-2017/reinvent2017.jpg" alt="reinvent2017"/>
+    
+      <p>The conference is over, I'm back home and it's time to digest and make plans. AWS re:Invent 2017 was my first big conference and it was a lot of fun. I learned a lot, and now I have a bunch of new stuff to learn. When will it end? Hopefully never!</p>
+    
+      <h2>Announcements</h2>
+      <p>Here is the list of the announcements that I was hoping for and never dreamed they would announce.</p>
+    
+      <h3>DynamoDB Global Tables</h3>
+    
+      <p>The biggest and most welcome announcement at re:Invent for me was DynamoDB Global Tables. Yep, Kubernetes support, graph databases and Golang for Lambda is great and all, but cross-region replication is going to be a hit at work. No more loading 100's of GB in three regions from a Data Pipeline job that takes days. YAS!!!</p>
+    
+      <h3>Neptune</h3>
+    
+      <p>The announcement of AWS Neptune was a complete shocker for me. I've been researching graph databases for a couple of months and the industry is decidedly against using the common graph database flavors in a transactional system like the one I work on.</p>
+    
+      <p>Time will tell, but from what I've read, Neptune is limited to an in-memory store with read replicas in the same region. For me, that won't work. I still think <a href="https://dgraph.io/" target="_blank" rel="noopener">Dgraph</a> would be a better fit with their distributed transaction and multiple machine support. I might start a Dgraph POC in a few weeks and I'll try to blog about the results.</p>
+    
+      <h3>Kubernetes</h3>
+      <p>Most cloud providers now have Kubernetes support and it could not have come at a better time. I still need to dig into Kubernetes more and start using it in anger. This announcement was expected but nice to hear.</p>
+      <h3>Go for Lambda</h3>
+      <p>This was a surprise and a very welcome announcement. It's not released yet, and we did not get a good timeframe for its release. Or at least good enough for me.  When it is, we will be using it heavily at work.</p>
+    
+      <h2>My Schedule</h2>
+      <p>For those of you that have never been to one of these conferences, here is what my days looked like. I was lucky that all of my sessions were in the Venetian Hotel. Other people I went with had to move between two or three hotels during the day.</p>
+      
+      <table>
+        <thead>
+            <tr>
+              <th>Code</th>
+              <th>Description</th>
+              <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ATC303</td>
+            <td>Cache Me If You Can: Minimizing Latency While Optimizing Cost Through Advanced Caching Strategies</td>
+            <td>11/27/17 10:45 AM</td>
+          </tr>
+          <tr>
+            <td>ATC301</td>
+            <td>1 Million bids in 100ms – using AWS to power your Real-Time Bidder</td>
+            <td>11/27/17 12:15 PM</td>
+          </tr>
+          <tr>
+            <td>GAM307</td>
+            <td>Ubisoft: How For Honor Runs Using Amazon ECS</td>
+            <td>11/27/17 1:45 PM</td>
+          </tr>
+          <tr>
+            <td>GAM401</td>
+            <td>Designing for the Future: Building a Flexible Event-based Analytics Architecture for Games</td>
+            <td>11/27/17 3:15 PM</td>
+          </tr>
+          <tr>
+            <td>DAT321</td>
+            <td>From Minutes to Milliseconds: How Careem Used Amazon ElastiCache for Redis</td>
+            <td>11/28/17 9:15 AM</td>
+          </tr>
+          <tr>
+            <td>ARC209</td>
+            <td>A Day in the Life of a Netflix Engineer III</td>
+            <td>11/28/17 10:45 AM</td>
+          </tr>
+          <tr>
+            <td>ARC401</td>
+            <td>Serverless Architectural Patterns and Best Practices</td>
+            <td>11/28/17 1:45 PM</td>
+          </tr>
+          <tr>
+            <td>DEV206</td>
+            <td>Life of a Code Change to a Tier 1 Service</td>
+            <td>11/28/17 3:15 PM</td>
+          </tr>
+          <tr>
+            <td>DAT305</td>
+            <td>ElastiCache Deep Dive: Best Practices and Usage Patterns</td>
+            <td>11/28/17 4:45 PM</td>
+          </tr>
+          <tr>
+            <td>GEN25</td>
+            <td>Andy Jassy's Keynote</td>
+            <td>11/29/17 8:00 AM</td>
+          </tr>
+          <tr>
+            <td>DAT328</td>
+            <td>Tinder and DynamoDB: It's a Match! Massive Data Migration, Zero Down Time</td>
+            <td>11/29/17 11:30 AM</td>
+          </tr>
+          <tr>
+            <td>DEV314</td>
+            <td>Monitoring as Code: Getting to Monitoring-Driven Development</td>
+            <td>11/29/17 1:45 PM</td>
+          </tr>
+          <tr>
+            <td>DAT304</td>
+            <td>DynamoDB - What's new</td>
+            <td>11/29/17 3:15 PM</td>
+          </tr>
+          <tr>
+            <td>GEN06</td>
+            <td>Werner Vogels' Keynote</td>
+            <td>11/30/17 8:30 AM</td>
+          </tr>
+          <tr>
+            <td>ARC319</td>
+            <td>How to Design a Multi-Region Active-Active Architecture</td>
+            <td>11/30/17 11:30 AM</td>
+          </tr>
+          <tr>
+            <td>DAT327</td>
+            <td>DynamoDB adaptive capacity: smooth performance for chaotic workloads</td>
+            <td>11/30/17 2:30 PM</td>
+          </tr>
+          <tr>
+            <td>ARC321</td>
+            <td>Models of Availability</td>
+            <td>11/30/17 4:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <h2>Going Again</h2>
+      
+      <p>I think I'm going to need the rest of 2017 to recover, but all in all, I think it was worthwhile to go to the conference even though you could watch the reply on Youtube. If you ever have the chance to go, you should take it. One of the benefits of going is speaking to the engineers who built the systems you use. I had a great conversation and a good chuckle about AWS support with them. See you next year at re:Invent 2018.</p>
+    </article>
+    
+
+    <section id="author">
+      <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />
+      <h3>
+        Adam J Wolf
+      </h3>
+      <p>
+        Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      </p>
+    </section>
+    
+  </body>
+</html>

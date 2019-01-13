@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Adam J Wolf">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Adam J Wolf Blog"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AdamJWolf.com" href="/rss.xml" />
+    
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-194.png" sizes="194x194" />
+    
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <title>Aluminum Toy Hauler Vacations- ...</title>
+  </head>
+  <body>
+    <header id="blog-header">
+      <h1>Adam J Wolf Blog</h1>
+    </header>
+    
+    <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/resume/">Resume</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/chestnut/">Chestnut</a></li>
+          </ol>
+        </nav>
+        
+
+    <article>
+      <header >
+        <h1>Redis TTL is no Free Lunch</h1>
+        <time datetime="2018-10-26">October 26 2018</time>
+      </header>
+      <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/redis-logo.png" alt="redis-logo" width="175" />
+      
+      <p>Do you know how Redis cleans up memory? If not, keep reading. You see, I know much more about how Redis cleans up memory, more than I ever wanted to know. Recently, I built a system that had a variable load and was hammered during the <a href="/posts/the-hyper-logger/">fall foliage season</a> and we ran into a little memory issue with my favorite database. We had to keep scaling it up and it was getting expensive.</p>
+    
+      <h2>TTL and a Red Bird</h2>
+    
+      <p><img class="wp-image-155 alignright" src="/posts/redis-ttl-is-no-free-lunch/doughnut_cookie_desert_sweets.png" alt="doughnut_cookie_desert_sweets" width="120" height="120" />The REDBird system uses Redis and writes and reads a lot of time series data. Truth be told, the system creates a lot of keys and leaves them on the system for Redis to clean up. Kind of like that brother that doesn't clean up after himself in the kitchen and thinks mom will clean it up for him. There is only one problem, we write and expire keys faster than Redis can clean up in its default configuration.</p>
+    
+      <p>Keys in Redis are expired in two ways. There is a passive, and an active way. When a client tries to read an expired key, it is deleted in the passive way. The active way entails the system looking up 20 keys at random and testing them for an expired Time To Live (TTL). If it finds that more than 25% are expired, it will run again.</p>
+    
+      <img class="wp-image-156 alignright" src="/posts/redis-ttl-is-no-free-lunch/stopwatch_timer_running_time.png" alt="stopwatch_timer_running_time" width="120" height="120" />
+      
+      <p>This is where things get a little murky for me. The Redis documents say that the cleanup function will run 10 times a second but that it will stop if it does not find greater than 25% of keys are expired. I have some questions. Stop for how long? What does start again if it finds greater than 25% are expired mean?</p>
+    
+      <h2>hz and Frequency</h2>
+    
+      <p>The answer to most of my questions was inside the <a href="http://download.redis.io/redis-stable/redis.conf" target="_blank" rel="noopener">redis.conf</a> file. In the file, under the hz configuration settings, we get this little gem of a comment.</p>
+    
+      <blockquote>
+        <p>Redis calls an internal function to perform many background tasks, like closing connections of clients in timeout, <strong>purging expired keys</strong> that are never requested, and so forth.</p>
+      </blockquote>
+    
+      <p>Wow, and when we keep reading, we get this bonus.</p>
+    
+      <blockquote>
+        <p>By default "hz" is set to 10. Raising the value will use more CPU when Redis is idle, but at the same time will make Redis more responsive when there are many keys expiring at the same time, and timeouts may be handled with more precision.</p>
+      </blockquote>
+      
+      <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/settings_panel_equalizer_preferences.png" alt="settings_panel_equalizer_preferences" width="120" height="120" />
+    
+      <p>There it is. The magical 10 number. Now I know what you are thinking. Adjust the "hz" configuration value and REDBird will fly again. The problem is, Amazon Elasticache does not give you access to this configuration setting. I wonder why? Not really, I know why. Moving "hz" to 100 or 500 would reduce the total number of Redis instances that Amazon can deployed on the same hardware with a "hz" of 10. Ok, that's fair, but sucks. Moving on.</p>
+    
+      <h2>Fly REDBird Fly</h2>
+    
+      <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/send_post_paper_plane.png" alt="send_post_paper_plane" width="120" height="120" />
+    
+      <p>So how did we fix this? We took some inspiration from <a href="https://ivan-site.com/2014/06/force-evict-expired-keys-from-redis/" target="_blank" rel="noopener">this</a> and <a href="https://engineering.grab.com/a-key-expired-in-redis-you-wont-believe-what-happened-next" target="_blank" rel="noopener">another</a> blog post and started asking Redis to lookup random keys in a fire and forget pipeline batch. We started out with batches of 50K every second and eventually found that a 10K batch every couple of seconds gave us a good balance of memory cleanup and system load. Today REDBird is flying even during the fall and we were able to reduce the size of our cluster saving more money for the <a href="/pages/at-work/">chipmunks and lumberjacks</a> retirement fund.</p>
+    
+    </article>
+
+    <section id="author">
+      <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />
+      <h3>
+        Adam J Wolf
+      </h3>
+      <p>
+        Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      </p>
+    </section>
+    
+  </body>
+</html>

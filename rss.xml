@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="http://aluminumtoyhauler.vacations/rss.xml" rel="self" type="application/rss+xml" />
+    <title>Aluminum Toy Hauler Vacations</title>
+    <link>http://www.aluminumtoyhauler.vacations</link>
+    <description>Discover how to use an ATC Aluminum Toy Hauler on your vacations.</description>
+    <item>
+      <title>Munds Park</title>
+      <link>http://aluminumtoyhauler.vacations/posts/munds-park-5-24-2016/</link>
+      <description>It's official. My wife and I are officially RV'ers. Last week we went up and had a wonderful 4 day weekend at the Munds Park RV resort with Chestnut our 8.5' x 20' ATC Aluminum Toy Hauler.</description>
+      <guid>http://aluminumtoyhauler.vacations/posts/munds-park-5-24-2016/</guid>
+    </item>
+    <item>
+      <title>The Black Box</title>
+      <link>http://aluminumtoyhauler.vacations/posts/black-box/</link>
+      <description>Adding a toolbox to the ATC Toy Hauler to hold all of the items use in the servicing of the grey and black water tanks.</description>
+      <guid>http://aluminumtoyhauler.vacations/posts/black-box/</guid>
+    </item>
+    <item>
+      <title>Finding Chestnut</title>
+      <link>http://aluminumtoyhauler.vacations/posts/finding-chestnut/</link>
+      <description>See how we became a ATC Toy Hauler owner.</description>
+      <guid>http://aluminumtoyhauler.vacations/posts/finding-chestnut/</guid>
+    </item>
+  </channel>
+</rss>

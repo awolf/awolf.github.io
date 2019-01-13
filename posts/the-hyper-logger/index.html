@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Adam J Wolf">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Adam J Wolf Blog"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AdamJWolf.com" href="/rss.xml" />
+    
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-194.png" sizes="194x194" />
+    
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <title>Aluminum Toy Hauler Vacations- ...</title>
+  </head>
+  <body>
+    <header id="blog-header">
+      <h1>Adam J Wolf Blog</h1>
+    </header>
+    
+    <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/resume/">Resume</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/chestnut/">Chestnut</a></li>
+          </ol>
+        </nav>
+        
+
+    <article>
+      <header >
+        <h1>The Hyper Logger</h1>
+        <time datetime="2018-9-28">September 28 2018</time>
+      </header>
+    
+      <p><img class="alignright" src="/posts/the-hyper-logger/thin-0779_wood_ax.png" alt="thin_wood_ax" width="120" height="120" />The other day while working at <a href="/pages/at-work/">Chipmunks &amp; Lumberjacks</a>, I was asked to create a computer system to count the distinct set of leaf shapes, sizes and colors of every tree in the forest. I know what you are thinking! Why would anyone want to know this information? For C&amp;L it's really important, they use it when scoring whether a tree can be harvested.</p>
+    
+      <p><img class="alignleft" src="/posts/the-hyper-logger/thin_leaf_tree_forest.png" alt="thin_leaf_tree_forest" width="120" height="120" />The naive implementation of this system would be to add all of the leaves into a database and do distinct queries. This system might work for a while but what happens when the total number of trees and their associated leaves climb into the billions or trillions? Will it still perform? The short answer is no; the longer answer is, absolutely not, are you kidding me!</p>
+    
+      <h2>Probabilistic Data Structures</h2>
+    
+      <p>So, what is a geek working for C&amp;L to do? Enter the probabilistic data structure <a href="https://en.wikipedia.org/wiki/HyperLogLog">HyperLogLog</a>. This sleek and beautiful data structure will tell you the distinct count of items entered into its structure with a 2% error rate. Ok now, come on, 2% is not that bad, especially when you can fit 10^9 items in just 1.5K of memory. HyperLog might be the best thing to come out of the 80's besides Nintendo and the Sony Walkman.</p>
+    
+      <p><img class="alignright" src="/posts/the-hyper-logger/leaf_tree_forest.png" alt="leaf_tree_forest" width="120" height="120" />HyperLogLog data structures have an Add, Count and Merge function. Add will insert a new value into the data structure. Count will tell you the distinct number of items in the data structure. Merge will take two HyperLogLog data structures and return a new combined data structure with only the distinct set of the two data structures.<br /><br />Add and Count are the meat and potatoes of the HyperLogLog data structure but don't discount Merge. Some very interesting features can be created with Merge. For C&amp;L we needed the 1, 7 and 30 day counts for our tree leaves. To save some space we just used one data structure per day and merged the days to find the week and month values. Neat, right?</p>
+    
+      <h2>Benefits</h2>
+    
+      <p>There are some significant side benefits of using this type of data structure over the typical row in a database. Three of them are GDPR compliance, easy replay and size.</p>
+      <p><img class="alignleft" src="/posts/the-hyper-logger/maple_leaf_canada_tree.png" alt="maple_leaf_canada_tree" width="120" height="120" />For GDPR, if you are just exchanging the data structures, there is no recognizable information stored inside the data structure due to the hashing of the original value and flipping a bit from 0 to 1 during the Add command.</p>
+    
+      <p>Replay is all about recovering from a distributed system failure and that trying to insert the same value into a HyperLogLog data structure has no effect on the count. It's basically a no-op.</p>
+      <p>You have to admit that storing a bazillion items in 1.5 kilobytes is pretty neat. The data size makes sharing and transmitting the structure between data-centers or servers in the same center relativity easy.</p>
+    
+      <h2>A Red Bird</h2>
+    
+      <img class="alignright" src="/posts/the-hyper-logger/bird_house_twitter.png" alt="bird_house_twitter" width="120" height="120" />
+    
+      <p>The new system named REDBird is built and deployed to multiple forests around the world and C&amp;L is very happy with the new system. If you have a cardinality challenge at work, you might want to learn more about probabilistic data structures and HyperLogLog.</p>
+    
+    </article>
+
+    <section id="author">
+      <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />
+      <h3>
+        Adam J Wolf
+      </h3>
+      <p>
+        Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      </p>
+    </section>
+    
+  </body>
+</html>

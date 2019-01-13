@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Adam J Wolf">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Adam J Wolf Blog"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AdamJWolf.com" href="/rss.xml" />
+    
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-194.png" sizes="194x194" />
+    
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <title>Aluminum Toy Hauler Vacations- ...</title>
+  </head>
+  <body>
+    <header id="blog-header">
+      <h1>Adam J Wolf Blog</h1>
+    </header>
+    
+    <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/resume/">Resume</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/chestnut/">Chestnut</a></li>
+          </ol>
+        </nav>
+        
+
+    <article>
+      <header >
+        <h1>Ruby and Docker</h1>
+        <time datetime="2018-2-26">February 26 2018</time>
+      </header>
+    
+      <p><img class="alignright" src="/posts/ruby-and-docker/ruby.png" alt="ruby" width="150" height="140" />I maintain the Ruby Client wrapper for my company’s REST API. I’m not exactly sure how this happened. I might have volunteered, or it could have been bad luck. Either way, it was time for a little bug fixing and as it so happens, I got a new laptop a couple of weeks ago. You know what that means; starting from scratch, again.</p>
+    
+      <p>This time will be different. I’ll do it right this time, I tell myself. Maybe a VM, or a Vagrant file, or something hot like Docker.</p>
+    
+      <blockquote>
+        <p>Oooh, the new hotness, Docker; that would be fun.</p>
+      </blockquote>
+      
+      <p>I've been learning about Docker and Kubernetes for a bit so creating a development environment for some quick Ruby fixes would be fun and educational. Especially, since I already have Docker installed.</p>
+    
+      <img class="aligncenter" src="/posts/ruby-and-docker/docker.png" alt="docker" width="473"/>
+    
+      <p>With a 5 line Dockerfile and a Ruby 2.2 base image, I was set and ready. A one line code bug fix, a version bump and our Ruby Gem was updated. So smooth it was impressive and exciting.</p>
+    
+      <h3>My Dockerfile</h3>
+      
+      <pre>
+      FROM ruby:2.2
+      RUN apt-get update &amp;&amp; apt-get install -y build-essential
+      RUN mkdir -p /app
+      WORKDIR /app
+      RUN gem install bundler
+      </pre>
+      
+      <p>With a <code>docker build -t devtheruby .</code> and a <code>docker run -it -v $(pwd):/app devtheruby bash</code>, I had my environment up and running. With the volume mount, I could edit the code from VS Code on the host and build and run tests in the connected terminal. Not a bad way to work.</p>
+    
+      <p>Docker was really easy to set up and as a bonus, I added the Dockerfile to the Git repository for future me. I try to be nice to future me; he has to fix all my mistakes. For quick fixes, this seems like a good alternative to VM's.  I'm just not sure if this is the way I would want to develop every day. I think I'm going to leave that up to future me.</p>
+    
+    </article>
+
+    <section id="author">
+      <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />
+      <h3>
+        Adam J Wolf
+      </h3>
+      <p>
+        Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      </p>
+    </section>
+    
+  </body>
+</html>
