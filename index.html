@@ -246,13 +246,7 @@
                         
                           <h3>My Dockerfile</h3>
                           
-                          <pre>
-                          FROM ruby:2.2
-                          RUN apt-get update &amp;&amp; apt-get install -y build-essential
-                          RUN mkdir -p /app
-                          WORKDIR /app
-                          RUN gem install bundler
-                          </pre>
+                          <script src="https://gist.github.com/awolf/e7a14b7ed6025f956b5ef307d7785166.js"></script>
                           
                           <p>With a <code>docker build -t devtheruby .</code> and a <code>docker run -it -v $(pwd):/app devtheruby bash</code>, I had my environment up and running. With the volume mount, I could edit the code from VS Code on the host and build and run tests in the connected terminal. Not a bad way to work.</p>
                         
