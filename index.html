@@ -52,403 +52,545 @@
         
     
     <article>
-      <header >
-        <h1>Brain Freeze from Clojure</h1>
-        <time datetime="2018-12-30">December 30 2018</time>
+      <header>
+        <h1>Adam's Technology Radar for 2019</h1>
+        <time datetime="2019-1-15">January 15, 2019</time>
       </header>
-      <p>I am back to my endeavor to learn Clojure. This is a 2019 goal of mine. I've been getting a jump on my resolution in this confusing time between Christmas and New Years. What day is it? Do I need to go back to work yet?</p>
+      <p> Well, another year has come and gone and so has the technologies I am most interested in. Every year I evaluate
+        what’s hot, what’s not and focus my learning on the things that I think are going to be good for my career and my
+        current and future employers.</p>
     
-      <img class="alignright" src="/posts/brain-freeze-from-clojure/thin-1039_brain_thinking_mind_knowledge.png" width=120 />
+      <p>This year I have three main areas of focus and they are Serverless, WebAssembly and Artificial Intelligence. These
+        three general areas will be an underlying focus of mine throughout the year as well as my Clojure and functional
+        programming studies. I am really looking forward to these topics. Some of them, I am very familiar with and others
+        are going to be a stretch to say the least.</p>
     
-      <p>When working through the chapters of <a href="https://pragprog.com/book/shcloj3/programming-clojure-third-edition">Programming Clojure 3rd edition</a> from the Pragmatic Programmers, I came across this example of converting some code from Java to Clojure and it struck me just how different they truly are. I am not saying one is better than the other, but I don't know how much further apart they could be; hence the brain freeze. 🤪</p>
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/serverless.png" />
     
-      <h2>Java</h2>
-      <script src="https://gist.github.com/awolf/c6db6df6876ea4962df5e54ea4a86f71.js"></script>
+      <p> Serverless and WebAssemble might be considered the same topic but I am approaching them from two different
+        directions. For Serverless, I am approaching it as an experienced user that wants to know more about what and
+        when can things go wrong. We use AWS Lambda at work heavily and I always have to caution my coworkers that Lambda
+        is not a good default choice without thinking.</p>
     
-      <p>Looks normal to me; how about you? My C# brain looks past the variable creation, mutable state, the multiple return sites and hones in on the setting of the "ch" variable and the inner "if" function.  
+      <blockquote>
+        Is anything a good choice without thinking? I think not!
+      </blockquote>
+    
+      <h4>Things to think about</h4>
+      <ol>
+        <li>How many times will this function execute?</li>
+        <li>Do I need to coordinate between function instances?</li>
+        <li>What happens when we reach our 1000 concurrent executions?</li>
+        <li>Will a single function run so much that it stops other functions from running?</li>
+        <li>What is the backup plan when AWS Lambda experiences an outage?</li>
+      </ol>
+    
+      <p>You might be thinking that some of these things are unlikely, but I have seen most of them in production. These
+        questions and their answers should be thought about and figured out before you fire a Lambda into production. Don't
+        get me wrong, I think it's a good start for a platform, but it's not perfect, like every other technology. I do
+        believe we are going to be seeing a lot more <a href="https://en.wikipedia.org/wiki/Function_as_a_service">FAAS</a>
+        in the future and in places you didn't expect it. <i>Psssssssst; it's WebAssembly!</i></p>
+    
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href=" http://cidrdb.org/cidr2019/papers/p119-hellerstein-cidr19.pdf">Serverless computing: one step forward,
+            two steps back</a>
+        </li>
+        <li>
+          <a href="https://blog.acolyer.org/2019/01/14/serverless-computing-one-step-forward-two-steps-back/">The Morning
+            Paper</a>
+        </li>
+        <li>
+          <a href="https://martinfowler.com/articles/serverless.html"> Serverless Architectures</a>
+        </li>
+      </ul>
+    
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/web-assembly.png" />
+    
+      <p>
+        WebAssembly the Javascript killer! Just Kidding. I know what you're thinking, isn't it a bit early to dive into
+        WebAssembly? I would agree if I were talking about frontend UI for the browser. What I'm talking about is using
+        WebAssembly and V8 Isolates embedded into products like what Cloudflare is doing with their edge functions called
+        Workers.
+      </p>
+      <p>
+        Cloudflare Workers is a neat feature of their content delivery network (CDN) where you can run a WebAssembly
+        functions at the edge. I think this is neat because you can now do things that you could never do before like API
+        validation or authentication on the edge of a giant CDN. As an eventual bonus, you don't have to do it in one
+        language, you could do it in any language that compiles to WebAssembly. For now I think they are only supporting
+        Rust and Javascript.
+      </p>
+      <p>
+        Besides Cloudflare and Fastly, I can see a bunch of uses for this type of embedding custom processing at the edge
+        or
+        core of a product. How would you like to embed a C# or GoLang WebAssembly function into Redis and skip the Lua
+        language? How about using WebAssembly as the new Docker on Kubernetes? WebAssembly was born and will evolve in an
+        untrusted sandbox with security built in.
+      </p>
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href="https://blog.cloudflare.com/serverless-performance-comparison-workers-lambda">Serverless Performance:
+            Cloudflare Workers, Lambda and Lambda@Edge </a>
+        </li>
+        <li>
+          <a href="https://blog.cloudflare.com/introducing-cloudflare-workers/">Introducing Cloudflare Workers: Run
+            JavaScript Service Workers at the Edge</a>
+        </li>
+        <li>
+          <a href="https://rustwasm.github.io/book/ ">Rust and WebAssembly</a>
+        </li>
+        <li>
+          <a href="https://www.fastly.com/blog/edge-programming-rust-web-assembly">Edge programming with Rust and
+            WebAssembly</a>
+        </li>
+        <li>
+          <a href="https://pragprog.com/book/khrust/programming-webassembly-with-rust">Programming WebAssembly with Rust</a>
+        </li>
+      </ul>
+    
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/ai-at-the-edge.png" />
+    
+      <p>
+        This choice is a no-brainer. I think everyone in the IT industry is talking about this, working on it, or learning
+        about it and so am I. My specific interest is how can the models produced from training be used in anger at the
+        edge of our software. </p>
+    
+      <img class="alignright" src="/posts/adams-technology-radar-2019/prediction-machine-cover.jpg" width="150" />
+    
+      <p>I am currently reading the book <a href="https://www.amazon.com/Prediction-Machines-Economics-Artificial-Intelligence-ebook/dp/B075GXJPFS/ref=sr_1_1?ie=UTF8&qid=1547591808&sr=8-1&keywords=prediction+machines">"Prediction
+          Machines: The Simple Economics of Artificial Intelligence"</a> and I really like how the book takes a look at AI
+        from the perspective of an economist. One of the things that struck me about the book was the observation of when
+        the cost of accurate predictions decrease, more value is placed on humans that interpret and execute. The SageDB
+        and the IntelliCode plugin for Visual Studio are great examples of this AI enhancing costly humans.
+      </p>
+      <p>I am not quite sure how and what I am going to do with this technology pursuit but I would love to try and put a
+        trained model into a WebAssembly host at the edge of a network or as a replacement for a Lambda function. The year
+        has just begun and I am looking forward to digging into these three technologies.
       </p>
     
-      <h2>Clojure</h2>
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href="https://blogs.msdn.microsoft.com/visualstudio/2018/05/07/introducing-visual-studio-intellicode/">Introducing
+            Visual Studio IntelliCode</a>
+        </li>
+        <li>
+          <a href="http://alexbeutel.com/papers/CIDR2019_SageDB.pdf">SageDB: A Learned Database System</a>
+        </li>
+        <li>
+          <a href="http://cidrdb.org/cidr2019/papers/p101-kipf-cidr19.pdf">Learned Cardinalities: Estimating Correlated
+            Joins with Deep Learning</a>
+        </li>
+        <li>
+          <a href="http://cidrdb.org/cidr2019/papers/p96-marcus-cidr19.pdf">Towards a Hands-Free Query Optimizer through
+            Deep Learning</a>
+        </li>
+      </ul>
     
-      <script src="https://gist.github.com/awolf/5bf2b65d71249f72aabb54a7ce5bedb6.js"></script>
-    
-      <p>The Clojure code makes my brain freeze for a second or two like I am looking at a foreign language. The complete lack of mutable state, multiple return sites and no control flow structures are the most jarring.</p>
-    
-      <img class="alignleft" src="/posts/brain-freeze-from-clojure/thin-0766_weather_snow_flake_winter.png"  width=120/>
-    
-      <p>Much of the difference of these two code blocks could be chalked up to the imperative vs. declarative styles but the contrast to me seems night and day. I am still very new to Clojure and I still have to unpack that "when" clause every time I look at the "index-filter" function.</p>
-    
-      <p>I am definitely looking forward to learning more Clojure in 2019. I hope to train my brain to stop halting and start absorbing the declarative style and Clojure in the new year.</p>
+      <p>I hope I've given you some things to think about. Watch out for more blogs on each of my technology
+        choices coming in the next few weeks and months. I now have my work cut out for me, how about you? What are you
+        looking to learn and explore in 2019?</p>
     </article>
     <article>
           <header >
-            <h1>Redis TTL is no Free Lunch</h1>
-            <time datetime="2018-10-26">October 26 2018</time>
+            <h1>Brain Freeze from Clojure</h1>
+            <time datetime="2018-12-30">December 30 2018</time>
           </header>
-          <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/redis-logo.png" alt="redis-logo" width="175" />
-          
-          <p>Do you know how Redis cleans up memory? If not, keep reading. You see, I know much more about how Redis cleans up memory, more than I ever wanted to know. Recently, I built a system that had a variable load and was hammered during the <a href="/posts/the-hyper-logger/">fall foliage season</a> and we ran into a little memory issue with my favorite database. We had to keep scaling it up and it was getting expensive.</p>
+          <p>I am back to my endeavor to learn Clojure. This is a 2019 goal of mine. I've been getting a jump on my resolution in this confusing time between Christmas and New Years. What day is it? Do I need to go back to work yet?</p>
         
-          <h2>TTL and a Red Bird</h2>
+          <img class="alignright" src="/posts/brain-freeze-from-clojure/thin-1039_brain_thinking_mind_knowledge.png" width=120 />
         
-          <p><img class="wp-image-155 alignright" src="/posts/redis-ttl-is-no-free-lunch/doughnut_cookie_desert_sweets.png" alt="doughnut_cookie_desert_sweets" width="120" height="120" />The REDBird system uses Redis and writes and reads a lot of time series data. Truth be told, the system creates a lot of keys and leaves them on the system for Redis to clean up. Kind of like that brother that doesn't clean up after himself in the kitchen and thinks mom will clean it up for him. There is only one problem, we write and expire keys faster than Redis can clean up in its default configuration.</p>
+          <p>When working through the chapters of <a href="https://pragprog.com/book/shcloj3/programming-clojure-third-edition">Programming Clojure 3rd edition</a> from the Pragmatic Programmers, I came across this example of converting some code from Java to Clojure and it struck me just how different they truly are. I am not saying one is better than the other, but I don't know how much further apart they could be; hence the brain freeze. 🤪</p>
         
-          <p>Keys in Redis are expired in two ways. There is a passive, and an active way. When a client tries to read an expired key, it is deleted in the passive way. The active way entails the system looking up 20 keys at random and testing them for an expired Time To Live (TTL). If it finds that more than 25% are expired, it will run again.</p>
+          <h2>Java</h2>
+          <script src="https://gist.github.com/awolf/c6db6df6876ea4962df5e54ea4a86f71.js"></script>
         
-          <img class="wp-image-156 alignright" src="/posts/redis-ttl-is-no-free-lunch/stopwatch_timer_running_time.png" alt="stopwatch_timer_running_time" width="120" height="120" />
-          
-          <p>This is where things get a little murky for me. The Redis documents say that the cleanup function will run 10 times a second but that it will stop if it does not find greater than 25% of keys are expired. I have some questions. Stop for how long? What does start again if it finds greater than 25% are expired mean?</p>
+          <p>Looks normal to me; how about you? My C# brain looks past the variable creation, mutable state, the multiple return sites and hones in on the setting of the "ch" variable and the inner "if" function.  
+          </p>
         
-          <h2>hz and Frequency</h2>
+          <h2>Clojure</h2>
         
-          <p>The answer to most of my questions was inside the <a href="http://download.redis.io/redis-stable/redis.conf" target="_blank" rel="noopener">redis.conf</a> file. In the file, under the hz configuration settings, we get this little gem of a comment.</p>
+          <script src="https://gist.github.com/awolf/5bf2b65d71249f72aabb54a7ce5bedb6.js"></script>
         
-          <blockquote>
-            <p>Redis calls an internal function to perform many background tasks, like closing connections of clients in timeout, <strong>purging expired keys</strong> that are never requested, and so forth.</p>
-          </blockquote>
+          <p>The Clojure code makes my brain freeze for a second or two like I am looking at a foreign language. The complete lack of mutable state, multiple return sites and no control flow structures are the most jarring.</p>
         
-          <p>Wow, and when we keep reading, we get this bonus.</p>
+          <img class="alignleft" src="/posts/brain-freeze-from-clojure/thin-0766_weather_snow_flake_winter.png"  width=120/>
         
-          <blockquote>
-            <p>By default "hz" is set to 10. Raising the value will use more CPU when Redis is idle, but at the same time will make Redis more responsive when there are many keys expiring at the same time, and timeouts may be handled with more precision.</p>
-          </blockquote>
-          
-          <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/settings_panel_equalizer_preferences.png" alt="settings_panel_equalizer_preferences" width="120" height="120" />
+          <p>Much of the difference of these two code blocks could be chalked up to the imperative vs. declarative styles but the contrast to me seems night and day. I am still very new to Clojure and I still have to unpack that "when" clause every time I look at the "index-filter" function.</p>
         
-          <p>There it is. The magical 10 number. Now I know what you are thinking. Adjust the "hz" configuration value and REDBird will fly again. The problem is, Amazon Elasticache does not give you access to this configuration setting. I wonder why? Not really, I know why. Moving "hz" to 100 or 500 would reduce the total number of Redis instances that Amazon can deployed on the same hardware with a "hz" of 10. Ok, that's fair, but sucks. Moving on.</p>
-        
-          <h2>Fly REDBird Fly</h2>
-        
-          <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/send_post_paper_plane.png" alt="send_post_paper_plane" width="120" height="120" />
-        
-          <p>So how did we fix this? We took some inspiration from <a href="https://ivan-site.com/2014/06/force-evict-expired-keys-from-redis/" target="_blank" rel="noopener">this</a> and <a href="https://engineering.grab.com/a-key-expired-in-redis-you-wont-believe-what-happened-next" target="_blank" rel="noopener">another</a> blog post and started asking Redis to lookup random keys in a fire and forget pipeline batch. We started out with batches of 50K every second and eventually found that a 10K batch every couple of seconds gave us a good balance of memory cleanup and system load. Today REDBird is flying even during the fall and we were able to reduce the size of our cluster saving more money for the <a href="/pages/at-work/">chipmunks and lumberjacks</a> retirement fund.</p>
-        
+          <p>I am definitely looking forward to learning more Clojure in 2019. I hope to train my brain to stop halting and start absorbing the declarative style and Clojure in the new year.</p>
         </article>
     <article>
               <header >
-                <h1>GraphConnect 2018</h1>
-                <time datetime="2016-9-24">September 24 2018</time>
+                <h1>Redis TTL is no Free Lunch</h1>
+                <time datetime="2018-10-26">October 26 2018</time>
               </header>
+              <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/redis-logo.png" alt="redis-logo" width="175" />
               
-              <p>One of the best parts of my job is how much I get to learn about topics that I have previously only heard of. One of those things was graph databases and how they can be used and abused for connected data.</p>
+              <p>Do you know how Redis cleans up memory? If not, keep reading. You see, I know much more about how Redis cleans up memory, more than I ever wanted to know. Recently, I built a system that had a variable load and was hammered during the <a href="/posts/the-hyper-logger/">fall foliage season</a> and we ran into a little memory issue with my favorite database. We had to keep scaling it up and it was getting expensive.</p>
+            
+              <h2>TTL and a Red Bird</h2>
+            
+              <p><img class="wp-image-155 alignright" src="/posts/redis-ttl-is-no-free-lunch/doughnut_cookie_desert_sweets.png" alt="doughnut_cookie_desert_sweets" width="120" height="120" />The REDBird system uses Redis and writes and reads a lot of time series data. Truth be told, the system creates a lot of keys and leaves them on the system for Redis to clean up. Kind of like that brother that doesn't clean up after himself in the kitchen and thinks mom will clean it up for him. There is only one problem, we write and expire keys faster than Redis can clean up in its default configuration.</p>
+            
+              <p>Keys in Redis are expired in two ways. There is a passive, and an active way. When a client tries to read an expired key, it is deleted in the passive way. The active way entails the system looking up 20 keys at random and testing them for an expired Time To Live (TTL). If it finds that more than 25% are expired, it will run again.</p>
+            
+              <img class="wp-image-156 alignright" src="/posts/redis-ttl-is-no-free-lunch/stopwatch_timer_running_time.png" alt="stopwatch_timer_running_time" width="120" height="120" />
               
-              <p><img class="aligncenter" src="/posts/graphconnect-2018/gcny-2017-logo-pw2x.png"  width="800" /></p>
+              <p>This is where things get a little murky for me. The Redis documents say that the cleanup function will run 10 times a second but that it will stop if it does not find greater than 25% of keys are expired. I have some questions. Stop for how long? What does start again if it finds greater than 25% are expired mean?</p>
+            
+              <h2>hz and Frequency</h2>
+            
+              <p>The answer to most of my questions was inside the <a href="http://download.redis.io/redis-stable/redis.conf" target="_blank" rel="noopener">redis.conf</a> file. In the file, under the hz configuration settings, we get this little gem of a comment.</p>
+            
+              <blockquote>
+                <p>Redis calls an internal function to perform many background tasks, like closing connections of clients in timeout, <strong>purging expired keys</strong> that are never requested, and so forth.</p>
+              </blockquote>
+            
+              <p>Wow, and when we keep reading, we get this bonus.</p>
+            
+              <blockquote>
+                <p>By default "hz" is set to 10. Raising the value will use more CPU when Redis is idle, but at the same time will make Redis more responsive when there are many keys expiring at the same time, and timeouts may be handled with more precision.</p>
+              </blockquote>
               
-              <p>I was lucky enough to go to this year's GraphConnect 2018 in New York City this September 20-21 at the Marriott in Times Square. As a person who grew up on Long Island and worked in New York City, this was an interesting homecoming for me.</p>
+              <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/settings_panel_equalizer_preferences.png" alt="settings_panel_equalizer_preferences" width="120" height="120" />
             
-              <h2>The Conference</h2>
+              <p>There it is. The magical 10 number. Now I know what you are thinking. Adjust the "hz" configuration value and REDBird will fly again. The problem is, Amazon Elasticache does not give you access to this configuration setting. I wonder why? Not really, I know why. Moving "hz" to 100 or 500 would reduce the total number of Redis instances that Amazon can deployed on the same hardware with a "hz" of 10. Ok, that's fair, but sucks. Moving on.</p>
             
-              <p>The conference was a well put together affair and I did learn a ton of stuff about how graphs are used in other industries, the intersection of graph databases, Machine Learning, Deep Learning and AI in general.</p>
+              <h2>Fly REDBird Fly</h2>
             
-              <h3>Talks</h3>
-              <ul>
-                <li>State of the Graph: Opening Keynote</li>
-                <li>The Present and Future of Artificial Intelligence and Machine Learning</li>
-                <li>Neo4j Graph Platform for Demographics Master Data at Citigroup</li>
-                <li>Predictive Analysis from Massive Knowledge Graphs on Neo4j</li>
-                <li>Neo4j Morpheus: Interweaving Table and Graph Data in Spark</li>
-                <li>Large-scale real time recommendations with Neo4j</li>
-                <li>DeepWalk - Turning Graphs into Features via Network Embeddings</li>
-                <li>How Graph Technology is Changing Artificial Intelligence and Machine Learning</li>
-                <li>Infinite Segmentation: Scalable Mutual Information Ranking on real world graphs</li>
-                <li>Machine Learning Algorithms in Neo4j</li>
-              </ul>
+              <img class="alignright" src="/posts/redis-ttl-is-no-free-lunch/send_post_paper_plane.png" alt="send_post_paper_plane" width="120" height="120" />
             
-              <h3Classes</h3>
+              <p>So how did we fix this? We took some inspiration from <a href="https://ivan-site.com/2014/06/force-evict-expired-keys-from-redis/" target="_blank" rel="noopener">this</a> and <a href="https://engineering.grab.com/a-key-expired-in-redis-you-wont-believe-what-happened-next" target="_blank" rel="noopener">another</a> blog post and started asking Redis to lookup random keys in a fire and forget pipeline batch. We started out with batches of 50K every second and eventually found that a 10K batch every couple of seconds gave us a good balance of memory cleanup and system load. Today REDBird is flying even during the fall and we were able to reduce the size of our cluster saving more money for the <a href="/pages/at-work/">chipmunks and lumberjacks</a> retirement fund.</p>
             
-              <ul>
-                <li>Neo4j for Data Science and Machine Learning</li>
-                <li>Graph Modeling Clinic</li>
-              </ul>
-            
-              <h2>Taking a Walk</h2>
-              
-              <p><img class="alignleft" src="/posts/graphconnect-2018/mountaineering-copy.png" alt="mountaineering copy" width="120" height="120" />I had a lot of fun at the conference, meeting new people and vendors selling everything from graph based analytics to ML training systems. The best talk of the whole conference was the "<em>DeepWalk - Turning Graphs into Features via Network Embeddings</em>". This talk was a standing room only talk from one of the <a href="https://www3.cs.stonybrook.edu/~skiena/">authors</a> of the <a href="https://arxiv.org/abs/1403.6652">paper</a> and was a lot of fun going through the paper and discussing how graphs can be used for feature extraction for our connected datasets and ML training grounds.</p>
-            
-              <p><img class=" size-full wp-image-176 alignright" src="/posts/graphconnect-2018/line_structure_relations_hierarchy.png" alt="line_structure_relations_hierarchy" width="120" height="120" />The first day was all talks while the next day was all learning. I took the Graph Modeling clinic to help me get over my propensity to design a data model like a RDBMS ERD diagram and the "Data Science and Machine Learning" course for the fun of learning more about Machine Learning and Model training.</p>
-              
-              <p>All in all, a nice conference with interesting speakers and training without a lot of pushy sales people. I have to hand it to Neo4j, they put on a nice conference.</p>
             </article>
     <article>
                   <header >
-                    <h1>The Hyper Logger</h1>
-                    <time datetime="2018-9-28">September 28 2018</time>
+                    <h1>GraphConnect 2018</h1>
+                    <time datetime="2016-9-24">September 24 2018</time>
                   </header>
+                  
+                  <p>One of the best parts of my job is how much I get to learn about topics that I have previously only heard of. One of those things was graph databases and how they can be used and abused for connected data.</p>
+                  
+                  <p><img class="aligncenter" src="/posts/graphconnect-2018/gcny-2017-logo-pw2x.png"  width="800" /></p>
+                  
+                  <p>I was lucky enough to go to this year's GraphConnect 2018 in New York City this September 20-21 at the Marriott in Times Square. As a person who grew up on Long Island and worked in New York City, this was an interesting homecoming for me.</p>
                 
-                  <p><img class="alignright" src="/posts/the-hyper-logger/thin-0779_wood_ax.png" alt="thin_wood_ax" width="120" height="120" />The other day while working at <a href="/pages/at-work/">Chipmunks &amp; Lumberjacks</a>, I was asked to create a computer system to count the distinct set of leaf shapes, sizes and colors of every tree in the forest. I know what you are thinking! Why would anyone want to know this information? For C&amp;L it's really important, they use it when scoring whether a tree can be harvested.</p>
+                  <h2>The Conference</h2>
                 
-                  <p><img class="alignleft" src="/posts/the-hyper-logger/thin_leaf_tree_forest.png" alt="thin_leaf_tree_forest" width="120" height="120" />The naive implementation of this system would be to add all of the leaves into a database and do distinct queries. This system might work for a while but what happens when the total number of trees and their associated leaves climb into the billions or trillions? Will it still perform? The short answer is no; the longer answer is, absolutely not, are you kidding me!</p>
+                  <p>The conference was a well put together affair and I did learn a ton of stuff about how graphs are used in other industries, the intersection of graph databases, Machine Learning, Deep Learning and AI in general.</p>
                 
-                  <h2>Probabilistic Data Structures</h2>
+                  <h3>Talks</h3>
+                  <ul>
+                    <li>State of the Graph: Opening Keynote</li>
+                    <li>The Present and Future of Artificial Intelligence and Machine Learning</li>
+                    <li>Neo4j Graph Platform for Demographics Master Data at Citigroup</li>
+                    <li>Predictive Analysis from Massive Knowledge Graphs on Neo4j</li>
+                    <li>Neo4j Morpheus: Interweaving Table and Graph Data in Spark</li>
+                    <li>Large-scale real time recommendations with Neo4j</li>
+                    <li>DeepWalk - Turning Graphs into Features via Network Embeddings</li>
+                    <li>How Graph Technology is Changing Artificial Intelligence and Machine Learning</li>
+                    <li>Infinite Segmentation: Scalable Mutual Information Ranking on real world graphs</li>
+                    <li>Machine Learning Algorithms in Neo4j</li>
+                  </ul>
                 
-                  <p>So, what is a geek working for C&amp;L to do? Enter the probabilistic data structure <a href="https://en.wikipedia.org/wiki/HyperLogLog">HyperLogLog</a>. This sleek and beautiful data structure will tell you the distinct count of items entered into its structure with a 2% error rate. Ok now, come on, 2% is not that bad, especially when you can fit 10^9 items in just 1.5K of memory. HyperLog might be the best thing to come out of the 80's besides Nintendo and the Sony Walkman.</p>
+                  <h3Classes</h3>
                 
-                  <p><img class="alignright" src="/posts/the-hyper-logger/leaf_tree_forest.png" alt="leaf_tree_forest" width="120" height="120" />HyperLogLog data structures have an Add, Count and Merge function. Add will insert a new value into the data structure. Count will tell you the distinct number of items in the data structure. Merge will take two HyperLogLog data structures and return a new combined data structure with only the distinct set of the two data structures.<br /><br />Add and Count are the meat and potatoes of the HyperLogLog data structure but don't discount Merge. Some very interesting features can be created with Merge. For C&amp;L we needed the 1, 7 and 30 day counts for our tree leaves. To save some space we just used one data structure per day and merged the days to find the week and month values. Neat, right?</p>
+                  <ul>
+                    <li>Neo4j for Data Science and Machine Learning</li>
+                    <li>Graph Modeling Clinic</li>
+                  </ul>
                 
-                  <h2>Benefits</h2>
+                  <h2>Taking a Walk</h2>
+                  
+                  <p><img class="alignleft" src="/posts/graphconnect-2018/mountaineering-copy.png" alt="mountaineering copy" width="120" height="120" />I had a lot of fun at the conference, meeting new people and vendors selling everything from graph based analytics to ML training systems. The best talk of the whole conference was the "<em>DeepWalk - Turning Graphs into Features via Network Embeddings</em>". This talk was a standing room only talk from one of the <a href="https://www3.cs.stonybrook.edu/~skiena/">authors</a> of the <a href="https://arxiv.org/abs/1403.6652">paper</a> and was a lot of fun going through the paper and discussing how graphs can be used for feature extraction for our connected datasets and ML training grounds.</p>
                 
-                  <p>There are some significant side benefits of using this type of data structure over the typical row in a database. Three of them are GDPR compliance, easy replay and size.</p>
-                  <p><img class="alignleft" src="/posts/the-hyper-logger/maple_leaf_canada_tree.png" alt="maple_leaf_canada_tree" width="120" height="120" />For GDPR, if you are just exchanging the data structures, there is no recognizable information stored inside the data structure due to the hashing of the original value and flipping a bit from 0 to 1 during the Add command.</p>
-                
-                  <p>Replay is all about recovering from a distributed system failure and that trying to insert the same value into a HyperLogLog data structure has no effect on the count. It's basically a no-op.</p>
-                  <p>You have to admit that storing a bazillion items in 1.5 kilobytes is pretty neat. The data size makes sharing and transmitting the structure between data-centers or servers in the same center relativity easy.</p>
-                
-                  <h2>A Red Bird</h2>
-                
-                  <img class="alignright" src="/posts/the-hyper-logger/bird_house_twitter.png" alt="bird_house_twitter" width="120" height="120" />
-                
-                  <p>The new system named REDBird is built and deployed to multiple forests around the world and C&amp;L is very happy with the new system. If you have a cardinality challenge at work, you might want to learn more about probabilistic data structures and HyperLogLog.</p>
-                
+                  <p><img class=" size-full wp-image-176 alignright" src="/posts/graphconnect-2018/line_structure_relations_hierarchy.png" alt="line_structure_relations_hierarchy" width="120" height="120" />The first day was all talks while the next day was all learning. I took the Graph Modeling clinic to help me get over my propensity to design a data model like a RDBMS ERD diagram and the "Data Science and Machine Learning" course for the fun of learning more about Machine Learning and Model training.</p>
+                  
+                  <p>All in all, a nice conference with interesting speakers and training without a lot of pushy sales people. I have to hand it to Neo4j, they put on a nice conference.</p>
                 </article>
     <article>
                       <header >
-                        <h1>Learing Clojure</h1>
-                        <time datetime="2018-8-15">August 15 2018</time>
+                        <h1>The Hyper Logger</h1>
+                        <time datetime="2018-9-28">September 28 2018</time>
                       </header>
-                      
-                      <p><img class="alignright" src="https://adamjwolfcom.files.wordpress.com/2018/10/clojure-logo.png" alt="clojure-logo" width="160" height="160" />It's that time of year again at work. Code Freeze. The time of year where the code in production needs to be highly stable and predictable as opposed to the rest of the year where it needs to be highly stable and predictable 😜.  The code is not truly frozen, it's kind of slushy but the benefit is that I can focus some of my extra energies into learning something new or something old like Lisp.</p>
-                      
-                      <h2>Yes, Lisp</h2>
-                      
-                      <p>Those of you who know me know that I had a ball learning from "The Land of Lisp" with it's catchy <a href="https://youtu.be/HM1Zb3xmvMc" target="_blank" rel="noopener">show tune like videos</a> and from "The Realm of Racket" book with all of its interactive games. My next fun coding book is going to be "Clojure for the Brave and True". The book looks like a lot of fun and as a bonus I will get more exposure to Java and the JVM.</p>
                     
-                     <table>
-                      <tr>
-                        <td><img class="aligncenter" src="/posts/learning-clojure/clojure-for-the-brave-and-true.jpg" alt="clojure-logo" height="300" /></td>
-                        <td><img class="aligncenter" src="/posts/learning-clojure/land-of-lisp.jpg" alt="clojure-logo" height="300" /></td>
-                        <td><img class="aligncenter" src="/posts/learning-clojure/realm-of-racket.jpg" alt="clojure-logo" height="300" /></td>
-                      </tr>
-                     </table>
-                      
-                      <p>The learning plan is to work through the book during "code freeze" and hopefully do some fun side projects with Clojure. I always find it better to "use it in anger" to really learn a topic instead of just following a prescribed plan. I don't have any idea what the side project will be yet but I think the book will give me some good ideas.</p>
-                      
-                      <p>The Github <a href="https://github.com/awolf/learn-clojure/tree/master/brave-clojure">repo</a> has been created and I have my IDE and REPL set up and working. All that's left is the fun part, reading and learning.</p>
+                      <p><img class="alignright" src="/posts/the-hyper-logger/thin-0779_wood_ax.png" alt="thin_wood_ax" width="120" height="120" />The other day while working at <a href="/pages/at-work/">Chipmunks &amp; Lumberjacks</a>, I was asked to create a computer system to count the distinct set of leaf shapes, sizes and colors of every tree in the forest. I know what you are thinking! Why would anyone want to know this information? For C&amp;L it's really important, they use it when scoring whether a tree can be harvested.</p>
+                    
+                      <p><img class="alignleft" src="/posts/the-hyper-logger/thin_leaf_tree_forest.png" alt="thin_leaf_tree_forest" width="120" height="120" />The naive implementation of this system would be to add all of the leaves into a database and do distinct queries. This system might work for a while but what happens when the total number of trees and their associated leaves climb into the billions or trillions? Will it still perform? The short answer is no; the longer answer is, absolutely not, are you kidding me!</p>
+                    
+                      <h2>Probabilistic Data Structures</h2>
+                    
+                      <p>So, what is a geek working for C&amp;L to do? Enter the probabilistic data structure <a href="https://en.wikipedia.org/wiki/HyperLogLog">HyperLogLog</a>. This sleek and beautiful data structure will tell you the distinct count of items entered into its structure with a 2% error rate. Ok now, come on, 2% is not that bad, especially when you can fit 10^9 items in just 1.5K of memory. HyperLog might be the best thing to come out of the 80's besides Nintendo and the Sony Walkman.</p>
+                    
+                      <p><img class="alignright" src="/posts/the-hyper-logger/leaf_tree_forest.png" alt="leaf_tree_forest" width="120" height="120" />HyperLogLog data structures have an Add, Count and Merge function. Add will insert a new value into the data structure. Count will tell you the distinct number of items in the data structure. Merge will take two HyperLogLog data structures and return a new combined data structure with only the distinct set of the two data structures.<br /><br />Add and Count are the meat and potatoes of the HyperLogLog data structure but don't discount Merge. Some very interesting features can be created with Merge. For C&amp;L we needed the 1, 7 and 30 day counts for our tree leaves. To save some space we just used one data structure per day and merged the days to find the week and month values. Neat, right?</p>
+                    
+                      <h2>Benefits</h2>
+                    
+                      <p>There are some significant side benefits of using this type of data structure over the typical row in a database. Three of them are GDPR compliance, easy replay and size.</p>
+                      <p><img class="alignleft" src="/posts/the-hyper-logger/maple_leaf_canada_tree.png" alt="maple_leaf_canada_tree" width="120" height="120" />For GDPR, if you are just exchanging the data structures, there is no recognizable information stored inside the data structure due to the hashing of the original value and flipping a bit from 0 to 1 during the Add command.</p>
+                    
+                      <p>Replay is all about recovering from a distributed system failure and that trying to insert the same value into a HyperLogLog data structure has no effect on the count. It's basically a no-op.</p>
+                      <p>You have to admit that storing a bazillion items in 1.5 kilobytes is pretty neat. The data size makes sharing and transmitting the structure between data-centers or servers in the same center relativity easy.</p>
+                    
+                      <h2>A Red Bird</h2>
+                    
+                      <img class="alignright" src="/posts/the-hyper-logger/bird_house_twitter.png" alt="bird_house_twitter" width="120" height="120" />
+                    
+                      <p>The new system named REDBird is built and deployed to multiple forests around the world and C&amp;L is very happy with the new system. If you have a cardinality challenge at work, you might want to learn more about probabilistic data structures and HyperLogLog.</p>
+                    
                     </article>
     <article>
                           <header >
-                            <h1>Ruby and Docker</h1>
-                            <time datetime="2018-2-26">February 26 2018</time>
+                            <h1>Learing Clojure</h1>
+                            <time datetime="2018-8-15">August 15 2018</time>
                           </header>
-                        
-                          <p><img class="alignright" src="/posts/ruby-and-docker/ruby.png" alt="ruby" width="150" height="140" />I maintain the Ruby Client wrapper for my company’s REST API. I’m not exactly sure how this happened. I might have volunteered, or it could have been bad luck. Either way, it was time for a little bug fixing and as it so happens, I got a new laptop a couple of weeks ago. You know what that means; starting from scratch, again.</p>
-                        
-                          <p>This time will be different. I’ll do it right this time, I tell myself. Maybe a VM, or a Vagrant file, or something hot like Docker.</p>
-                        
-                          <blockquote>
-                            <p>Oooh, the new hotness, Docker; that would be fun.</p>
-                          </blockquote>
                           
-                          <p>I've been learning about Docker and Kubernetes for a bit so creating a development environment for some quick Ruby fixes would be fun and educational. Especially, since I already have Docker installed.</p>
-                        
-                          <img class="aligncenter" src="/posts/ruby-and-docker/docker.png" alt="docker" width="473"/>
-                        
-                          <p>With a 5 line Dockerfile and a Ruby 2.2 base image, I was set and ready. A one line code bug fix, a version bump and our Ruby Gem was updated. So smooth it was impressive and exciting.</p>
-                        
-                          <h3>My Dockerfile</h3>
+                          <p><img class="alignright" src="https://adamjwolfcom.files.wordpress.com/2018/10/clojure-logo.png" alt="clojure-logo" width="160" height="160" />It's that time of year again at work. Code Freeze. The time of year where the code in production needs to be highly stable and predictable as opposed to the rest of the year where it needs to be highly stable and predictable 😜.  The code is not truly frozen, it's kind of slushy but the benefit is that I can focus some of my extra energies into learning something new or something old like Lisp.</p>
                           
-                          <script src="https://gist.github.com/awolf/e7a14b7ed6025f956b5ef307d7785166.js"></script>
+                          <h2>Yes, Lisp</h2>
                           
-                          <p>With a <code>docker build -t devtheruby .</code> and a <code>docker run -it -v $(pwd):/app devtheruby bash</code>, I had my environment up and running. With the volume mount, I could edit the code from VS Code on the host and build and run tests in the connected terminal. Not a bad way to work.</p>
+                          <p>Those of you who know me know that I had a ball learning from "The Land of Lisp" with it's catchy <a href="https://youtu.be/HM1Zb3xmvMc" target="_blank" rel="noopener">show tune like videos</a> and from "The Realm of Racket" book with all of its interactive games. My next fun coding book is going to be "Clojure for the Brave and True". The book looks like a lot of fun and as a bonus I will get more exposure to Java and the JVM.</p>
                         
-                          <p>Docker was really easy to set up and as a bonus, I added the Dockerfile to the Git repository for future me. I try to be nice to future me; he has to fix all my mistakes. For quick fixes, this seems like a good alternative to VM's.  I'm just not sure if this is the way I would want to develop every day. I think I'm going to leave that up to future me.</p>
-                        
+                         <table>
+                          <tr>
+                            <td><img class="aligncenter" src="/posts/learning-clojure/clojure-for-the-brave-and-true.jpg" alt="clojure-logo" height="300" /></td>
+                            <td><img class="aligncenter" src="/posts/learning-clojure/land-of-lisp.jpg" alt="clojure-logo" height="300" /></td>
+                            <td><img class="aligncenter" src="/posts/learning-clojure/realm-of-racket.jpg" alt="clojure-logo" height="300" /></td>
+                          </tr>
+                         </table>
+                          
+                          <p>The learning plan is to work through the book during "code freeze" and hopefully do some fun side projects with Clojure. I always find it better to "use it in anger" to really learn a topic instead of just following a prescribed plan. I don't have any idea what the side project will be yet but I think the book will give me some good ideas.</p>
+                          
+                          <p>The Github <a href="https://github.com/awolf/learn-clojure/tree/master/brave-clojure">repo</a> has been created and I have my IDE and REPL set up and working. All that's left is the fun part, reading and learning.</p>
                         </article>
     <article>
                               <header >
-                                <h1>My Re:Invent 2017</h1>
-                                <time datetime="2016-12-7">December 7 2017</time>
+                                <h1>Ruby and Docker</h1>
+                                <time datetime="2018-2-26">February 26 2018</time>
                               </header>
+                            
+                              <p><img class="alignright" src="/posts/ruby-and-docker/ruby.png" alt="ruby" width="150" height="140" />I maintain the Ruby Client wrapper for my company’s REST API. I’m not exactly sure how this happened. I might have volunteered, or it could have been bad luck. Either way, it was time for a little bug fixing and as it so happens, I got a new laptop a couple of weeks ago. You know what that means; starting from scratch, again.</p>
+                            
+                              <p>This time will be different. I’ll do it right this time, I tell myself. Maybe a VM, or a Vagrant file, or something hot like Docker.</p>
+                            
+                              <blockquote>
+                                <p>Oooh, the new hotness, Docker; that would be fun.</p>
+                              </blockquote>
                               
-                              <img class="alignnone size-full wp-image-61" src="/posts/my-aws-reinvent-2017/reinvent2017.jpg" alt="reinvent2017"/>
+                              <p>I've been learning about Docker and Kubernetes for a bit so creating a development environment for some quick Ruby fixes would be fun and educational. Especially, since I already have Docker installed.</p>
                             
-                              <p>The conference is over, I'm back home and it's time to digest and make plans. AWS re:Invent 2017 was my first big conference and it was a lot of fun. I learned a lot, and now I have a bunch of new stuff to learn. When will it end? Hopefully never!</p>
+                              <img class="aligncenter" src="/posts/ruby-and-docker/docker.png" alt="docker" width="473"/>
                             
-                              <h2>Announcements</h2>
-                              <p>Here is the list of the announcements that I was hoping for and never dreamed they would announce.</p>
+                              <p>With a 5 line Dockerfile and a Ruby 2.2 base image, I was set and ready. A one line code bug fix, a version bump and our Ruby Gem was updated. So smooth it was impressive and exciting.</p>
                             
-                              <h3>DynamoDB Global Tables</h3>
-                            
-                              <p>The biggest and most welcome announcement at re:Invent for me was DynamoDB Global Tables. Yep, Kubernetes support, graph databases and Golang for Lambda is great and all, but cross-region replication is going to be a hit at work. No more loading 100's of GB in three regions from a Data Pipeline job that takes days. YAS!!!</p>
-                            
-                              <h3>Neptune</h3>
-                            
-                              <p>The announcement of AWS Neptune was a complete shocker for me. I've been researching graph databases for a couple of months and the industry is decidedly against using the common graph database flavors in a transactional system like the one I work on.</p>
-                            
-                              <p>Time will tell, but from what I've read, Neptune is limited to an in-memory store with read replicas in the same region. For me, that won't work. I still think <a href="https://dgraph.io/" target="_blank" rel="noopener">Dgraph</a> would be a better fit with their distributed transaction and multiple machine support. I might start a Dgraph POC in a few weeks and I'll try to blog about the results.</p>
-                            
-                              <h3>Kubernetes</h3>
-                              <p>Most cloud providers now have Kubernetes support and it could not have come at a better time. I still need to dig into Kubernetes more and start using it in anger. This announcement was expected but nice to hear.</p>
-                              <h3>Go for Lambda</h3>
-                              <p>This was a surprise and a very welcome announcement. It's not released yet, and we did not get a good timeframe for its release. Or at least good enough for me.  When it is, we will be using it heavily at work.</p>
-                            
-                              <h2>My Schedule</h2>
-                              <p>For those of you that have never been to one of these conferences, here is what my days looked like. I was lucky that all of my sessions were in the Venetian Hotel. Other people I went with had to move between two or three hotels during the day.</p>
+                              <h3>My Dockerfile</h3>
                               
-                              <table>
-                                <thead>
-                                    <tr>
-                                      <th>Code</th>
-                                      <th>Description</th>
-                                      <th>Time</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>ATC303</td>
-                                    <td>Cache Me If You Can: Minimizing Latency While Optimizing Cost Through Advanced Caching Strategies</td>
-                                    <td>11/27/17 10:45 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>ATC301</td>
-                                    <td>1 Million bids in 100ms – using AWS to power your Real-Time Bidder</td>
-                                    <td>11/27/17 12:15 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>GAM307</td>
-                                    <td>Ubisoft: How For Honor Runs Using Amazon ECS</td>
-                                    <td>11/27/17 1:45 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>GAM401</td>
-                                    <td>Designing for the Future: Building a Flexible Event-based Analytics Architecture for Games</td>
-                                    <td>11/27/17 3:15 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DAT321</td>
-                                    <td>From Minutes to Milliseconds: How Careem Used Amazon ElastiCache for Redis</td>
-                                    <td>11/28/17 9:15 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>ARC209</td>
-                                    <td>A Day in the Life of a Netflix Engineer III</td>
-                                    <td>11/28/17 10:45 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>ARC401</td>
-                                    <td>Serverless Architectural Patterns and Best Practices</td>
-                                    <td>11/28/17 1:45 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DEV206</td>
-                                    <td>Life of a Code Change to a Tier 1 Service</td>
-                                    <td>11/28/17 3:15 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DAT305</td>
-                                    <td>ElastiCache Deep Dive: Best Practices and Usage Patterns</td>
-                                    <td>11/28/17 4:45 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>GEN25</td>
-                                    <td>Andy Jassy's Keynote</td>
-                                    <td>11/29/17 8:00 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DAT328</td>
-                                    <td>Tinder and DynamoDB: It's a Match! Massive Data Migration, Zero Down Time</td>
-                                    <td>11/29/17 11:30 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DEV314</td>
-                                    <td>Monitoring as Code: Getting to Monitoring-Driven Development</td>
-                                    <td>11/29/17 1:45 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DAT304</td>
-                                    <td>DynamoDB - What's new</td>
-                                    <td>11/29/17 3:15 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>GEN06</td>
-                                    <td>Werner Vogels' Keynote</td>
-                                    <td>11/30/17 8:30 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>ARC319</td>
-                                    <td>How to Design a Multi-Region Active-Active Architecture</td>
-                                    <td>11/30/17 11:30 AM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>DAT327</td>
-                                    <td>DynamoDB adaptive capacity: smooth performance for chaotic workloads</td>
-                                    <td>11/30/17 2:30 PM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>ARC321</td>
-                                    <td>Models of Availability</td>
-                                    <td>11/30/17 4:00 PM</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            
-                              <h2>Going Again</h2>
+                              <script src="https://gist.github.com/awolf/e7a14b7ed6025f956b5ef307d7785166.js"></script>
                               
-                              <p>I think I'm going to need the rest of 2017 to recover, but all in all, I think it was worthwhile to go to the conference even though you could watch the reply on Youtube. If you ever have the chance to go, you should take it. One of the benefits of going is speaking to the engineers who built the systems you use. I had a great conversation and a good chuckle about AWS support with them. See you next year at re:Invent 2018.</p>
+                              <p>With a <code>docker build -t devtheruby .</code> and a <code>docker run -it -v $(pwd):/app devtheruby bash</code>, I had my environment up and running. With the volume mount, I could edit the code from VS Code on the host and build and run tests in the connected terminal. Not a bad way to work.</p>
+                            
+                              <p>Docker was really easy to set up and as a bonus, I added the Dockerfile to the Git repository for future me. I try to be nice to future me; he has to fix all my mistakes. For quick fixes, this seems like a good alternative to VM's.  I'm just not sure if this is the way I would want to develop every day. I think I'm going to leave that up to future me.</p>
+                            
                             </article>
-                            
     <article>
                                   <header >
-                                    <h1>Attendance with Beacons</h1>
-                                    <time datetime="2015-3-21">March 21 2015</time>
+                                    <h1>My Re:Invent 2017</h1>
+                                    <time datetime="2016-12-7">December 7 2017</time>
                                   </header>
                                   
-                                    <p>This post is going to be a little different than my normal Xamarin.Forms posts. I want you all to know that I am more than a pretty interface. I have architectural and distributed systems chops as well.</p>
+                                  <img class="alignnone size-full wp-image-61" src="/posts/my-aws-reinvent-2017/reinvent2017.jpg" alt="reinvent2017"/>
                                 
-                                    <p>I currently work for a local university that needs a solution for taking attendance for the first 3 weeks of every semester. You see, the university I work for is not an attendance taking university, but we need to satisfy a government requirement to take a student’s attendance to get financial aid. So I was asked to solve this little problem using mobile.</p>
+                                  <p>The conference is over, I'm back home and it's time to digest and make plans. AWS re:Invent 2017 was my first big conference and it was a lot of fun. I learned a lot, and now I have a bunch of new stuff to learn. When will it end? Hopefully never!</p>
                                 
-                                    <h4 id="here-was-the-challenge">Here was the challenge</h4>
-                                    <blockquote>
-                                    Students will walk into class and have their attendance taken automatically without the teachers involvement. Magically Delicious!
-                                    </blockquote>
+                                  <h2>Announcements</h2>
+                                  <p>Here is the list of the announcements that I was hoping for and never dreamed they would announce.</p>
                                 
-                                    <h2>Beacons</h2> 
-                                    
-                                    <img class="alignright" src="/posts/attendance-with-beacons/beaconradar.png" alt="BeaconRadar" width="312" height="323">
-                                    
-                                    <p>To solve the problem, I combined some very cool technology and one of them, of course, is Xamarin and Xamarin.Forms, but it’s not the star of this blog post. The star is iBeacons, specifically <a href="http://estimote.com/" target="_blank" rel="noopener">Estimote</a> Beacons.</p>
+                                  <h3>DynamoDB Global Tables</h3>
                                 
-                                    <p>If you don’t know what an iBeacon is, don’t worry. Think of them as tiny radio stations that transmit their signal over Bluetooth. The Bluetooth signal can range from a few feet to over 200 feet for each station.</p>
+                                  <p>The biggest and most welcome announcement at re:Invent for me was DynamoDB Global Tables. Yep, Kubernetes support, graph databases and Golang for Lambda is great and all, but cross-region replication is going to be a hit at work. No more loading 100's of GB in three regions from a Data Pipeline job that takes days. YAS!!!</p>
                                 
-                                    <p>The beacons broadcast a small amount of data every few seconds to receivers that are tuned to its specific address. Each classroom at the university will get its own beacon and it will broadcast the building and the room number of the classroom.</p>
+                                  <h3>Neptune</h3>
                                 
-                                    <p>When a phone comes in contact with the beacons signal, it will then wake the Xamarin app up and give it 10 seconds to do its work. This works even if your app is not running. Neat!</p>
+                                  <p>The announcement of AWS Neptune was a complete shocker for me. I've been researching graph databases for a couple of months and the industry is decidedly against using the common graph database flavors in a transactional system like the one I work on.</p>
                                 
-                                    <h2>Beacon Phone Home</h2>
+                                  <p>Time will tell, but from what I've read, Neptune is limited to an in-memory store with read replicas in the same region. For me, that won't work. I still think <a href="https://dgraph.io/" target="_blank" rel="noopener">Dgraph</a> would be a better fit with their distributed transaction and multiple machine support. I might start a Dgraph POC in a few weeks and I'll try to blog about the results.</p>
                                 
-                                    <p>Ok, now that the phone has come into range of our classroom radio station, what do we do now? For this application, the app transmits the beacon data and the student’s identity to the cloud. We call this message a beacon ping. To the cloud!</p>
-                                    
-                                    <img class="aligncenter" src="/posts/attendance-with-beacons/azurebeaconcloudps.png" alt="AzureBeaconCloudPS" width="700" height="414">
+                                  <h3>Kubernetes</h3>
+                                  <p>Most cloud providers now have Kubernetes support and it could not have come at a better time. I still need to dig into Kubernetes more and start using it in anger. This announcement was expected but nice to hear.</p>
+                                  <h3>Go for Lambda</h3>
+                                  <p>This was a surprise and a very welcome announcement. It's not released yet, and we did not get a good timeframe for its release. Or at least good enough for me.  When it is, we will be using it heavily at work.</p>
                                 
-                                    <p>The university’s student mobile application is backed by an Node.js Azure Mobile Service. I know, I use C# on the phone and JavaScript on the server, the irony!</p>
-                                    
-                                    <p>As you can imagine, we will have a lot of pings coming into the Azure front ends. Today most of that data will be used for attendance but we have no idea where the school will place beacons in the future. Maybe they’ll put them in front of the food venues to figure out which is the most popular. Or put them on the light posts outside to see what walkways are the busiest. We just don’t know what the genie will do once it’s let out of the bottle.</p>
+                                  <h2>My Schedule</h2>
+                                  <p>For those of you that have never been to one of these conferences, here is what my days looked like. I was lucky that all of my sessions were in the Venetian Hotel. Other people I went with had to move between two or three hotels during the day.</p>
+                                  
+                                  <table>
+                                    <thead>
+                                        <tr>
+                                          <th>Code</th>
+                                          <th>Description</th>
+                                          <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>ATC303</td>
+                                        <td>Cache Me If You Can: Minimizing Latency While Optimizing Cost Through Advanced Caching Strategies</td>
+                                        <td>11/27/17 10:45 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>ATC301</td>
+                                        <td>1 Million bids in 100ms – using AWS to power your Real-Time Bidder</td>
+                                        <td>11/27/17 12:15 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>GAM307</td>
+                                        <td>Ubisoft: How For Honor Runs Using Amazon ECS</td>
+                                        <td>11/27/17 1:45 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>GAM401</td>
+                                        <td>Designing for the Future: Building a Flexible Event-based Analytics Architecture for Games</td>
+                                        <td>11/27/17 3:15 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DAT321</td>
+                                        <td>From Minutes to Milliseconds: How Careem Used Amazon ElastiCache for Redis</td>
+                                        <td>11/28/17 9:15 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>ARC209</td>
+                                        <td>A Day in the Life of a Netflix Engineer III</td>
+                                        <td>11/28/17 10:45 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>ARC401</td>
+                                        <td>Serverless Architectural Patterns and Best Practices</td>
+                                        <td>11/28/17 1:45 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DEV206</td>
+                                        <td>Life of a Code Change to a Tier 1 Service</td>
+                                        <td>11/28/17 3:15 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DAT305</td>
+                                        <td>ElastiCache Deep Dive: Best Practices and Usage Patterns</td>
+                                        <td>11/28/17 4:45 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>GEN25</td>
+                                        <td>Andy Jassy's Keynote</td>
+                                        <td>11/29/17 8:00 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DAT328</td>
+                                        <td>Tinder and DynamoDB: It's a Match! Massive Data Migration, Zero Down Time</td>
+                                        <td>11/29/17 11:30 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DEV314</td>
+                                        <td>Monitoring as Code: Getting to Monitoring-Driven Development</td>
+                                        <td>11/29/17 1:45 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DAT304</td>
+                                        <td>DynamoDB - What's new</td>
+                                        <td>11/29/17 3:15 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>GEN06</td>
+                                        <td>Werner Vogels' Keynote</td>
+                                        <td>11/30/17 8:30 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>ARC319</td>
+                                        <td>How to Design a Multi-Region Active-Active Architecture</td>
+                                        <td>11/30/17 11:30 AM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>DAT327</td>
+                                        <td>DynamoDB adaptive capacity: smooth performance for chaotic workloads</td>
+                                        <td>11/30/17 2:30 PM</td>
+                                      </tr>
+                                      <tr>
+                                        <td>ARC321</td>
+                                        <td>Models of Availability</td>
+                                        <td>11/30/17 4:00 PM</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 
-                                    <h2>Beacon PubSub</h2>
-                                    <p>With all the unknowns for our system, flexibility was something we had to build into the system from the beginning. I decided to use the Azure Message Bus in a PubSub configuration to handle today’s and tomorrow’s requirements. This configuration is very powerful and it’s so simple to setup it borders on criminal.</p>
-                                
-                                    <img class="aligncenter" src="/posts/attendance-with-beacons/beaconstreamtopology.png" alt="BeaconStreamTopology" width="800" height="342">
-                                
-                                    <p>Our day 1 configuration for the Beacon PubSub was for the Azure Mobile Service to take in pings from the handset and push them onto the “BeaconPing” topic inside of the Azure Message Bus. Two subscriptions are added to the topic, one for taking attendance and one for auditing.</p>
-                                
-                                    <h3>Taking Attendance</h3>
-                                    <p>Taking attendance is pretty simple. For every ping, we look up a student’s schedule based on the StudentId inside the ping and see if the beacon’s location matches the classroom on their schedule. If we have a match, then we mark them as attended. If not, we throw the ping away and move on. Students can easily come into contact with beacons from other classrooms so we just handle that case by ignoring the ping. The attendance module is idempotent so duplicates are not a problem.</p>
-                                
-                                    <h3 id="auditing">Auditing</h3>
-                                
-                                    <p>The audit subscription will subscribe to every ping and put the pings into Hadoop for future analysis. I have no doubt our computer science students will have some fun with that data in the years to come.</p>
-                                
-                                    <h3 id="the-future">The Future</h3>
-                                
-                                    <p>One of the benefits to using PubSub like this is flexibility. With each ping, identifying the student and a location on campus, the opportunities are endless. One scenario we like to talk about is placing a beacon on our school mascot and running reports to see what part of the student body came in contact with our furry friend. I don’t know why we would want to do that, but we could. Beacons don’t have to be stationary either.</p>
-                                
-                                    <h2>The Endless Possibilities</h2>
-                                    <p>The one reason why I like this system and setup is flexibility and the fact that we don’t have to change the code on the mobile app when we add a new type of beacon or beacon processor. We just put more beacons on campus and another processor in the cloud and we’re done. See, like I said in the beginning of this post, I’m not just a pretty interface!</p>
-                                
-                                    <p>One thing to note here is that some students might not have a phone or wish to be tracked in this manner. Our students using the app have a choice to enable or disable this feature and we still have to have a manual way to taking attendance at the school. Because some student may have a Windows or Blackberry phone! 😉</p>
-                                
+                                  <h2>Going Again</h2>
+                                  
+                                  <p>I think I'm going to need the rest of 2017 to recover, but all in all, I think it was worthwhile to go to the conference even though you could watch the reply on Youtube. If you ever have the chance to go, you should take it. One of the benefits of going is speaking to the engineers who built the systems you use. I had a great conversation and a good chuckle about AWS support with them. See you next year at re:Invent 2018.</p>
                                 </article>
                                 
-                                
+    <article>
+                                      <header >
+                                        <h1>Attendance with Beacons</h1>
+                                        <time datetime="2015-3-21">March 21 2015</time>
+                                      </header>
+                                      
+                                        <p>This post is going to be a little different than my normal Xamarin.Forms posts. I want you all to know that I am more than a pretty interface. I have architectural and distributed systems chops as well.</p>
+                                    
+                                        <p>I currently work for a local university that needs a solution for taking attendance for the first 3 weeks of every semester. You see, the university I work for is not an attendance taking university, but we need to satisfy a government requirement to take a student’s attendance to get financial aid. So I was asked to solve this little problem using mobile.</p>
+                                    
+                                        <h4 id="here-was-the-challenge">Here was the challenge</h4>
+                                        <blockquote>
+                                        Students will walk into class and have their attendance taken automatically without the teachers involvement. Magically Delicious!
+                                        </blockquote>
+                                    
+                                        <h2>Beacons</h2> 
+                                        
+                                        <img class="alignright" src="/posts/attendance-with-beacons/beaconradar.png" alt="BeaconRadar" width="312" height="323">
+                                        
+                                        <p>To solve the problem, I combined some very cool technology and one of them, of course, is Xamarin and Xamarin.Forms, but it’s not the star of this blog post. The star is iBeacons, specifically <a href="http://estimote.com/" target="_blank" rel="noopener">Estimote</a> Beacons.</p>
+                                    
+                                        <p>If you don’t know what an iBeacon is, don’t worry. Think of them as tiny radio stations that transmit their signal over Bluetooth. The Bluetooth signal can range from a few feet to over 200 feet for each station.</p>
+                                    
+                                        <p>The beacons broadcast a small amount of data every few seconds to receivers that are tuned to its specific address. Each classroom at the university will get its own beacon and it will broadcast the building and the room number of the classroom.</p>
+                                    
+                                        <p>When a phone comes in contact with the beacons signal, it will then wake the Xamarin app up and give it 10 seconds to do its work. This works even if your app is not running. Neat!</p>
+                                    
+                                        <h2>Beacon Phone Home</h2>
+                                    
+                                        <p>Ok, now that the phone has come into range of our classroom radio station, what do we do now? For this application, the app transmits the beacon data and the student’s identity to the cloud. We call this message a beacon ping. To the cloud!</p>
+                                        
+                                        <img class="aligncenter" src="/posts/attendance-with-beacons/azurebeaconcloudps.png" alt="AzureBeaconCloudPS" width="700" height="414">
+                                    
+                                        <p>The university’s student mobile application is backed by an Node.js Azure Mobile Service. I know, I use C# on the phone and JavaScript on the server, the irony!</p>
+                                        
+                                        <p>As you can imagine, we will have a lot of pings coming into the Azure front ends. Today most of that data will be used for attendance but we have no idea where the school will place beacons in the future. Maybe they’ll put them in front of the food venues to figure out which is the most popular. Or put them on the light posts outside to see what walkways are the busiest. We just don’t know what the genie will do once it’s let out of the bottle.</p>
+                                    
+                                        <h2>Beacon PubSub</h2>
+                                        <p>With all the unknowns for our system, flexibility was something we had to build into the system from the beginning. I decided to use the Azure Message Bus in a PubSub configuration to handle today’s and tomorrow’s requirements. This configuration is very powerful and it’s so simple to setup it borders on criminal.</p>
+                                    
+                                        <img class="aligncenter" src="/posts/attendance-with-beacons/beaconstreamtopology.png" alt="BeaconStreamTopology" width="800" height="342">
+                                    
+                                        <p>Our day 1 configuration for the Beacon PubSub was for the Azure Mobile Service to take in pings from the handset and push them onto the “BeaconPing” topic inside of the Azure Message Bus. Two subscriptions are added to the topic, one for taking attendance and one for auditing.</p>
+                                    
+                                        <h3>Taking Attendance</h3>
+                                        <p>Taking attendance is pretty simple. For every ping, we look up a student’s schedule based on the StudentId inside the ping and see if the beacon’s location matches the classroom on their schedule. If we have a match, then we mark them as attended. If not, we throw the ping away and move on. Students can easily come into contact with beacons from other classrooms so we just handle that case by ignoring the ping. The attendance module is idempotent so duplicates are not a problem.</p>
+                                    
+                                        <h3 id="auditing">Auditing</h3>
+                                    
+                                        <p>The audit subscription will subscribe to every ping and put the pings into Hadoop for future analysis. I have no doubt our computer science students will have some fun with that data in the years to come.</p>
+                                    
+                                        <h3 id="the-future">The Future</h3>
+                                    
+                                        <p>One of the benefits to using PubSub like this is flexibility. With each ping, identifying the student and a location on campus, the opportunities are endless. One scenario we like to talk about is placing a beacon on our school mascot and running reports to see what part of the student body came in contact with our furry friend. I don’t know why we would want to do that, but we could. Beacons don’t have to be stationary either.</p>
+                                    
+                                        <h2>The Endless Possibilities</h2>
+                                        <p>The one reason why I like this system and setup is flexibility and the fact that we don’t have to change the code on the mobile app when we add a new type of beacon or beacon processor. We just put more beacons on campus and another processor in the cloud and we’re done. See, like I said in the beginning of this post, I’m not just a pretty interface!</p>
+                                    
+                                        <p>One thing to note here is that some students might not have a phone or wish to be tracked in this manner. Our students using the app have a choice to enable or disable this feature and we still have to have a manual way to taking attendance at the school. Because some student may have a Windows or Blackberry phone! 😉</p>
+                                    
+                                    </article>
+                                    
+                                    
     
   <section id="author">
     <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />

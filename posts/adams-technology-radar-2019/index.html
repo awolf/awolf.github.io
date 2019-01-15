@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Adam J Wolf">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Adam J Wolf Blog"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for AdamJWolf.com" href="/rss.xml" />
+    
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-194.png" sizes="194x194" />
+    
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <title>Aluminum Toy Hauler Vacations- ...</title>
+  </head>
+  <body>
+    <header id="blog-header">
+      <h1>Adam J Wolf Blog</h1>
+    </header>
+    
+    <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/resume/">Resume</a></li>
+            <li><a href="/pages/about/">About</a></li>
+          </ol>
+        </nav>
+        
+
+    <article>
+      <header>
+        <h1>Adam's Technology Radar for 2019</h1>
+        <time datetime="2019-1-15">January 15, 2019</time>
+      </header>
+      <p> Well, another year has come and gone and so has the technologies I am most interested in. Every year I evaluate
+        what’s hot, what’s not and focus my learning on the things that I think are going to be good for my career and my
+        current and future employers.</p>
+    
+      <p>This year I have three main areas of focus and they are Serverless, WebAssembly and Artificial Intelligence. These
+        three general areas will be an underlying focus of mine throughout the year as well as my Clojure and functional
+        programming studies. I am really looking forward to these topics. Some of them, I am very familiar with and others
+        are going to be a stretch to say the least.</p>
+    
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/serverless.png" />
+    
+      <p> Serverless and WebAssemble might be considered the same topic but I am approaching them from two different
+        directions. For Serverless, I am approaching it as an experienced user that wants to know more about what and
+        when can things go wrong. We use AWS Lambda at work heavily and I always have to caution my coworkers that Lambda
+        is not a good default choice without thinking.</p>
+    
+      <blockquote>
+        Is anything a good choice without thinking? I think not!
+      </blockquote>
+    
+      <h4>Things to think about</h4>
+      <ol>
+        <li>How many times will this function execute?</li>
+        <li>Do I need to coordinate between function instances?</li>
+        <li>What happens when we reach our 1000 concurrent executions?</li>
+        <li>Will a single function run so much that it stops other functions from running?</li>
+        <li>What is the backup plan when AWS Lambda experiences an outage?</li>
+      </ol>
+    
+      <p>You might be thinking that some of these things are unlikely, but I have seen most of them in production. These
+        questions and their answers should be thought about and figured out before you fire a Lambda into production. Don't
+        get me wrong, I think it's a good start for a platform, but it's not perfect, like every other technology. I do
+        believe we are going to be seeing a lot more <a href="https://en.wikipedia.org/wiki/Function_as_a_service">FAAS</a>
+        in the future and in places you didn't expect it. <i>Psssssssst; it's WebAssembly!</i></p>
+    
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href=" http://cidrdb.org/cidr2019/papers/p119-hellerstein-cidr19.pdf">Serverless computing: one step forward,
+            two steps back</a>
+        </li>
+        <li>
+          <a href="https://blog.acolyer.org/2019/01/14/serverless-computing-one-step-forward-two-steps-back/">The Morning
+            Paper</a>
+        </li>
+        <li>
+          <a href="https://martinfowler.com/articles/serverless.html"> Serverless Architectures</a>
+        </li>
+      </ul>
+    
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/web-assembly.png" />
+    
+      <p>
+        WebAssembly the Javascript killer! Just Kidding. I know what you're thinking, isn't it a bit early to dive into
+        WebAssembly? I would agree if I were talking about frontend UI for the browser. What I'm talking about is using
+        WebAssembly and V8 Isolates embedded into products like what Cloudflare is doing with their edge functions called
+        Workers.
+      </p>
+      <p>
+        Cloudflare Workers is a neat feature of their content delivery network (CDN) where you can run a WebAssembly
+        functions at the edge. I think this is neat because you can now do things that you could never do before like API
+        validation or authentication on the edge of a giant CDN. As an eventual bonus, you don't have to do it in one
+        language, you could do it in any language that compiles to WebAssembly. For now I think they are only supporting
+        Rust and Javascript.
+      </p>
+      <p>
+        Besides Cloudflare and Fastly, I can see a bunch of uses for this type of embedding custom processing at the edge
+        or
+        core of a product. How would you like to embed a C# or GoLang WebAssembly function into Redis and skip the Lua
+        language? How about using WebAssembly as the new Docker on Kubernetes? WebAssembly was born and will evolve in an
+        untrusted sandbox with security built in.
+      </p>
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href="https://blog.cloudflare.com/serverless-performance-comparison-workers-lambda">Serverless Performance:
+            Cloudflare Workers, Lambda and Lambda@Edge </a>
+        </li>
+        <li>
+          <a href="https://blog.cloudflare.com/introducing-cloudflare-workers/">Introducing Cloudflare Workers: Run
+            JavaScript Service Workers at the Edge</a>
+        </li>
+        <li>
+          <a href="https://rustwasm.github.io/book/ ">Rust and WebAssembly</a>
+        </li>
+        <li>
+          <a href="https://www.fastly.com/blog/edge-programming-rust-web-assembly">Edge programming with Rust and
+            WebAssembly</a>
+        </li>
+        <li>
+          <a href="https://pragprog.com/book/khrust/programming-webassembly-with-rust">Programming WebAssembly with Rust</a>
+        </li>
+      </ul>
+    
+      <img class="slide-center" src="/posts/adams-technology-radar-2019/ai-at-the-edge.png" />
+    
+      <p>
+        This choice is a no-brainer. I think everyone in the IT industry is talking about this, working on it, or learning
+        about it and so am I. My specific interest is how can the models produced from training be used in anger at the
+        edge of our software. </p>
+    
+      <img class="alignright" src="/posts/adams-technology-radar-2019/prediction-machine-cover.jpg" width="150" />
+    
+      <p>I am currently reading the book <a href="https://www.amazon.com/Prediction-Machines-Economics-Artificial-Intelligence-ebook/dp/B075GXJPFS/ref=sr_1_1?ie=UTF8&qid=1547591808&sr=8-1&keywords=prediction+machines">"Prediction
+          Machines: The Simple Economics of Artificial Intelligence"</a> and I really like how the book takes a look at AI
+        from the perspective of an economist. One of the things that struck me about the book was the observation of when
+        the cost of accurate predictions decrease, more value is placed on humans that interpret and execute. The SageDB
+        and the IntelliCode plugin for Visual Studio are great examples of this AI enhancing costly humans.
+      </p>
+      <p>I am not quite sure how and what I am going to do with this technology pursuit but I would love to try and put a
+        trained model into a WebAssembly host at the edge of a network or as a replacement for a Lambda function. The year
+        has just begun and I am looking forward to digging into these three technologies.
+      </p>
+    
+      <h5>Further Reading</h5>
+      <ul>
+        <li>
+          <a href="https://blogs.msdn.microsoft.com/visualstudio/2018/05/07/introducing-visual-studio-intellicode/">Introducing
+            Visual Studio IntelliCode</a>
+        </li>
+        <li>
+          <a href="http://alexbeutel.com/papers/CIDR2019_SageDB.pdf">SageDB: A Learned Database System</a>
+        </li>
+        <li>
+          <a href="http://cidrdb.org/cidr2019/papers/p101-kipf-cidr19.pdf">Learned Cardinalities: Estimating Correlated
+            Joins with Deep Learning</a>
+        </li>
+        <li>
+          <a href="http://cidrdb.org/cidr2019/papers/p96-marcus-cidr19.pdf">Towards a Hands-Free Query Optimizer through
+            Deep Learning</a>
+        </li>
+      </ul>
+    
+      <p>I hope I've given you some things to think about. Watch out for more blogs on each of my technology
+        choices coming in the next few weeks and months. I now have my work cut out for me, how about you? What are you
+        looking to learn and explore in 2019?</p>
+    </article>
+
+    <section id="author">
+      <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />
+      <h3>
+        Adam J Wolf
+      </h3>
+      <p>
+        Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      </p>
+    </section>
+    
+  </body>
+</html>
