@@ -8,55 +8,57 @@
     <item>
       <title>Adam's Technology Radar for 2019</title>
       <link>http://awolf.github.io/posts/adams-technology-radar-2019/</link>
-      <description></description>
+      <description>Well, another year has come and gone and so has the technologies I am most interested in. Every year I evaluate
+    what’s hot, what’s not and focus my learning on the things that I think are going to be good for my career and my
+    current and future employers.</description>
       <guid>http://awolf.github.io/posts/adams-technology-radar-2019/</guid>
     </item>
     <item>
       <title>Brain Freeze from Clojure</title>
       <link>http://awolf.github.io/posts/brain-freeze-from-clojure/</link>
-      <description></description>
+      <description>I am back to my endeavor to learn Clojure. This is a 2019 goal of mine. I've been getting a jump on my resolution in this confusing time between Christmas and New Years. What day is it? Do I need to go back to work yet?</description>
       <guid>http://awolf.github.io/posts/brain-freeze-from-clojure/</guid>
     </item>
     <item>
       <title>Redis TTL is No Free Lunch</title>
       <link>http://awolf.github.io/posts/redis-ttl-is-no-free-lunch/</link>
-      <description></description>
+      <description>Do you know how Redis cleans up memory? If not, keep reading. You see, I know much more about how Redis cleans up memory, more than I ever wanted to know. Recently, I built a system that had a variable load and was hammered during the <a href="/posts/the-hyper-logger/">fall foliage season</a> and we ran into a little memory issue with my favorite database. We had to keep scaling it up and it was getting expensive.</description>
       <guid>http://awolf.github.io/posts/redis-ttl-is-no-free-lunch/</guid>
     </item>
     <item>
       <title>GraphConnect 2018</title>
       <link>http://awolf.github.io/posts/graphconnect-2018/</link>
-      <description></description>
+      <description>One of the best parts of my job is how much I get to learn about topics that I have previously only heard of. One of those things was graph databases and how they can be used and abused for connected data.</description>
       <guid>http://awolf.github.io/posts/graphconnect-2018/</guid>
     </item>
     <item>
       <title>The Hyper Logger</title>
       <link>http://awolf.github.io/posts/the-hyper-logger/</link>
-      <description></description>
+      <description>The other day while working at <a href="/pages/at-work/">Chipmunks &amp; Lumberjacks</a>, I was asked to create a computer system to count the distinct set of leaf shapes, sizes and colors of every tree in the forest. I know what you are thinking! Why would anyone want to know this information? For C&amp;L it's really important, they use it when scoring whether a tree can be harvested.</description>
       <guid>http://awolf.github.io/posts/the-hyper-logger/</guid>
     </item>
     <item>
       <title>Learning Clojure</title>
       <link>http://awolf.github.io/posts/learning-clojure/</link>
-      <description></description>
+      <description>It's that time of year again at work. Code Freeze. The time of year where the code in production needs to be highly stable and predictable as opposed to the rest of the year where it needs to be highly stable and predictable 😜.  The code is not truly frozen, it's kind of slushy but the benefit is that I can focus some of my extra energies into learning something new or something old like Lisp.</description>
       <guid>http://awolf.github.io/posts/learning-clojure/</guid>
     </item>
     <item>
       <title>Ruby and Docker</title>
       <link>http://awolf.github.io/posts/ruby-and-docker/</link>
-      <description></description>
+      <description>I've been learning about Docker and Kubernetes for a bit so creating a development environment for some quick Ruby fixes would be fun and educational. Especially, since I already have Docker installed.</description>
       <guid>http://awolf.github.io/posts/ruby-and-docker/</guid>
     </item>
     <item>
       <title>My AWS ReInvent</title>
       <link>http://awolf.github.io/posts/my-aws-reinvent-2017/</link>
-      <description></description>
+      <description>The conference is over, I'm back home and it's time to digest and make plans. AWS re:Invent 2017 was my first big conference and it was a lot of fun. I learned a lot, and now I have a bunch of new stuff to learn. When will it end? Hopefully never!</description>
       <guid>http://awolf.github.io/posts/my-aws-reinvent-2017/</guid>
     </item>
     <item>
       <title>Attendance with Beacons</title>
       <link>http://awolf.github.io/posts/attendance-with-beacons/</link>
-      <description></description>
+      <description>This post is going to be a little different than my normal Xamarin.Forms posts. I want you all to know that I am more than a pretty interface. I have architectural and distributed systems chops as well.</description>
       <guid>http://awolf.github.io/posts/attendance-with-beacons/</guid>
     </item>
   </channel>
