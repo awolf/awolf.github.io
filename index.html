@@ -59,7 +59,7 @@
       </header>
     
       <p>
-        Now that is an interesting title of a paper, "Age Partitioned Bloom Filters," some what of a mouthful and packed with meaning. I love it. When this gem of a paper came up in my <a href="https://twitter.com/adamjwolf">Twitter</a> feed, I instantly fav'ed it, downloaded and read it. And the paper did not disappoint. If you've not read it yet, I suggest you do so now. You can find it <a href="https://arxiv.org/abs/2001.03147">here</a>. Go on, this blog post can wait.
+        Now that is an interesting title of a paper, "Age Partitioned Bloom Filters," somewhat of a mouthful and packed with meaning. I love it. When this gem of a paper came up in my <a href="https://twitter.com/adamjwolf">Twitter</a> feed, I instantly fav'ed it, downloaded and read it. And the paper did not disappoint. If you've not read it yet, I suggest you do so now. You can find it <a href="https://arxiv.org/abs/2001.03147">here</a>. Go on, this blog post can wait.
       </p>
     
       <h2>The Setup</h2>
@@ -79,7 +79,7 @@
       <h2>Time Segments</h2>
     
       <p>
-        One of the approaches that the authors dismissed was using Bloom filters associated to a segment of time and asking each segment if the new piece of data was part of the set. To make this a little bit more real how about I set up a scenario to make it more concrete.
+        One of the approaches that the authors dismissed was using Bloom filters associated to a segment of time and asking each segment if the new piece of data was part of the set. To make this a little bit more real how about I set up a scenario to make it more concrete. Bring on the cat memes.
       </p>
     
       <h3>Edge Cache Scenario</h3>
@@ -93,7 +93,7 @@
       </p>
     
       <p>
-        With the Bloom filter, we could optimize our cache storage and not store yesterday's old memes on the edge. Everything is fine until the Bloom filter gets full. What do you do now; start a new one? Maybe, but it will be empty and not have any memory of possible cached or requested items. What you need in your cat meme cache business would be an Age Partitioned Bloom filter or similar technique. If only the oldest of meme image location would empty out the back of your Bloom filter, you would not have to reset to an empty one when the Bloom filter became full. NEATO! right.
+        With the Bloom filter, we could optimize our cache storage and not store yesterday's old memes on the edge. Everything is fine until the Bloom filter gets full. What do you do now; start a new one? Maybe, but it will be empty and not have any memory of possible cached or requested items. What you need in your cat meme cache business would be an Age Partitioned Bloom filter or similar technique. If only the oldest of the meme image locations would empty out the back of your Bloom filter, you would not have to reset to an empty one when the Bloom filter became full. NEATO! right.
       </p>
     
       <h3>Time Segment Issues</h3>
@@ -116,6 +116,7 @@
     <section class="older-posts">
     <h1>Older Posts</h1>
     <ul>
+      <li><a href="/posts/pwl-age-partitioned-bloom-filters/">Age Partitioned Bloom Filters</a></li>
       <li><a href="/posts/structured-improvement/">Structured Improvement</a></li>
       <li><a href="/posts/architecture-rx/">Architecture Rx</a></li>
       <li><a href="/posts/adams-technology-radar-2019/">Adam's Technology Radar 2019</a></li>
@@ -134,7 +135,7 @@
       Adam J Wolf
     </h3>
     <p>
-      Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet, If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
+      Hi, I'm Adam and I am a Principle Software Engineer at Emailage, husband, pit bull lover, sawdust maker, and Carhartt wearer. Welcome to my little place on the internet. If you ever have a question, please hit me up on <a href="http://www.twitter.com/adamjwolf">Twitter</a>.
     </p>
   </section>
   
