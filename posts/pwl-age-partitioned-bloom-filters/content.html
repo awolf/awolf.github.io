@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<p>Now that is an interesting title of a paper, &#8220;Age Partitioned Bloom Filters&#8221;, somewhat of a mouthful and packed with meaning. I love it. When this gem of a paper came up in my <a href="https://twitter.com/adamjwolf">Twitter</a> feed I instantly fav&#8217;ed it, downloaded and read it. And the paper did not disappoint. If you&#8217;ve not read it yet, I suggest you do so now. You can find it <a href="https://arxiv.org/abs/2001.03147">here</a>. Go on, this blog post can wait.</p>
+
+<h2 id="thesetup">The Setup</h2>
+
+<p>Was it good? I knew you would like it. One of the best thing about the paper was how the authors setup their needs and went through all the different variations on techniques, types of Bloom Filters and other data structures to efficiently solve their problems.</p>
+
+<blockquote>
+<p>In this paper we present Age-Partitioned Bloom Filters, a BF-based approach for duplicate detection in sliding windows that not only is competitive in time-complexity, but has better space usage than current dictionary-based approaches (e.g., SWAMP), at the cost of some moderate slack.</p>
+</blockquote>
+
+<p>I bet you can just image doing duplicate detection on a large continuously stream of data using an Age Partitioned Bloom Filter. Neat!</p>
+
+<h2 id="timesegments">Time Segments</h2>
+
+<p>One of the approaches that the authors dismissed was using bloom filters associated to a segment of time and asking each segment if the new piece of data was part of the set. To make this a little bit more real how about I setup
+a scenario to make it more concrete.</p>
+
+<h3 id="edgecachescenario">Edge Cache Scenario</h3>
+
+<p>Let&#8217;s say that we are going to start a company that caches cat meme images on the edge of a large network. To do this in a more efficient way, we only want to cache things that are actually requested more than once. No need to cache all cat memes on the edge, if only the latest and the greatest are ever requested.</p>
+
+<p>Typically in this scenario we would setup a bloom filter in our request system and add the requested cat meme URL to our bloom filter. When and if a request that came in were already in the bloom filter, we would pull the image from disk and place it on our edge network. The next time someone wanted that picture of the baby Yoda cat meme they would get it off the edge of the network.</p>
+
+<p>With the bloom filter, we could optimize our cache storage and not store yesterdays old memes on the edge. Everything is fine until, the bloom filter gets full!. What do you do now. Start a new one! Maybe, but it will be empty and not have any memory of possible cached or requested items. What you need in your cat meme cache business would be an Age Partitioned Bloom Filter or similar technique. If only the oldest of meme image location would empty out the back of your bloom filter, you would not have to reset to an empty one when the bloom filter became full. NEATO! right.</p>
+
+<h3 id="timesegmentissues">Time Segment Issues</h3>
+
+<p>The issues the authors of the paper had with time segments was the choppiness of the technique and the processing costs. So if we did this for the cat meme system, we might create a bloom filter per hour and query the current bloom filter and the past 24 to get a days worth of data to check wether or not the meme image should be cached. This is a simple and a somewhat silly example to be honest but I hope you get the point. Asking 25 Bloom filters if it has a cat meme URL in it would take some time. Unless you could merge the bloom filters together and keep the same error rate.</p>
+
+<h2 id="hyperloglogandpfmerge">HyperLogLog and PFMerge</h2>
+
+<p>I have used the time segment technique in high cardinality counting systems using HyperLogLog in the past. One of the benefits of HyperLogLog in Redis is the PFMERG command. The PFMerge command will take any number of time segmented HyperLogLog data structures and merge them together. I can tell you that in production, with Billions of data structures, and millions of cardinality checks a minute, the system runs and runs very nicely.</p>
+
+<p>I love reading papers like this one and discovering new technique to challenges I never even thought of. Have you had high cardinality counting problems or cat meme optimization problems. I hope to have more in the future to be honest.</p>
+
+</body>
+</html>
+
