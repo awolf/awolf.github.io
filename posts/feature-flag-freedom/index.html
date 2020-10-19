@@ -60,22 +60,17 @@
       </header>
       <img src="/posts/feature-flag-freedom/flag.png" width="120" height="120" class="alignright"/>
       <p>
-        Looking back at the last couple of years, I can honestly say that Feature Flags have fundamentally changed the way
-        that I develop and deliver software, or at least the way in which I prefer to develop and deliver software. The
-        ability to enable safe trunk based development and the increased velocity of software delivery is liberating.
+        Looking back at the last couple of years, I can honestly say that Feature Flags have fundamentally changed how I develop and deliver software, or at least how I prefer to develop and deliver software. The ability to enable safe trunk-based development and the increased velocity of software delivery is liberating.
       </p>
     
       <p>
-        Feature Flags have many names, names like "Feature Toggle", "Feature Bits" and "Feature Flippers". They also come in
-        many flavors and lifecycles. For this article we are going to concentrate on software delivery. More information
-        about other types and flavors can be found <a src="https://martinfowler.com/articles/feature-toggles.html">here</a>
-        and <a src="https://en.wikipedia.org/wiki/Feature_toggle">here</a>.
+        Feature Flags have many names, names like Feature Toggle, Feature Bits, and Feature Flippers. They also come in many flavors and lifecycles. For this article, we are going to concentrate on software delivery. More information about other types and flavors can be found <a src="https://martinfowler.com/articles/feature-toggles.html">here</a> and <a src="https://en.wikipedia.org/wiki/Feature_toggle">here</a>.
       </p>
     
       <h2> A Whole New World </h2>
     <img src="/posts/feature-flag-freedom/world.png" width="120" height="120" class="alignleft"/>
       <p>
-        It might be hard to imagine trunk based feature delivery with feature flags so let's set up a scenario and walk
+        It might be hard to imagine trunk-based feature delivery with feature flags so let's set up a scenario and walk
         through it. Let's say that I was given the task of normalizing the input of phone numbers using a Twillio service
         for our fictitious API. Ready, Set, Go!
       </p>
@@ -83,56 +78,37 @@
       <h3>Create the Flag</h3>
     
       <p>
-        First things first, we have to create a new flag. For our configuration, we use a Yaml file that is processed during deployment into commands that update a system like AWS Systems Manager Parameter Store, Consul or Zookeeper.
+        First things first, we have to create a new flag. For our configuration, we use a Yaml file that is processed during deployment into commands that update a system like AWS Systems Manager Parameter Store, Consul, or Zookeeper.
       </p>
       <img src="/posts/feature-flag-freedom/toggle.png" width="120" height="120" class="alignright"/>
       <p>
-        For our phone normalizing feature, I will use "phone-normalizing-with-twillio" as the flag name and give it the default
-        configuration of false. Once committed, the CICD process will validate the changes and deploy it to production in the normal way.
-        Slowly at first, if there is no increase in error rates, it will deploy it throughout the world to all endpoints.
+        For our phone normalizing feature, I will use "phone-normalizing-with-twillio" as the flag name and give it the default configuration of false. Once committed, the CICD process will validate the changes and deploy it to production normally. Slowly at first, if there is no increase in error rates, it will deploy it throughout the world to all endpoints.
       </p>
       
-    
       <h3> Use the Flag </h3>
       <img src="/posts/feature-flag-freedom/preferences.png" width="120" height="120" class="alignleft"/>
       <p>
-        Now that my flag is created and ready for use, I can pull the latest from our API Master branch and start writing
-        the code. The first thing that I do is start my additions with a feature flag check. This is just a simple call to
-        our on board feature flag service that checks whether the box running the software, or client accessing the system,
-        should get the feature turned on. If the service can't find the specified flag, it returns false, just in case you missed the first step of configuring the flag. 
+        Now that my flag is created and ready for use, I can pull the latest from our API Master branch and start writing the code. The first thing that I do is start my additions with a feature flag check. This is just a simple call to our onboard feature flag service that checks whether the box running the software or client accessing the system should get the feature turned on. If the service can't find the specified flag, it returns false, just in case you missed the first step of configuring the flag.
       </p>
       <p>
-        Now that we have our flag, we can push to master and the code will be released to production but will not have any
-        effect on our fictitious API. Liberating isn't it? We can keep iterating on it and making it better all the while
-        checking in and keeping up with everyone else. No merging hell with long lived code branches, just normal
-        development.
+        Now that we have our flag, we can push to master, and the code will be released to production but will not affect our fictitious API. Liberating. We can keep iterating on it and make it better while checking in and keeping up with everyone else —no merging hell with long-lived code branches, just normal development.
       </p>
     
       <h3>The Release</h3>
     <img src="/posts/feature-flag-freedom/ship.png" width="120" height="120" class="alignright"/>
       <p>
-        Ok, our code has been in production for a bit while I perfected it, but now it's time to let it out into the world.
-        For this feature we might want to turn it on for QA to test, or a single client to validate, or release it to the
-        world. The fact that we can selectively turn this feature on or off for a person, company, EC2 instance, ECS Cluster,
-        availability zone, region, continent or the world, is pretty nice.
+        Ok, our code has been in production for a bit while I perfected it, but now it's time to let it out into the world. We might want to turn it on for QA to test, or a single client to validate, or release it to the world for this feature. We can selectively turn this feature on or off for a person, company, EC2 instance, ECS Cluster, availability zone, region, a continent, or the world, is pretty nice.
       </p>
     
       <p>
-        To release my feature, I'll check out the configuration repo again and set my flag to on. Who gets to see my new
-        feature is completely up to me. When checked in, the CICD process will deploy the configuration change and the
-        feature will be live and available to my API users.
+        To release my feature, I'll check out the configuration repo again and set my flag to on. Who gets to see my new feature is completely up to me. When checked in, the CICD process will deploy the configuration change, and the feature will be live and available to my API users.
       </p>
     
       <h2>Liberating</h2>
       <img src="/posts/feature-flag-freedom/achievement.png" width="120" height="120" class="alignleft"/>
       <p>
-        So what do you think? Feature flag with trunk based development is kinda different and a little scary at first, but
-        I must say, it is well worth the effort. I would not want to go back to the big bang deployments of the past. Oh, one
-        piece of advise, please cleanup after yourself. Feature Flags, like the one we talked about here, are meant to be
-        short lived so remember to go back and remove your feature flag in the code and in the configuration. Leave
-        the campsite better than you found it.
+        So what do you think? Feature flag with trunk-based development is rather different and a little scary at first, but I must say, it is well worth the effort. I would not want to go back to the big bang deployments of the past. Oh, one piece of advice, please clean up after yourself. Feature Flags, like the one we talked about here, are meant to be short-lived so remember to go back and remove your feature flag in the code and the configuration. Leave the campsite better than you found it.
       </p>
-    
     </article>
 
     <section id="author">
