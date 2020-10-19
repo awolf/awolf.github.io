@@ -5,6 +5,18 @@
     <title>Adam J Wolf Blog</title>
     <link>https://awolf.github.io</link>
     <description>The blog of Adam J Wolf. Some technology, programming and interesting tidbits from a lifelong developer.</description>
+     <item>
+      <title>Feature Flag Freedom</title>
+      <link>https://awolf.github.io/posts/feature-flag-freedom/</link>
+      <description>Looking back at the last couple of years, I can honestly say that Feature Flags have fundamentally changed how I develop and deliver software, or at least how I prefer to develop and deliver software. The ability to enable safe trunk-based development and the increased velocity of software delivery is liberating.</description>
+      <guid>https://awolf.github.io/posts/feature-flag-freedom/</guid>
+    </item>
+     <item>
+      <title>PWL: Age Partitioned Bloom Filters</title>
+      <link>https://awolf.github.io/posts/pwl-age-partitioned-bloom-filters/</link>
+      <description>Now that is an interesting title of a paper, "Age Partitioned Bloom Filters," somewhat of a mouthful and packed with meaning. I love it. When this gem of a paper came up in my Twitter feed, I instantly fav'ed it, downloaded and read it. And the paper did not disappoint. If you've not read it yet, I suggest you do so now.</description>
+      <guid>https://awolf.github.io/posts/pwl-age-partitioned-bloom-filters/</guid>
+    </item>
     <item>
       <title>Structured Improvement</title>
       <link>https://awolf.github.io/posts/structured-improvement/</link>
