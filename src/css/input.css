@@ -1,4 +1,4 @@
 @import "tailwindcss";
 
 /* Import existing custom styles */
-@import "../../css/style.css";
+@import "./base.css";
