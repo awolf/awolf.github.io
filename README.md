@@ -1,6 +1,54 @@
 # Adam J Wolf Blog
 My personal website source using CodeKit as a preprocessor. It's all manual folks.
 
+## Tailwind CSS Setup
+
+This site now uses Tailwind CSS v4 for styling. The original custom styles are preserved and work alongside Tailwind utilities.
+
+### Prerequisites
+
+- Node.js (v20 or later)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Building CSS
+
+To build the CSS file:
+
+```bash
+npm run build:css
+```
+
+To watch for changes and rebuild automatically:
+
+```bash
+npm run watch:css
+```
+
+### How it Works
+
+- Source CSS is in `src/css/input.css`
+- This file imports Tailwind CSS and the original `css/style.css`
+- The build process compiles everything into `css/style.css`
+- All HTML files reference `css/style.css` which now includes Tailwind utilities
+
+### Using Tailwind
+
+You can now use Tailwind utility classes in your HTML files alongside the existing custom CSS. For example:
+
+```html
+<div class="flex items-center justify-center p-4 text-blue-500">
+  Content here
+</div>
+```
+
+The original custom styles remain intact and take precedence where there are conflicts.
+
 ## To Do Writing 
 
 - [ ] Technology Side Effects
