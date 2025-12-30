@@ -30,6 +30,12 @@ To watch for changes and rebuild automatically:
 npm run watch:css
 ```
 
+### How to Serve
+
+```bash
+npx serve .
+```
+
 ### How it Works
 
 - Source CSS is in `src/css/input.css`
