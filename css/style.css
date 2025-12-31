@@ -158,7 +158,11 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .fixed {
+    position: fixed;
+  }
+}
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
