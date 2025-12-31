@@ -5,24 +5,5 @@
   .prose h1, .prose h2, .prose h3 {
     @apply tracking-tight;
   }
-  
-  /* Image alignments for legacy content */
-  .alignright {
-    @apply float-right ml-6 mb-4 rounded-xl shadow-md;
-  }
-  
-  .alignleft {
-    @apply float-left mr-6 mb-4 rounded-xl shadow-md;
-  }
-  
-  .aligncenter {
-    @apply block mx-auto my-8 rounded-xl shadow-lg;
-  }
 }
 
-@layer components {
-  /* Legacy image card styles */
-  .img-card-right {
-    @apply float-right w-full md:w-1/2 ml-0 md:ml-6 mb-6 rounded-2xl border-8 border-white dark:border-slate-800 shadow-xl;
-  }
-}

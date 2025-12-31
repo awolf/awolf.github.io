@@ -4,7 +4,6 @@
 
 @theme {
   --font-sans: "Inter", "Roobert", "Inter override", "sans-serif";
-  --color-brand: #2c80c9;
 }
 
 /* Import existing custom styles */
