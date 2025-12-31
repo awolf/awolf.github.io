@@ -34,101 +34,157 @@
     <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
-    <title>Adam J Wolf Blog - Resume</title>
+    <title>Resume - Adam J Wolf</title>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body>
-    <header id="blog-header">
-      <h1>Adam J Wolf Blog</h1>
+  <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased transition-colors duration-300">
+    <header class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/75 dark:bg-slate-950/75">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Adam J Wolf</a>
+          </div>
+          <div class="flex items-center space-x-4">
+            <nav class="hidden md:block">
+              <ul class="flex space-x-8">
+                <li><a href="/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="/pages/about/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a></li>
+                <li><a href="/pages/at-work/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">At Work</a></li>
+                <li><a href="/pages/resume/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Resume</a></li>
+              </ul>
+            </nav>
+            <div class="flex items-center border-l border-slate-200 dark:border-slate-800 ml-4 pl-4">
+              <button class="theme-toggle p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-600 transition-all" aria-label="Toggle dark mode">
+                <span class="dark:hidden">🌙</span>
+                <span class="hidden dark:inline">☀️</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     
-    <nav>
-          <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/pages/resume/">Resume</a></li>
-            <!-- <li><a href="/pages/about/">About</a></li> -->
-          </ol>
-        </nav>
-        
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="prose prose-slate dark:prose-invert max-w-none">
+        <header class="not-prose mb-12">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
+            Resume
+          </h1>
+        </header>
 
-    <blockquote> Specializing in cloud architectures, engineering and scaling engineering organizations. I’ve  worked on multiple B2B, B2C and B2B2C startups in the fintech, fraud detection and manufacturing spaces, as well as large enterprises, higher education and state governments. I am looking for challenging opportunities at the cross section of cloud architecture and business.</blockquote>
+        <blockquote class="text-xl italic border-l-4 border-blue-500 pl-6 py-2 bg-slate-50 dark:bg-slate-900 rounded-r-xl">
+          Specializing in cloud architectures, engineering and scaling engineering organizations. I’ve worked on multiple B2B, B2C and B2B2C startups in the fintech, fraud detection and manufacturing spaces, as well as large enterprises, higher education and state governments. I am looking for challenging opportunities at the cross section of cloud architecture and business.
+        </blockquote>
 
-    <h2 id="employment-history">Employment History</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-8 border-b border-slate-200 dark:border-slate-800 pb-2">Employment History</h2>
 
-    <h3>Wealth.com &#8211; VP of Cloud Architecture &#8211; 6/2021 - 6/2024, Shawnee, OK (Remote) </h3>
-    <p>Founding engineer and architect of wealth.com server-less technology stack including website, graphQL services and event driven backend utilizing the AWS cloud.</p>
-    
-    <p>Specified, architected and built Wealth's dynamic legal estate document engine for 51 US jurisdictions, including Trusts, Wills, Power of Attorney and Nomination of Guardianship documents.</p>
-    
-    <p>Developed & implemented a strategic vision as well as technology road map for the development of proprietary software products that supercharge our clients estate management and decision making processes across the organization.</p>
-    
-    <p>Worked with the Executive Leadership and SMEs across the organization on Software Engineering, Data Science, Machine Learning, and Product Management initiatives at the project, implementation and operation levels.</p>
-    
-    <p>Partnered with the Head of Data Analytics, Product and Program Management to evaluate the current product and dictate a path forward to commercialization that includes milestones for tracking progress efficiently.</p>
-    
-    <p>Hired, built, and grew the Software Engineering and Data Science Teams with top tier talent that will become Leaders within the organization to produce game changing software products.</p>
-    
-    <p>Direct manager for 6 full-time engineers, including hiring, growing, performance reviews, one on one sessions and mentoring.</p>
+        <div class="space-y-12">
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Wealth.com</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">VP of Cloud Architecture • 6/2021 - 6/2024 • Shawnee, OK (Remote)</div>
+            <p>Founding engineer and architect of wealth.com server-less technology stack including website, graphQL services and event driven backend utilizing the AWS cloud.</p>
+            <p>Specified, architected and built Wealth's dynamic legal estate document engine for 51 US jurisdictions, including Trusts, Wills, Power of Attorney and Nomination of Guardianship documents.</p>
+            <p>Developed & implemented a strategic vision as well as technology road map for the development of proprietary software products that supercharge our clients estate management and decision making processes across the organization.</p>
+            <p>Worked with the Executive Leadership and SMEs across the organization on Software Engineering, Data Science, Machine Learning, and Product Management initiatives at the project, implementation and operation levels.</p>
+            <p>Partnered with the Head of Data Analytics, Product and Program Management to evaluate the current product and dictate a path forward to commercialization that includes milestones for tracking progress efficiently.</p>
+            <p>Hired, built, and grew the Software Engineering and Data Science Teams with top tier talent that will become Leaders within the organization to produce game changing software products.</p>
+            <p>Direct manager for 6 full-time engineers, including hiring, growing, performance reviews, one on one sessions and mentoring.</p>
+          </section>
 
-    <h3>LexisNexis Risk Solutions (Emailage) &#8211; Principal Software Engineer 4/2020 &#8211; 5/2021, Shawnee, OK (Remote)</h3>
-    
-    <p>Designing, prototyping, documenting, and estimating a new API product in conjunction with Leadership, Product, and Technology teams. The product will be deployed in markets with wildly varying datasets in the Asia Pacific and Latin America regions, which rely heavily on machine learning models and dynamic datasets per customer.</p>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">LexisNexis Risk Solutions (Emailage)</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Principal Software Engineer • 4/2020 – 5/2021 • Shawnee, OK (Remote)</div>
+            <p>Designing, prototyping, documenting, and estimating a new API product in conjunction with Leadership, Product, and Technology teams. The product will be deployed in markets with wildly varying datasets in the Asia Pacific and Latin America regions, which rely heavily on machine learning models and dynamic datasets per customer.</p>
+            <p>Subject matter expert and mentor to the team integrating the Action Engine into the Email Risk Score API product. Duties include facilitating cross-team communication, teaching, mentoring, code, and architectural reviews.</p>
+          </section>
 
-    <p>Subject matter expert and mentor to the team integrating the Action Engine into the Email Risk Score API product. Duties include facilitating cross-team communication, teaching, mentoring, code, and architectural reviews.</p>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Emailage</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Director of Architecture • 5/2018 – 4/2020 • Phoenix, AZ</div>
+            <p>Led the architectural design and development of every major engineering initiative at Emailage from ideation with the Product team, development with Engineering, and the deployment with Operations.</p>
+            <p>Created and managed the Engineer Mentorship program, including one on one mentoring sessions, code reviews, pair programming, pull requests review, systems architecture design sessions, and facilitated monthly Lunch & Learn meetings.</p>
+            <p>Traveled internationally to Dublin, Ireland, and Beijing, China, to mentor, teach and integrate remote teams into the Emailage tech stack, cloud platforms, and development processes.</p>
+            <p>Diagnosed and fixed multiple scalability problems in the original Emailage Risk Scoring API, including multi-threading, resource contention, and processor context switching issues. The fixes allowed Emailage to scale the service to meet customer demands during high traffic times without costly service scaling.</p>
+          </section>
 
-    <h3>Emailage &#8211; Director of Architecture, 5/2018 &#8211; 4/2020, Phoenix, AZ</h3>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Grand Canyon University</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Lead Developer • 2014 – 2017 • Phoenix, AZ</div>
+            <p>Architect and Lead Developer for the GCU Inquiry Portal project. The inquiry portal enables a potential student to find information about GCU and helps them apply for college. The portal is developed and deployed as an Azure cloud solution utilizing Web Apps, WebJobs, Azure Active Directory, O365, Message Bus, and Storage Services.</p>
+            <p>Developed the iOS and Android GCU Student mobile applications. The applications help students navigate campus, schedules, statements, food venues, charge cards, and attendance. The mobile application's backend utilizes multiple Azure cloud services, including Mobile Services, Active Directory, Service Bus, Notification Hubs, and Storage Services. The mobile applications use each platform's Location and Bluetooth services for iBeacon integration for attendance tracking. I built the iOS and Android clients with C# and Xamarin Studio, and the backend with Node.JS and C#.</p>
+            <p>Developer of the GCU Maps iOS mobile application. Conceived, specified, built, and delivered the mobile application in 21 days as a pilot program for the new GCU Mobile Development team. The Apple iOS application gives the student the top 100 places on campus while providing real-time maps and locations.</p>
+          </section>
 
-    <p>Led the architectural design and development of every major engineering initiative at Emailage from ideation with the Product team, development with Engineering, and the deployment with Operations.</p>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Wells Fargo (Modis)</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Senior Developer • 2012 – 2014 • Phoenix, AZ</div>
+            <p>Architected, developed, and managed a team of 3 to build the Community Banking Pixel Analytics System. This system tracks the usage of the world's largest SharePoint installation and marries the tracking data with Wells Fargo's management hierarchy through Active Directory. Wells Fargo adopted the system at the enterprise level.</p>
+            <p>Lead developer for the Technology Connection Manager Mobile Alert Dashboard. The dashboard gives managers near real-time statistics on call center agent performance through a mobile-ready user interface. The interface gives managers the ability to coach representatives at their desks in real-time. The site is an Angular.js frontend with an ASP.net MVC backend.</p>
+          </section>
 
-    <p>Created and managed the Engineer Mentorship program, including one on one mentoring sessions, code reviews, pair programming, pull requests review, systems architecture design sessions, and facilitated monthly Lunch & Learn meetings.</p>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Pulte Group</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">BizTalk EAI Developer • 2012 – 2012 • Phoenix, AZ</div>
+            <p>BizTalk Developer responsible for the Enterprise Message Broker Migration conversion project. The project consisted of identifying all entry points in Message Broker and converting them to BizTalk web services. The project utilized BizTalk 2010, C#, WCF, SQL Server 2010, and 2012.</p>
+            <p>Lead Integration Developer for the Pulte Purchase Pro application. Designed and developed components and systems to integrate the new Asp.Net MVC application into the enterprise. The systems utilized BizTalk 2010, Asp.Net MVC, C#, WCF, SQL Server 2012, and integrated with other .Net applications and Lawson Financial Services.</p>
+          </section>
 
-    <p>Traveled internationally to Dublin, Ireland, and Beijing, China, to mentor, teach and integrate remote teams into the Emailage tech stack, cloud platforms, and development processes.</p>
+          <section>
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Blue Cognition LLC</h3>
+            <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Solutions Architect • 2006 – 2011 • Phoenix, AZ</div>
+            <p>Lead developer for the Wells Fargo enterprise Person web service. The person service consumes human resource data from PeopleSoft through WebSphere MQ and provides a cross-platform compliant web service using C#, WCF, SQL Server, and IIS. Clients include IBM Mainframe, Java, and .Net distributed applications.</p>
+            <p>Enterprise architect for Wilshire Press Inc. responsible for leading a team of developers writing Silverlight and ASP.net applications geared toward the publishing industry. Properties include www.TheBookPatch.com and www.PrintToPress.com.</p>
+            <p>Lead developer for the Wells Fargo Access Request Tool's (ART) Approval System. The ART Approval System notifies, schedules, and collects approval authorization from an end user's management structure for secured IT resources. The Approval System makes extensive use of Windows Workflow and supporting services. The system was built using .Net 3.5, LINQ, ASP.net, AJAX, WCF, WF, MSMQ, Windows Services, and SQL 2005.</p>
+            <p>Lead developer for the Wells Fargo Security Technology Solutions Group Enterprise Resource Management System (RMS). The RMS system is the record system containing all of the provisionable resources across the enterprise and their approval structure.</p>
+          </section>
+        </div>
+      </div>
 
-    <h3>Emailage &#8211; Enterprise Architect, 11/2017 &#8211; 5/2018, Phoenix, AZ</h3>
-    
-    <p>Architected, prototyped, and led a squad of 6 engineers in building a streaming cardinality counting system using ElastiCache Redis, SNS, SQS, Beanstalk, C#, and .Net Core. The system is deployed in 5 AWS regions on three continents, tracks the cardinality of more than 900 million sets, and processes billions of commands a day.</p>
+      <footer class="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+          <img src="/img/adam-badge-small.png" alt="Adam J Wolf" class="w-24 h-24 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg" />
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Adam J Wolf</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Hi, I'm Adam and I am a husband, pit bull lover, sawdust maker, Carhartt wearer and Cloud Architect at heart. Welcome to my little place on the internet.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="http://www.twitter.com/adamjwolf" class="text-slate-400 hover:text-blue-400 transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center text-sm text-slate-500 dark:text-slate-500 pb-8">
+          &copy; 2025 Adam J Wolf. Built with Tailwind CSS.
+        </div>
+      </footer>
+    </main>
 
-    <p>Architect and designer of the Digital Identity Graph at Emailage. The graph is 1.7 TB in size, contains over 14 billion nodes and edges, and responds to queries in single-digit milliseconds at scale in 5 AWS regions on three continents. The graph is one of the core components of the fraud detection API at Emailage.</p>
-
-    <p>Technical Lead for the cloud migration to AWS from three on-premise data centers. Including specifying, documenting, and developing cloud replacement for on-premise data services, processing, and retention systems.</p>
-
-    <h3>Emailage &#8211; Senior Systems Engineer, 3/2017 &#8211; 11/2017, Phoenix, AZ</h3>
-
-    <p>Lead Engineer and architect for Rapid API, a new Emailage Risk scoring API. The API queries 12 different data sources, including relational, NoSql, and columnar AWS data stores in 18 milliseconds under load. The system was built using C#, .Net Core, Kestrel, PostgreSQL, DynamoDB, SNS, and a monolithic architecture with a composable processing pipeline.</p>
-
-    <p>Developed a new risk scoring rules engine in conjunction with Product and Decision Science teams for Rapid API. The engine was built from a custom C# DSL using .Net Core Generics and predicate functions. The DSL enabled Decision Science team members to read, validate, understand, and modify the rules engine.</p>
-
-    <p>Diagnosed and fixed multiple scalability problems in the original Emailage Risk Scoring API, including multi-threading, resource contention, and processor context switching issues. The fixes allowed Emailage to scale the service to meet customer demands during high traffic times without costly service scaling.</p>
-
-    <h3 id="grand-canyon-university-lead-developer">Grand Canyon University &#8211; Lead Developer, 2014 &#8211; 2017 Phoenix, AZ</h3>
-    
-    <p>Architect and Lead Developer for the GCU Inquiry Portal project. The inquiry portal enables a potential student to find information about GCU and helps them apply for college. The portal is developed and deployed as an Azure cloud solution utilizing Web Apps, WebJobs, Azure Active Directory, O365, Message Bus, and Storage Services.</p>
-
-    <p>Developed the iOS and Android GCU Student mobile applications. The applications help students navigate campus, schedules, statements, food venues, charge cards, and attendance. The mobile application's backend utilizes multiple Azure cloud services, including Mobile Services, Active Directory, Service Bus, Notification Hubs, and Storage Services. The mobile applications use each platform's Location and Bluetooth services for iBeacon integration for attendance tracking. I built the iOS and Android clients with C# and Xamarin Studio, and the backend with Node.JS and C#.</p>
-
-    <p>Developer of the GCU Maps iOS mobile application. Conceived, specified, built, and delivered the mobile application in 21 days as a pilot program for the new GCU Mobile Development team. The Apple iOS application gives the student the top 100 places on campus while providing real-time maps and locations.</p>
-
-    <h3 id="wells-fargo-modis-senior-developer">Wells Fargo &#8211; Modis &#8211; Senior Developer, 2012 &#8211; 2014 Phoenix, AZ</h3>
-    
-    <p>Architected, developed, and managed a team of 3 to build the Community Banking Pixel Analytics System. This system tracks the usage of the world's largest SharePoint installation and marries the tracking data with Wells Fargo's management hierarchy through Active Directory. Wells Fargo adopted the system at the enterprise level.</p>
-
-    <p>Lead developer for the Technology Connection Manager Mobile Alert Dashboard. The dashboard gives managers near real-time statistics on call center agent performance through a mobile-ready user interface. The interface gives managers the ability to coach representatives at their desks in real-time. The site is an Angular.js frontend with an ASP.net MVC backend.</p>
-
-    <h3 id="pulte-group-biztalk-eai-developer">Pulte Group &#8211; BizTalk EAI Developer, 2012 &#8211; 2012 Phoenix, AZ</h3>
-    
-    <p>BizTalk Developer responsible for the Enterprise Message Broker Migration conversion project. The project consisted of identifying all entry points in Message Broker and converting them to BizTalk web services. The project utilized BizTalk 2010, C#, WCF, SQL Server 2010, and 2012.</p>
-
-    <p>Lead Integration Developer for the Pulte Purchase Pro application. Designed and developed components and systems to integrate the new Asp.Net MVC application into the enterprise. The systems utilized BizTalk 2010, Asp.Net MVC, C#, WCF, SQL Server 2012, and integrated with other .Net applications and Lawson Financial Services.</p>
-
-    <h3 id="blue-cognition-llc-solutions-architect">Blue Cognition LLC &#8211; Solutions Architect, 2006 &#8211; 2011 Phoenix, AZ</h3>
-    
-    <p>Lead developer for the Wells Fargo enterprise Person web service. The person service consumes human resource data from PeopleSoft through WebSphere MQ and provides a cross-platform compliant web service using C#, WCF, SQL Server, and IIS. Clients include IBM Mainframe, Java, and .Net distributed applications.</p>
-
-    <p>Enterprise architect for Wilshire Press Inc. responsible for leading a team of developers writing Silverlight and ASP.net applications geared toward the publishing industry. Properties include <a href="http://www.thebookpatch.com">www.TheBookPatch.com</a> and <a href="http://www.PrintToPress.com">www.PrintToPress.com</a>.</p>
-
-    <p>Lead developer for the Wells Fargo Access Request Tool's (ART) Approval System. The ART Approval System notifies, schedules, and collects approval authorization from an end user's management structure for secured IT resources. The Approval System makes extensive use of Windows Workflow and supporting services. The system was built using .Net 3.5, LINQ, ASP.net, AJAX, WCF, WF, MSMQ, Windows Services, and SQL 2005.</p>
-
-    <p>Lead developer for the Wells Fargo Security Technology Solutions Group Enterprise Resource Management System (RMS). The RMS system is the record system containing all of the provisionable resources across the enterprise and their approval structure.</p>
-
+    <script>
+      const themeToggles = document.querySelectorAll('.theme-toggle');
+      themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

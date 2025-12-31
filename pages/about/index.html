@@ -34,56 +34,132 @@
     <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
-    <title>Adam J Wolf Blog - About</title>
+    <title>About - Adam J Wolf</title>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body>
-    <header id="blog-header">
-      <h1>Adam J Wolf Blog</h1>
+  <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased transition-colors duration-300">
+    <header class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/75 dark:bg-slate-950/75">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Adam J Wolf</a>
+          </div>
+          <div class="flex items-center space-x-4">
+            <nav class="hidden md:block">
+              <ul class="flex space-x-8">
+                <li><a href="/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="/pages/about/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a></li>
+                <li><a href="/pages/at-work/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">At Work</a></li>
+                <li><a href="/pages/resume/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Resume</a></li>
+              </ul>
+            </nav>
+            <div class="flex items-center border-l border-slate-200 dark:border-slate-800 ml-4 pl-4">
+              <button class="theme-toggle p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-600 transition-all" aria-label="Toggle dark mode">
+                <span class="dark:hidden">🌙</span>
+                <span class="hidden dark:inline">☀️</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     
-    <nav>
-          <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/pages/resume/">Resume</a></li>
-            <!-- <li><a href="/pages/about/">About</a></li> -->
-          </ol>
-        </nav>
-        
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="prose prose-slate dark:prose-invert max-w-none">
+        <header class="not-prose mb-12">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
+            About
+          </h1>
+        </header>
 
-    <h1>About</h1>
+        <div class="space-y-16">
+          <section class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+            <img src="adam-badge-small.png" alt="Adam J Wolf" class="w-32 h-32 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg flex-shrink-0" />
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Adam J Wolf</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Hello! Thanks for coming to my little place on the internet. I’m glad you stopped by. If you have any questions or want to comment, please find me on <a href="https://www.twitter.com/adamjwolf" class="text-blue-600 dark:text-blue-400 hover:underline">Twitter</a> and fire away.
+              </p>
+            </div>
+          </section>
 
-    <section class="person">
-      <image src="adam-badge-small.png" alt="Adam J Wolf" />
-      <h3>
-        Adam J Wolf
-      </h3>
-        <p>Hello! Thanks for coming to my little place on the internet. I’m glad you stopped by. If you have any questions or want to comment, please find me on <a href="https://www.twitter.com/adamjwolf">Twitter</a> and fire away. </p>
-        
-    </section>
+          <section class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+            <img src="kathy-badge-small.png" alt="Kathy A Wolf" class="w-32 h-32 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg flex-shrink-0" />
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Kathy A Wolf</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Hi, I'm the editor and chief of this boy band. I make sure everyone stays out of trouble, and that good grammar rules are followed. Besides grammar and policing my boys (husband and dogs), I like to get outdoors as much as possible. I'll take one or all three of them with me to get some fresh air and exercise. I love Oklahoma and don't miss Arizona or New York, except for the Sun, Chinese food, and the bagels.
+              </p>
+            </div>
+          </section>
 
-    <section class="person">
-      <image src="kathy-badge-small.png" alt="Kathy A Wolf" />
-      <h3>
-        Kathy A Wolf
-      </h3>
-        <p>Hi, I'm the editor and chief of this boy band. I make sure everyone stays out of trouble, and that good grammar rules are followed. Besides grammar and policing my boys (husband and dogs), I like to get outdoors as much as possible. I'll take one or all three of them with me to get some fresh air and exercise. I love Oklahoma and don't miss Arizona or New York, except for the Sun, Chinese food, and the bagels.</p>
-    </section>
+          <section class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+            <img src="wash-badge-small.png" alt="Washington Wolf" class="w-32 h-32 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg flex-shrink-0" />
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Washington Wolf</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Hello, I'm Washington, and for some reason, I was named after Washington's state. My job, even though I've been told differently, is to protect the house. I do this by barking and howling at everything in the front or back of the house. I keep telling these humans that the little kid next door is trouble. Don't worry; I'm not all business; I love a good snuggle when I'm off work.
+              </p>
+            </div>
+          </section>
 
-    <section class="person">
-      <image src="wash-badge-small.png" alt="Washington Wolf" />
-      <h3>
-        Washington Wolf
-      </h3>
-        <p>Hello, I'm Washington, and for some reason, I was named after Washington's state. My job, even though I've been told differently, is to protect the house. I do this by barking and howling at everything in the front or back of the house. I keep telling these humans that the little kid next door is trouble. Don't worry; I'm not all business; I love a good snuggle when I'm off work.</p>
-    </section>
+          <section class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+            <img src="bama-badge-small.png" alt="Alabama Wolf" class="w-32 h-32 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg flex-shrink-0" />
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Alabama Wolf</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Howdy, I'm Alabama. I am also named after a U.S state. I respond to many names, names like Bam, Bama, Bambam, Bama-lama-ding-dong, and the one where I'm in trouble "Aaallllllaaaaabama!!!". I also respond to anyone holding a treat or a piece of cheese. Especially cheese. Yum, I love cheese. My favorite activities include listening to Adam make tippity, tappity sounds at the computer while trying to get some rest. I have a hard life.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
 
-    <section class="person">
-      <image src="bama-badge-small.png" alt="Alabama Wolf" />
-      <h3>
-        Alabama Wolf
-      </h3>
-      <p>Howdy, I'm Alabama. I am also named after a U.S state. I respond to many names, names like Bam, Bama, Bambam, Bama-lama-ding-dong, and the one where I'm in trouble "Aaallllllaaaaabama!!!". I also respond to anyone holding a treat or a piece of cheese. Especially cheese. Yum, I love cheese. My favorite activities include listening to Adam make tippity, tappity sounds at the computer while trying to get some rest. I have a hard life.</p>
-    </section>
+      <footer class="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+          <img src="/img/adam-badge-small.png" alt="Adam J Wolf" class="w-24 h-24 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg" />
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Adam J Wolf</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Hi, I'm Adam and I am a husband, pit bull lover, sawdust maker, Carhartt wearer and Cloud Architect at heart. Welcome to my little place on the internet.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="http://www.twitter.com/adamjwolf" class="text-slate-400 hover:text-blue-400 transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center text-sm text-slate-500 dark:text-slate-500 pb-8">
+          &copy; 2025 Adam J Wolf. Built with Tailwind CSS.
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const themeToggles = document.querySelectorAll('.theme-toggle');
+      themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -34,82 +34,152 @@
     <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
-    <title>Adam J Wolf -</title>
+    <title>Feature Flag Freedom - Adam J Wolf</title>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body>
-    <header id="blog-header">
-      <h1>Adam J Wolf Blog</h1>
+  <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased transition-colors duration-300">
+    <header class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/75 dark:bg-slate-950/75">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Adam J Wolf</a>
+          </div>
+          <div class="flex items-center space-x-4">
+            <nav class="hidden md:block">
+              <ul class="flex space-x-8">
+                <li><a href="/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="/pages/about/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a></li>
+                <li><a href="/pages/at-work/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">At Work</a></li>
+                <li><a href="/pages/resume/" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Resume</a></li>
+              </ul>
+            </nav>
+            <div class="flex items-center border-l border-slate-200 dark:border-slate-800 ml-4 pl-4">
+              <button class="theme-toggle p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-600 transition-all" aria-label="Toggle dark mode">
+                <span class="dark:hidden">🌙</span>
+                <span class="hidden dark:inline">☀️</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     
-    <nav>
-          <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/pages/resume/">Resume</a></li>
-            <!-- <li><a href="/pages/about/">About</a></li> -->
-          </ol>
-        </nav>
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article class="prose prose-slate dark:prose-invert max-w-none">
+        <header class="not-prose mb-12">
+          <a href="/" class="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mb-8">
+            <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
+            Back to Home
+          </a>
+          <div class="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mb-2">
+            <time datetime="2020-1-29">January 29, 2020</time>
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
+            Feature Flag Freedom
+          </h1>
+        </header>
         
-
-    <article>
-      <header>
-        <a href="/posts/feature-flag-freedom/">
-          <h1>Feature Flag Freedom</h1>
-        </a>
-        <time datetime="2020-1-29">January 29, 2020</time>
-      </header>
-      <img src="/posts/feature-flag-freedom/flag.png" width="120" height="120" class="alignright"/>
-      <p>
-        Looking back at the last couple of years, I can honestly say that Feature Flags have fundamentally changed how I develop and deliver software, or at least how I prefer to develop and deliver software. The ability to enable safe trunk-based development and the increased velocity of software delivery is liberating.
-      </p>
-    
-      <p>
-        Feature Flags have many names, names like Feature Toggle, Feature Bits, and Feature Flippers. They also come in many flavors and lifecycles. For this article, we are going to concentrate on software delivery. More information about other types and flavors can be found <a src="https://martinfowler.com/articles/feature-toggles.html">here</a> and <a src="https://en.wikipedia.org/wiki/Feature_toggle">here</a>.
-      </p>
-    
-      <h2> A Whole New World </h2>
-    <img src="/posts/feature-flag-freedom/world.png" width="120" height="120" class="alignleft"/>
-      <p>
-        It might be hard to imagine trunk-based feature delivery with feature flags so let's set up a scenario and walk
-        through it. Let's say that I was given the task of normalizing the input of phone numbers using a Twillio service
-        for our fictitious API. Ready, Set, Go!
-      </p>
-    
-      <h3>Create the Flag</h3>
-    
-      <p>
-        First things first, we have to create a new flag. For our configuration, we use a Yaml file that is processed during deployment into commands that update a system like AWS Systems Manager Parameter Store, Consul, or Zookeeper.
-      </p>
-      <img src="/posts/feature-flag-freedom/toggle.png" width="120" height="120" class="alignright"/>
-      <p>
-        For our phone normalizing feature, I will use "phone-normalizing-with-twillio" as the flag name and give it the default configuration of false. Once committed, the CICD process will validate the changes and deploy it to production normally. Slowly at first, if there is no increase in error rates, it will deploy it throughout the world to all endpoints.
-      </p>
+        <img src="/posts/feature-flag-freedom/flag.png" width="120" height="120" class="alignright"/>
+        <p>
+          Looking back at the last couple of years, I can honestly say that Feature Flags have fundamentally changed how I develop and deliver software, or at least how I prefer to develop and deliver software. The ability to enable safe trunk-based development and the increased velocity of software delivery is liberating.
+        </p>
       
-      <h3> Use the Flag </h3>
-      <img src="/posts/feature-flag-freedom/preferences.png" width="120" height="120" class="alignleft"/>
-      <p>
-        Now that my flag is created and ready for use, I can pull the latest from our API Master branch and start writing the code. The first thing that I do is start my additions with a feature flag check. This is just a simple call to our onboard feature flag service that checks whether the box running the software or client accessing the system should get the feature turned on. If the service can't find the specified flag, it returns false, just in case you missed the first step of configuring the flag.
-      </p>
-      <p>
-        Now that we have our flag, we can push to master, and the code will be released to production but will not affect our fictitious API. Liberating. We can keep iterating on it and make it better while checking in and keeping up with everyone else —no merging hell with long-lived code branches, just normal development.
-      </p>
-    
-      <h3>The Release</h3>
-    <img src="/posts/feature-flag-freedom/ship.png" width="120" height="120" class="alignright"/>
-      <p>
-        Ok, our code has been in production for a bit while I perfected it, but now it's time to let it out into the world. We might want to turn it on for QA to test, or a single client to validate, or release it to the world for this feature. We can selectively turn this feature on or off for a person, company, EC2 instance, ECS Cluster, availability zone, region, a continent, or the world, is pretty nice.
-      </p>
-    
-      <p>
-        To release my feature, I'll check out the configuration repo again and set my flag to on. Who gets to see my new feature is completely up to me. When checked in, the CICD process will deploy the configuration change, and the feature will be live and available to my API users.
-      </p>
-    
-      <h2>Liberating</h2>
-      <img src="/posts/feature-flag-freedom/achievement.png" width="120" height="120" class="alignleft"/>
-      <p>
-        So what do you think? Feature flag with trunk-based development is rather different and a little scary at first, but I must say, it is well worth the effort. I would not want to go back to the big bang deployments of the past. Oh, one piece of advice, please clean up after yourself. Feature Flags, like the one we talked about here, are meant to be short-lived so remember to go back and remove your feature flag in the code and the configuration. Leave the campsite better than you found it.
-      </p>
-    </article>
+        <p>
+          Feature Flags have many names, names like Feature Toggle, Feature Bits, and Feature Flippers. They also come in many flavors and lifecycles. For this article, we are going to concentrate on software delivery. More information about other types and flavors can be found <a src="https://martinfowler.com/articles/feature-toggles.html">here</a> and <a src="https://en.wikipedia.org/wiki/Feature_toggle">here</a>.
+        </p>
+      
+        <h2> A Whole New World </h2>
+      <img src="/posts/feature-flag-freedom/world.png" width="120" height="120" class="alignleft"/>
+        <p>
+          It might be hard to imagine trunk-based feature delivery with feature flags so let's set up a scenario and walk
+          through it. Let's say that I was given the task of normalizing the input of phone numbers using a Twillio service
+          for our fictitious API. Ready, Set, Go!
+        </p>
+      
+        <h3>Create the Flag</h3>
+      
+        <p>
+          First things first, we have to create a new flag. For our configuration, we use a Yaml file that is processed during deployment into commands that update a system like AWS Systems Manager Parameter Store, Consul, or Zookeeper.
+        </p>
+        <img src="/posts/feature-flag-freedom/toggle.png" width="120" height="120" class="alignright"/>
+        <p>
+          For our phone normalizing feature, I will use "phone-normalizing-with-twillio" as the flag name and give it the default configuration of false. Once committed, the CICD process will validate the changes and deploy it to production normally. Slowly at first, if there is no increase in error rates, it will deploy it throughout the world to all endpoints.
+        </p>
+        
+        <h3> Use the Flag </h3>
+        <img src="/posts/feature-flag-freedom/preferences.png" width="120" height="120" class="alignleft"/>
+        <p>
+          Now that my flag is created and ready for use, I can pull the latest from our API Master branch and start writing the code. The first thing that I do is start my additions with a feature flag check. This is just a simple call to our onboard feature flag service that checks whether the box running the software or client accessing the system should get the feature turned on. If the service can't find the specified flag, it returns false, just in case you missed the first step of configuring the flag.
+        </p>
+        <p>
+          Now that we have our flag, we can push to master, and the code will be released to production but will not affect our fictitious API. Liberating. We can keep iterating on it and make it better while checking in and keeping up with everyone else —no merging hell with long-lived code branches, just normal development.
+        </p>
+      
+        <h3>The Release</h3>
+      <img src="/posts/feature-flag-freedom/ship.png" width="120" height="120" class="alignright"/>
+        <p>
+          Ok, our code has been in production for a bit while I perfected it, but now it's time to let it out into the world. We might want to turn it on for QA to test, or a single client to validate, or release it to the world for this feature. We can selectively turn this feature on or off for a person, company, EC2 instance, ECS Cluster, availability zone, region, a continent, or the world, is pretty nice.
+        </p>
+      
+        <p>
+          To release my feature, I'll check out the configuration repo again and set my flag to on. Who gets to see my new feature is completely up to me. When checked in, the CICD process will deploy the configuration change, and the feature will be live and available to my API users.
+        </p>
+      
+        <h2>Liberating</h2>
+        <img src="/posts/feature-flag-freedom/achievement.png" width="120" height="120" class="alignleft"/>
+        <p>
+          So what do you think? Feature flag with trunk-based development is rather different and a little scary at first, but I must say, it is well worth the effort. I would not want to go back to the big bang deployments of the past. Oh, one piece of advice, please clean up after yourself. Feature Flags, like the one we talked about here, are meant to be short-lived so remember to go back and remove your feature flag in the code and the configuration. Leave the campsite better than you found it.
+        </p>
+      </article>
+
+      <footer class="mt-20 pt-16 border-t border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+          <img src="/img/adam-badge-small.png" alt="Adam J Wolf" class="w-24 h-24 rounded-full ring-4 ring-slate-100 dark:ring-slate-800 shadow-lg" />
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Adam J Wolf</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Hi, I'm Adam and I am a husband, pit bull lover, sawdust maker, Carhartt wearer and Cloud Architect at heart. Welcome to my little place on the internet.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="http://www.twitter.com/adamjwolf" class="text-slate-400 hover:text-blue-400 transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center text-sm text-slate-500 dark:text-slate-500 pb-8">
+          &copy; 2025 Adam J Wolf. Built with Tailwind CSS.
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const themeToggles = document.querySelectorAll('.theme-toggle');
+      themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
 
     <section id="author">
       <img src="/img/adam-badge-small.png" alt="Adam J Wolf" />

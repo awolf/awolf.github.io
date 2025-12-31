@@ -1,4 +1,21 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "Roobert", "Inter override", "sans-serif";
+  --color-brand: #2c80c9;
+}
+
 /* Import existing custom styles */
 @import "./base.css";
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-slate-900 dark:text-white;
+  }
+}
